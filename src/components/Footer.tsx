@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="md:col-span-2">
               <img src={logo} alt="GRPL" className="h-8 mb-6" />
               <p className="text-muted-foreground font-light leading-relaxed max-w-md">
-                Enterprise-grade marketing leadership for ambitious ANZ businesses. 
+                Executive level marketing leadership for ambitious ANZ businesses. 
                 Transform marketing into your growth engine.
               </p>
             </div>
