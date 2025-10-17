@@ -1,8 +1,11 @@
 import { LinkedinIcon, Mail, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import logo from "@/assets/logo-horizontal.png";
 import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  
   return (
     <footer id="contact" className="bg-background py-16 border-t border-border/50">
       <div className="container mx-auto px-6 lg:px-8">
@@ -32,7 +35,7 @@ const Footer = () => {
                 <li><a href="#about" className="hover:text-foreground transition-colors">About</a></li>
                 <li><a href="#insights" className="hover:text-foreground transition-colors">Insights</a></li>
                 <li><a href="#contact" className="hover:text-foreground transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a></li>
+                <li><button onClick={() => navigate('/privacy')} className="hover:text-foreground transition-colors">Privacy Policy</button></li>
               </ul>
             </div>
           </div>
