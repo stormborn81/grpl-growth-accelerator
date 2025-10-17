@@ -3,36 +3,38 @@ import octagonFullStop from "@/assets/logo-fullstop-reversed.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background pt-14 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-background pt-14">
       <div className="container mx-auto px-6 lg:px-8 py-24 md:py-32">
-        <div className="max-w-6xl mx-auto">
-          <div className="space-y-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="space-y-8">
             {/* Octagon background decoration */}
-            <div className="absolute top-1/4 right-10 w-[600px] h-[600px] opacity-[0.02] pointer-events-none hidden lg:block animate-pulse">
+            <div className="absolute top-1/4 right-10 w-96 h-96 opacity-[0.03] pointer-events-none hidden lg:block">
               <img src="/src/assets/octagon-outline.png" alt="" className="w-full h-full" />
             </div>
             
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-tighter relative leading-[0.9]">
-              Executive‑level
-              <span className="block">growth leadership</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight relative">
+              Executive‑level growth leadership
+              <span className="block mt-2">Without the Full‑Time Cost</span>
             </h1>
             
-            <div className="w-24 h-px bg-accent/50"></div>
+            <div className="w-16 h-0.5 bg-accent mx-auto"></div>
             
-            <div className="relative max-w-2xl">
-              <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground font-extralight leading-relaxed">
+            <div className="relative inline-block">
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
                 Access executive‑level marketing strategy and revenue growth planning without the overhead of a full‑time CMO
               </p>
+              {/* Octagon highlight accent */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-start gap-6 pt-8">
-              <Button variant="hero" size="lg" className="group">
-                <span className="font-light tracking-wide">Run Marketing Health Check</span>
-                <img src={octagonFullStop} alt="" className="ml-3 h-2.5 w-2.5 group-hover:rotate-90 transition-transform duration-300" />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto">
+                Run Marketing Health Check
+                <img src={octagonFullStop} alt="" className="ml-2 h-3 w-3" />
               </Button>
-              <Button variant="heroSecondary" size="lg" className="group">
-                <span className="font-light tracking-wide">Book Discovery Call</span>
-                <img src={octagonFullStop} alt="" className="ml-3 h-2.5 w-2.5 opacity-60 group-hover:opacity-100 group-hover:rotate-90 transition-all duration-300" />
+              <Button variant="heroSecondary" size="lg" className="w-full sm:w-auto">
+                Book Discovery Call
+                <img src={octagonFullStop} alt="" className="ml-2 h-3 w-3 opacity-50" />
               </Button>
             </div>
           </div>

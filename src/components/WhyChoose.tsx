@@ -30,33 +30,37 @@ const reasons = [
 
 const WhyChoose = () => {
   return (
-    <section className="py-32 md:py-40 bg-secondary border-b border-border/30 relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
       {/* Octagon background decoration */}
-      <div className="absolute bottom-10 left-10 w-[500px] h-[500px] opacity-[0.02] pointer-events-none animate-pulse">
+      <div className="absolute bottom-10 left-10 w-64 h-64 opacity-[0.05] pointer-events-none">
         <img src="/src/assets/octagon-rings.png" alt="" className="w-full h-full" />
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-20">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl font-light tracking-tighter mb-6 leading-tight">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4 text-grpl-white">
               Why Choose GRPL
             </h2>
-            <div className="w-20 h-px bg-accent/50"></div>
+            <div className="w-12 h-0.5 bg-accent mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
                 <div key={index} className="group relative">
-                  <div className="relative mb-8">
-                    <Icon className="h-12 w-12 text-muted-foreground group-hover:text-accent transition-colors duration-500" strokeWidth={1} />
+                  {/* Octagon block shape background */}
+                  <div className="absolute -inset-4 bg-grpl-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
+                       style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
                   </div>
-                  <h3 className="relative text-2xl font-light mb-4 tracking-tight">
+                  <div className="relative mb-6">
+                    <Icon className="h-8 w-8 text-grpl-white" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="relative text-xl font-bold mb-3 tracking-tight text-grpl-white">
                     {reason.title}
                   </h3>
-                  <p className="relative text-muted-foreground leading-relaxed font-extralight text-lg">
+                  <p className="relative text-grpl-white/70 leading-relaxed font-light">
                     {reason.description}
                   </p>
                 </div>
