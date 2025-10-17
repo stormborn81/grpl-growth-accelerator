@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import buttonOctagon from "@/assets/button-octagon.png";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center bg-background pt-14 overflow-hidden">
       {/* Video Background */}
@@ -43,7 +46,12 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row items-start gap-4 pt-8">
-              <Button variant="hero" size="lg" className="w-full sm:w-auto">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="w-full sm:w-auto"
+                onClick={() => navigate('/marketing-health-check')}
+              >
                 Run Marketing Health Check
                 <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
               </Button>
