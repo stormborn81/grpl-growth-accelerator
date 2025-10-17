@@ -1,10 +1,15 @@
+import brgLogo from "@/assets/clients/brg.png";
+import mableLogo from "@/assets/clients/mable.png";
+import healthengineLogo from "@/assets/clients/healthengine.webp";
+import medxLogo from "@/assets/clients/medx.png";
+import mangroveLogo from "@/assets/clients/mangrove.png";
+
 const clients = [
-  "BRG",
-  "Mable",
-  "Healthengine",
-  "MedX Finance",
-  "Exec Finance",
-  "Mangrove Digital",
+  { name: "BRG", logo: brgLogo },
+  { name: "Mable", logo: mableLogo },
+  { name: "Healthengine", logo: healthengineLogo },
+  { name: "MedX Finance", logo: medxLogo },
+  { name: "Mangrove Digital", logo: mangroveLogo },
 ];
 
 const TrustedBy = () => {
@@ -24,9 +29,13 @@ const TrustedBy = () => {
           {clients.map((client, index) => (
             <div
               key={index}
-              className="text-2xl font-black text-muted-foreground hover:text-accent transition-colors cursor-default"
+              className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
             >
-              {client}
+              <img
+                src={client.logo}
+                alt={`${client.name} logo`}
+                className="h-12 w-auto object-contain"
+              />
             </div>
           ))}
         </div>
