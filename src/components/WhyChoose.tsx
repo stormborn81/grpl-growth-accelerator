@@ -30,11 +30,16 @@ const reasons = [
 
 const WhyChoose = () => {
   return (
-    <section className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
+      {/* Octagon background decoration */}
+      <div className="absolute bottom-10 left-10 w-64 h-64 opacity-[0.05] pointer-events-none">
+        <img src="/src/assets/octagon-rings.png" alt="" className="w-full h-full" />
+      </div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4 text-grpl-white">
               Why Choose GRPL
             </h2>
             <div className="w-12 h-0.5 bg-accent mx-auto"></div>
@@ -46,12 +51,12 @@ const WhyChoose = () => {
               return (
                 <div key={index} className="group">
                   <div className="mb-6">
-                    <Icon className="h-8 w-8 text-foreground" strokeWidth={1.5} />
+                    <Icon className="h-8 w-8 text-grpl-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 tracking-tight">
+                  <h3 className="text-xl font-bold mb-3 tracking-tight text-grpl-white">
                     {reason.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed font-light">
+                  <p className="text-grpl-white/70 leading-relaxed font-light">
                     {reason.description}
                   </p>
                 </div>
