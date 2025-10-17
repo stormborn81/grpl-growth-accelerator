@@ -8,76 +8,76 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* GRPL Apple-inspired - Minimal with strategic orange */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* GRPL Dark Minimal Design - Nava Studio inspired */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary = Black for text and strong elements */
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary = Orange accent for CTAs */
+    --primary: 20 100% 50%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Secondary = Subtle gray for alternating sections */
-    --secondary: 0 0% 98%;
-    --secondary-foreground: 0 0% 0%;
+    /* Secondary = Subtle darker sections */
+    --secondary: 0 0% 6%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Muted = Light gray for subtle elements */
-    --muted: 0 0% 98%;
-    --muted-foreground: 0 0% 25%;
+    /* Muted = Dark gray for subtle elements */
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
 
-    /* Accent = GRPL Orange - used sparingly */
+    /* Accent = GRPL Orange */
     --accent: 20 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 92%;
-    --input: 0 0% 95%;
-    --ring: 0 0% 0%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 20 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
     /* Custom GRPL tokens */
     --grpl-orange: 20 100% 50%;
-    --grpl-black: 0 0% 0%;
-    --grpl-white: 0 0% 100%;
+    --grpl-black: 0 0% 3%;
+    --grpl-white: 0 0% 98%;
 
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
     --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
+    --card-foreground: 0 0% 98%;
 
     --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 20 100% 50%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 6%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
 
     --accent: 20 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
     --ring: 20 100% 50%;
   }
 }
@@ -92,6 +92,6 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-raleway font-black;
+    @apply font-raleway font-light tracking-tighter;
   }
 }

@@ -30,33 +30,34 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section id="services" className="py-32 md:py-40 bg-background border-b border-border/30 relative overflow-hidden">
+      {/* Subtle octagon background */}
+      <div className="absolute top-20 right-10 w-96 h-96 opacity-[0.015] pointer-events-none animate-pulse">
+        <img src="/src/assets/octagon-rings.png" alt="" className="w-full h-full" />
+      </div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+          <div className="mb-20">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl font-light tracking-tighter mb-6 leading-tight">
               Our Services
             </h2>
-            <div className="w-12 h-0.5 bg-accent mx-auto mb-6"></div>
-            <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
+            <div className="w-20 h-px bg-accent/50 mb-8"></div>
+            <p className="text-xl md:text-2xl text-muted-foreground font-extralight max-w-3xl leading-relaxed">
               Comprehensive marketing leadership, unlocking your next growth phase
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="relative bg-secondary p-8 group hover:shadow-lg transition-all duration-500"
-                     style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}>
-                  {/* Octagon border accent */}
-                  <div className="absolute inset-0 border border-transparent group-hover:border-accent/30 transition-colors duration-500"
-                       style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}></div>
-                  <Icon className="h-8 w-8 text-foreground mb-6 group-hover:text-accent transition-colors duration-500" strokeWidth={1.5} />
-                  <h3 className="text-xl font-bold mb-3 tracking-tight">
+                <div key={index} className="relative bg-secondary/50 border border-border/50 p-10 group hover:bg-secondary hover:border-accent/20 transition-all duration-500">
+                  <Icon className="h-10 w-10 text-muted-foreground mb-8 group-hover:text-accent transition-colors duration-500" strokeWidth={1} />
+                  <h3 className="text-2xl font-light mb-4 tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed font-light">
+                  <p className="text-muted-foreground leading-relaxed font-extralight text-lg">
                     {service.description}
                   </p>
                 </div>
