@@ -1,74 +1,57 @@
 import { LinkedinIcon, Mail, Phone } from "lucide-react";
 import logo from "@/assets/logo-horizontal.png";
+import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <img src={logo} alt="GRPL" className="h-8 mb-4" />
-            <p className="text-sm text-muted-foreground">
-              Enterprise-grade marketing leadership for ambitious ANZ businesses.
+    <footer id="contact" className="bg-background py-16 border-t border-border/50">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div className="md:col-span-2">
+              <img src={logo} alt="GRPL" className="h-8 mb-6" />
+              <p className="text-muted-foreground font-light leading-relaxed max-w-md">
+                Enterprise-grade marketing leadership for ambitious ANZ businesses. 
+                Transform marketing into your growth engine.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-sm mb-4 tracking-tight">Services</h4>
+              <ul className="space-y-3 text-sm text-muted-foreground font-light">
+                <li><a href="#services" className="hover:text-foreground transition-colors">Fractional CMO</a></li>
+                <li><a href="#services" className="hover:text-foreground transition-colors">Growth Strategy</a></li>
+                <li><a href="#services" className="hover:text-foreground transition-colors">Team Leadership</a></li>
+                <li><a href="#services" className="hover:text-foreground transition-colors">Marketing Health Check</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-sm mb-4 tracking-tight">Company</h4>
+              <ul className="space-y-3 text-sm text-muted-foreground font-light">
+                <li><a href="#about" className="hover:text-foreground transition-colors">About</a></li>
+                <li><a href="#insights" className="hover:text-foreground transition-colors">Insights</a></li>
+                <li><a href="#contact" className="hover:text-foreground transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <Separator className="mb-8" />
+          
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-muted-foreground font-light">
+              © {new Date().getFullYear()} GRPL. All rights reserved.
             </p>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-black text-sm uppercase mb-4">Services</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#services" className="hover:text-accent transition-colors">Fractional CMO</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">Chief Growth Officer</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">Marketing Strategy</a></li>
-              <li><a href="#services" className="hover:text-accent transition-colors">Team Development</a></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="font-black text-sm uppercase mb-4">Company</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#about" className="hover:text-accent transition-colors">About Us</a></li>
-              <li><a href="#insights" className="hover:text-accent transition-colors">Insights</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Case Studies</a></li>
-              <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="font-black text-sm uppercase mb-4">Get in Touch</h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="mailto:hello@grpl.com.au" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
-                  <Mail className="w-4 h-4" />
-                  hello@grpl.com.au
-                </a>
-              </li>
-              <li>
-                <a href="tel:+61400000000" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
-                  <Phone className="w-4 h-4" />
-                  +61 400 000 000
-                </a>
-              </li>
-              <li>
-                <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
-                  <LinkedinIcon className="w-4 h-4" />
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <div>
-            © {new Date().getFullYear()} GRPL. All rights reserved.
-          </div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
+            
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light">
+                LinkedIn
+              </a>
+              <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light">
+                Twitter
+              </a>
+            </div>
           </div>
         </div>
       </div>

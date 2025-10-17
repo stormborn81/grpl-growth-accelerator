@@ -4,48 +4,32 @@ import octagonOutline from "@/assets/octagon-outline.png";
 
 const CTA = () => {
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-foreground text-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 w-full h-full flex items-center justify-center">
-        <img src={octagonOutline} alt="" className="w-full max-w-4xl" />
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-6">
-            Ready to Transform Marketing into a Growth Engine?
+    <section className="py-24 md:py-32 bg-secondary">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6">
+            Ready to Transform Marketing Into a Growth Engine?
           </h2>
           
-          <p className="text-lg sm:text-xl text-background/80 mb-10 max-w-2xl mx-auto">
-            Start with a free marketing health check or book a discovery call to discuss your growth challenges.
+          <div className="w-16 h-0.5 bg-accent mx-auto mb-8"></div>
+          
+          <p className="text-xl text-muted-foreground mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+            Start with a complimentary marketing health check or book a discovery call 
+            to explore how GRPL can accelerate your growth
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button variant="hero" size="xl" className="group">
-              Run Your Marketing Health Check
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button variant="hero" size="lg">
+              Run Marketing Health Check
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button 
-              size="xl" 
-              className="bg-background text-foreground hover:bg-background/90 rounded-sm font-bold"
-            >
-              Book a Discovery Call
+            <Button variant="heroSecondary" size="lg">
+              Book Discovery Call
             </Button>
           </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-background/70">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span>No obligation</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span>30-minute consultation</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span>Actionable insights</span>
-            </div>
+          
+          <div className="mt-12 text-sm text-muted-foreground font-light">
+            <p>Questions? Email us at <a href="mailto:hello@grpl.co" className="underline hover:text-foreground transition-colors">hello@grpl.co</a></p>
           </div>
         </div>
       </div>

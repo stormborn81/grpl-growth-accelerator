@@ -1,48 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import octagonRings from "@/assets/octagon-rings.png";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-background py-20 lg:py-32">
-      {/* Background decoration */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 opacity-5 w-1/2 h-full flex items-center justify-end">
-        <img src={octagonRings} alt="" className="w-full max-w-2xl" />
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight mb-6">
-            Enterprise‑Grade Marketing Leadership{" "}
-            <span className="text-accent">Without the Full‑Time Cost</span>
-          </h1>
-          
-          <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl font-medium">
-            Access executive‑level marketing strategy, revenue growth planning, and marketing transformation for ANZ businesses—without the overhead of a full‑time CMO.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="hero" size="xl" className="group">
-              Run Your Marketing Health Check
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="heroSecondary" size="xl">
-              Book a Discovery Call
-            </Button>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-0.5 bg-accent"></div>
-              <span className="font-semibold">No long-term contracts</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-0.5 bg-accent"></div>
-              <span className="font-semibold">Flexible engagement</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-0.5 bg-accent"></div>
-              <span className="font-semibold">Proven results</span>
+    <section className="relative min-h-screen flex items-center justify-center bg-background pt-14">
+      <div className="container mx-auto px-6 lg:px-8 py-24 md:py-32">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="space-y-8">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight">
+              Enterprise‑Grade Marketing Leadership
+              <span className="block mt-2">Without the Full‑Time Cost</span>
+            </h1>
+            
+            <div className="w-16 h-0.5 bg-accent mx-auto"></div>
+            
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+              Access executive‑level marketing strategy and revenue growth planning without the overhead of a full‑time CMO
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto">
+                Run Marketing Health Check
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button variant="heroSecondary" size="lg" className="w-full sm:w-auto">
+                Book Discovery Call
+              </Button>
             </div>
           </div>
         </div>

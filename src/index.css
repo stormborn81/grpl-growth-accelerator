@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* GRPL Brand Colors - Monochrome with Orange Accent */
+    /* GRPL Apple-inspired - Minimal with strategic orange */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
@@ -22,34 +22,33 @@ All colors MUST be HSL.
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary = Light gray backgrounds */
-    --secondary: 0 0% 97%;
+    /* Secondary = Subtle gray for alternating sections */
+    --secondary: 0 0% 98%;
     --secondary-foreground: 0 0% 0%;
 
-    /* Muted = Medium gray for subtle text */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    /* Muted = Light gray for subtle elements */
+    --muted: 0 0% 98%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Accent = GRPL Orange #FF5C00 */
+    /* Accent = GRPL Orange - used sparingly */
     --accent: 20 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 20 100% 50%;
+    --border: 0 0% 92%;
+    --input: 0 0% 95%;
+    --ring: 0 0% 0%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
     /* Custom GRPL tokens */
     --grpl-orange: 20 100% 50%;
-    --grpl-gray-light: 0 0% 97%;
-    --grpl-gray-mid: 0 0% 60%;
-    --grpl-gray-dark: 0 0% 20%;
+    --grpl-black: 0 0% 0%;
+    --grpl-white: 0 0% 100%;
 
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .dark {

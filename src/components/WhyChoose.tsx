@@ -30,34 +30,34 @@ const reasons = [
 
 const WhyChoose = () => {
   return (
-    <section className="py-20 lg:py-32 bg-secondary">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
-            Why Choose GRPL
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Five compelling reasons to partner with us for your marketing leadership needs
-          </p>
-        </div>
+    <section className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+              Why Choose GRPL
+            </h2>
+            <div className="w-12 h-0.5 bg-accent mx-auto"></div>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="bg-background p-8 border-l-4 border-accent hover:shadow-lg transition-all duration-300 group"
-            >
-              <div className="flex items-start gap-4">
-                <div className="bg-accent text-accent-foreground p-3 rounded-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <reason.icon className="w-6 h-6" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+            {reasons.map((reason, index) => {
+              const Icon = reason.icon;
+              return (
+                <div key={index} className="group">
+                  <div className="mb-6">
+                    <Icon className="h-8 w-8 text-foreground" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 tracking-tight">
+                    {reason.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed font-light">
+                    {reason.description}
+                  </p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-black mb-2">{reason.title}</h3>
-                  <p className="text-muted-foreground">{reason.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

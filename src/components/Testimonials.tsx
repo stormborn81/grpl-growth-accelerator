@@ -24,34 +24,31 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20 lg:py-32 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
-            What Our Clients Say
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hear from executives who've partnered with GRPL
-          </p>
-        </div>
+    <section className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+              What Our Clients Say
+            </h2>
+            <div className="w-12 h-0.5 bg-accent mx-auto"></div>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="p-8 hover:shadow-xl transition-all border-t-4 border-accent"
-            >
-              <Quote className="w-10 h-10 text-accent mb-4" />
-              <blockquote className="text-muted-foreground mb-6 italic leading-relaxed">
-                "{testimonial.quote}"
-              </blockquote>
-              <div className="border-t border-border pt-4">
-                <div className="font-black text-lg">{testimonial.author}</div>
-                <div className="text-sm font-medium text-muted-foreground">{testimonial.title}</div>
-                <div className="text-sm text-accent font-bold">{testimonial.company}</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-secondary p-8 rounded-2xl">
+                <p className="text-foreground/80 mb-8 leading-relaxed font-light text-lg">
+                  "{testimonial.quote}"
+                </p>
+                <div className="border-t border-border/50 pt-6">
+                  <p className="font-bold text-sm">{testimonial.author}</p>
+                  <p className="text-xs text-muted-foreground mt-1 font-light">
+                    {testimonial.title}, {testimonial.company}
+                  </p>
+                </div>
               </div>
-            </Card>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
