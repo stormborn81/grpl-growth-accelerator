@@ -14,7 +14,9 @@ const Hero = () => {
           loop 
           muted 
           playsInline
+          preload="metadata"
           className="absolute right-0 top-1/2 -translate-y-1/2 h-[80%] w-auto object-cover opacity-20"
+          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
         >
           <source src="/hero-background.mp4" type="video/mp4" />
         </video>
