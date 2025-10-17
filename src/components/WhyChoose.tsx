@@ -35,7 +35,7 @@ const WhyChoose = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Black box container */}
-          <div className="bg-grpl-black p-12 md:p-16 lg:p-20 relative overflow-hidden">
+          <div className="bg-[#000000] p-12 md:p-16 lg:p-20 relative overflow-hidden">
             {/* Octagon background decoration */}
             <div className="absolute bottom-10 left-10 w-64 h-64 opacity-[0.05] pointer-events-none">
               <img src="/src/assets/octagon-rings.png" alt="" className="w-full h-full" />
