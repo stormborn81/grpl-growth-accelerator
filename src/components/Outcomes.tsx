@@ -23,13 +23,18 @@ const Outcomes = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
             {metrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="mb-4">
+              <div key={index} className="text-center relative group">
+                {/* Octagon border frame */}
+                <div className="absolute inset-0 -m-8" 
+                     style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
+                  <div className="w-full h-full border border-accent/20 group-hover:border-accent/40 transition-colors duration-500"></div>
+                </div>
+                <div className="relative mb-4">
                   <div className="text-6xl md:text-7xl font-black tracking-tight text-grpl-white">
                     {metric.value}
                   </div>
                 </div>
-                <div className="space-y-1">
+                <div className="relative space-y-1">
                   <p className="text-lg font-medium text-grpl-white">{metric.label}</p>
                   <p className="text-sm text-grpl-white/60 font-light">{metric.period}</p>
                 </div>

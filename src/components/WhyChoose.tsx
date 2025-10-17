@@ -49,14 +49,18 @@ const WhyChoose = () => {
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
-                <div key={index} className="group">
-                  <div className="mb-6">
+                <div key={index} className="group relative">
+                  {/* Octagon block shape background */}
+                  <div className="absolute -inset-4 bg-grpl-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
+                       style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
+                  </div>
+                  <div className="relative mb-6">
                     <Icon className="h-8 w-8 text-grpl-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 tracking-tight text-grpl-white">
+                  <h3 className="relative text-xl font-bold mb-3 tracking-tight text-grpl-white">
                     {reason.title}
                   </h3>
-                  <p className="text-grpl-white/70 leading-relaxed font-light">
+                  <p className="relative text-grpl-white/70 leading-relaxed font-light">
                     {reason.description}
                   </p>
                 </div>

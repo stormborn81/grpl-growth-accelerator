@@ -14,12 +14,12 @@ const services = [
   {
     icon: Zap,
     title: "Campaign Execution",
-    description: "End-to-end management and optimization of marketing initiatives",
+    description: "End-to-end management and optimisation of marketing initiatives",
   },
   {
     icon: BarChart,
     title: "MarTech & Analytics",
-    description: "Integration and optimization of marketing technology stack",
+    description: "Integration and optimisation of marketing technology stack",
   },
   {
     icon: GraduationCap,
@@ -39,7 +39,7 @@ const Services = () => {
             </h2>
             <div className="w-12 h-0.5 bg-accent mx-auto mb-6"></div>
             <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
-              Comprehensive marketing leadership tailored to your growth stage
+              Comprehensive marketing leadership, unlocking your next growth phase
             </p>
           </div>
 
@@ -47,8 +47,12 @@ const Services = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-secondary p-8 rounded-2xl group hover:shadow-lg transition-shadow">
-                  <Icon className="h-8 w-8 text-foreground mb-6" strokeWidth={1.5} />
+                <div key={index} className="relative bg-secondary p-8 group hover:shadow-lg transition-all duration-500"
+                     style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}>
+                  {/* Octagon border accent */}
+                  <div className="absolute inset-0 border border-transparent group-hover:border-accent/30 transition-colors duration-500"
+                       style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}></div>
+                  <Icon className="h-8 w-8 text-foreground mb-6 group-hover:text-accent transition-colors duration-500" strokeWidth={1.5} />
                   <h3 className="text-xl font-bold mb-3 tracking-tight">
                     {service.title}
                   </h3>

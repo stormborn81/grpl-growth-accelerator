@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import octagonFullStop from "@/assets/logo-fullstop-reversed.png";
 
 const Hero = () => {
   return (
@@ -19,17 +19,22 @@ const Hero = () => {
             
             <div className="w-16 h-0.5 bg-accent mx-auto"></div>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-              Access executive‑level marketing strategy and revenue growth planning without the overhead of a full‑time CMO
-            </p>
+            <div className="relative inline-block">
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+                Access executive‑level marketing strategy and revenue growth planning without the overhead of a full‑time CMO
+              </p>
+              {/* Octagon highlight accent */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+            </div>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
               <Button variant="hero" size="lg" className="w-full sm:w-auto">
                 Run Marketing Health Check
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <img src={octagonFullStop} alt="" className="ml-2 h-3 w-3" />
               </Button>
               <Button variant="heroSecondary" size="lg" className="w-full sm:w-auto">
                 Book Discovery Call
+                <img src={octagonFullStop} alt="" className="ml-2 h-3 w-3 opacity-50" />
               </Button>
             </div>
           </div>

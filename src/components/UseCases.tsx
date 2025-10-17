@@ -34,16 +34,20 @@ const UseCases = () => {
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
               return (
-                <div key={index} className="text-center">
-                  <div className="mb-6 flex justify-center">
-                    <div className="w-16 h-16 rounded-full bg-background flex items-center justify-center">
-                      <Icon className="h-7 w-7 text-foreground" strokeWidth={1.5} />
+                <div key={index} className="text-center relative p-8 group">
+                  {/* Octagon block background */}
+                  <div className="absolute inset-0 bg-background/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                       style={{clipPath: "polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%)"}}></div>
+                  <div className="relative mb-6 flex justify-center">
+                    <div className="w-16 h-16 bg-background flex items-center justify-center group-hover:bg-accent/10 transition-colors duration-500"
+                         style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
+                      <Icon className="h-7 w-7 text-foreground group-hover:text-accent transition-colors duration-500" strokeWidth={1.5} />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-black mb-4 tracking-tight">
+                  <h3 className="relative text-2xl font-black mb-4 tracking-tight">
                     {useCase.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed font-light">
+                  <p className="relative text-muted-foreground leading-relaxed font-light">
                     {useCase.description}
                   </p>
                 </div>

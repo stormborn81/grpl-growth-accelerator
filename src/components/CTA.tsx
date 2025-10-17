@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import octagonOutline from "@/assets/octagon-outline.png";
+import octagonFullStop from "@/assets/logo-fullstop-reversed.png";
 
 const CTA = () => {
   return (
@@ -26,10 +25,11 @@ const CTA = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="lg">
               Run Marketing Health Check
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <img src={octagonFullStop} alt="" className="ml-2 h-3 w-3" />
             </Button>
             <Button variant="heroSecondary" size="lg">
               Book Discovery Call
+              <img src={octagonFullStop} alt="" className="ml-2 h-3 w-3 opacity-50" />
             </Button>
           </div>
           
