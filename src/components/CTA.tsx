@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import buttonOctagon from "@/assets/button-octagon.png";
 
 const CTA = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
       {/* Octagon background decoration */}
@@ -23,11 +26,11 @@ const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="lg">
+            <Button variant="hero" size="lg" onClick={() => navigate('/marketing-health-check')}>
               Run Marketing Health Check
               <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
             </Button>
-            <Button variant="heroSecondary" size="lg">
+            <Button variant="heroSecondary" size="lg" onClick={() => window.location.href = 'mailto:hello@grpl.co?subject=Discovery Call Request'}>
               Book Discovery Call
               <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
             </Button>
