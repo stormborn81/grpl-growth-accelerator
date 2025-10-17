@@ -23,9 +23,9 @@ const Header = () => {
             <a href="#insights" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Insights
             </a>
-            <a href="/contact" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+            <button onClick={() => navigate('/contact')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Contact
-            </a>
+            </button>
           </nav>
 
           <div className="flex items-center gap-3">
