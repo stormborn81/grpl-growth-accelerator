@@ -3,22 +3,22 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "GRPL brought clarity and direction to our marketing strategy. Within three months, we saw measurable improvements in lead quality and conversion rates. Their ability to translate strategy into actionable plans was transformative.",
-    author: "Jennifer Walsh",
-    title: "Chief Revenue Officer",
-    company: "HealthTech Innovators",
+    quote: "GRPL didn't just give us a logo and a tagline, they built our entire market presence from scratch. They developed our positioning, crafted a distinctive voice and visual system, and put together the tools and playbooks we needed to launch. The result was a confident entry into the market: Clients understood our story, early partners knew what we stood for, and our team had a clear roadmap for growth.",
+    author: "Mark Grace",
+    title: "Founder",
+    company: "Mangrove Digital",
   },
   {
-    quote: "As a founder wearing too many hats, having GRPL step in as our fractional CMO was game-changing. They gave us the strategic oversight we needed while building our internal team's capabilities. Best investment we made.",
-    author: "David Kim",
+    quote: "Matt's strategic thinking is one of his greatest assets. He designed a holistic marketing strategy that aligned with Healthengine's growth goals, bringing coherence to disparate channels, setting clear performance metrics, and ensuring every campaign delivered measurable return.",
+    author: "Dan Stinton",
+    title: "CEO",
+    company: "Healthengine",
+  },
+  {
+    quote: "GRPL built our brand from the ground up and embedded the systems, processes and creative thinking that allowed us to lend over a billion dollars in our first two years. Their fractional CMO service isn't just consultancy; they operate as part of the leadership team. Together we built a sustainable lead engine, integrated our technology stack, led a martech transformation and scaled our audience and pipeline. GRPL drives real, measurable impact.",
+    author: "Todd O'Reilly",
     title: "Founder & CEO",
-    company: "FinServe Solutions",
-  },
-  {
-    quote: "The combination of strategic thinking and hands-on execution sets GRPL apart. They don't just tell you what to do—they roll up their sleeves and make it happen. Our marketing is now a true growth driver.",
-    author: "Rachel Patel",
-    title: "COO",
-    company: "Digital Commerce Group",
+    company: "MedX Finance",
   },
 ];
 
