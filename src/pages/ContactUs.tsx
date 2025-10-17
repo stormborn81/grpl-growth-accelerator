@@ -11,8 +11,11 @@ const ContactUs = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-              <p className="text-lg text-foreground/70">
+              <p className="text-lg text-foreground/70 mb-4">
                 Schedule a discovery call to discuss your marketing needs
+              </p>
+              <p className="text-base text-foreground/70">
+                Email us: <a href="mailto:Letsgo@GRPL.com.au" className="text-primary hover:underline">Letsgo@GRPL.com.au</a>
               </p>
             </div>
             
