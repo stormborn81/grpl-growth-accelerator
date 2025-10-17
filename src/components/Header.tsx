@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import logo from "@/assets/logo-horizontal.png";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-6 lg:px-8">
@@ -26,10 +29,20 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" className="hidden sm:inline-flex text-xs">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="hidden sm:inline-flex text-xs"
+              onClick={() => navigate('/marketing-health-check')}
+            >
               Health Check
             </Button>
-            <Button variant="hero" size="sm" className="text-xs">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="text-xs"
+              onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
+            >
               Book Call
             </Button>
           </div>
