@@ -5,24 +5,24 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 clip-octagon",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/85 rounded-full",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-full",
-        outline: "border border-primary/20 bg-background text-primary hover:bg-primary/5 rounded-full",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full",
-        ghost: "hover:bg-primary/5 rounded-full",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-primary/85 rounded-full",
-        heroSecondary: "border border-primary/20 bg-background text-foreground hover:bg-primary/5 rounded-full",
+        default: "bg-primary text-primary-foreground hover:bg-primary/85",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border-2 border-primary/20 bg-background text-primary hover:bg-primary/5",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-primary/5",
+        link: "text-primary underline-offset-4 hover:underline clip-none",
+        hero: "bg-primary text-primary-foreground hover:bg-primary/85",
+        heroSecondary: "border-2 border-primary/20 bg-background text-foreground hover:bg-primary/5",
       },
       size: {
-        default: "h-11 px-6 py-2",
-        sm: "h-9 px-4 text-xs",
-        lg: "h-12 px-8 text-base",
-        xl: "h-14 px-10 text-lg",
+        default: "h-11 px-8 py-2",
+        sm: "h-9 px-6 text-xs",
+        lg: "h-12 px-10 text-base",
+        xl: "h-14 px-12 text-lg",
         icon: "h-10 w-10",
       },
     },

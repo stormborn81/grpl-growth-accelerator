@@ -95,3 +95,25 @@ All colors MUST be HSL.
     @apply font-raleway font-black;
   }
 }
+
+@layer utilities {
+  /* Octagonal clip-path for buttons */
+  .clip-octagon {
+    clip-path: polygon(
+      30% 0%, 70% 0%,
+      100% 30%, 100% 70%,
+      70% 100%, 30% 100%,
+      0% 70%, 0% 30%
+    );
+  }
+  
+  /* Octagonal shape for icon containers */
+  .octagon-icon {
+    clip-path: polygon(
+      30% 0%, 70% 0%,
+      100% 30%, 100% 70%,
+      70% 100%, 30% 100%,
+      0% 70%, 0% 30%
+    );
+  }
+}
