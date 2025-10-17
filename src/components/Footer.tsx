@@ -45,11 +45,8 @@ const Footer = () => {
             </p>
             
             <div className="flex items-center gap-6">
-              <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light">
+              <a href="https://www.linkedin.com/company/grplstrategy" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light">
                 LinkedIn
-              </a>
-              <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors font-light">
-                Twitter
               </a>
             </div>
           </div>
