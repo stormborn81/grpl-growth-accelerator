@@ -1,4 +1,4 @@
-import { Search, Map, Zap, BarChart, GraduationCap } from "lucide-react";
+import { Search, Map, Zap, BarChart, GraduationCap, Sparkles } from "lucide-react";
 
 const services = [
   {
@@ -25,6 +25,11 @@ const services = [
     icon: GraduationCap,
     title: "Team Development",
     description: "Mentoring and capability uplift for internal teams",
+  },
+  {
+    icon: Sparkles,
+    title: "Creative Excellence",
+    description: "Elevate your creative output with executive‑level alignment and vision.",
   },
 ];
 
