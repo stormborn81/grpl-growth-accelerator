@@ -5,7 +5,6 @@ const clients = [
   "MedX Finance",
   "Exec Finance",
   "Mangrove Digital",
-  "Dymocks",
 ];
 
 const TrustedBy = () => {
