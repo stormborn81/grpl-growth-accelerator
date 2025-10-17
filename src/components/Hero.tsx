@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import octagonFullStop from "@/assets/logo-fullstop-reversed.png";
+import buttonOctagon from "@/assets/button-octagon.png";
 
 const Hero = () => {
   return (
@@ -30,11 +30,11 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
               <Button variant="hero" size="lg" className="w-full sm:w-auto">
                 Run Marketing Health Check
-                <img src={octagonFullStop} alt="" className="ml-2 h-3 w-3" />
+                <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
               </Button>
               <Button variant="heroSecondary" size="lg" className="w-full sm:w-auto">
                 Book Discovery Call
-                <img src={octagonFullStop} alt="" className="ml-2 h-3 w-3 opacity-50" />
+                <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
               </Button>
             </div>
           </div>
