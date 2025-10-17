@@ -30,14 +30,14 @@ const CTA = () => {
               Run Marketing Health Check
               <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
             </Button>
-            <Button variant="heroSecondary" size="lg" onClick={() => window.location.href = 'mailto:hello@grpl.co?subject=Discovery Call Request'}>
+            <Button variant="heroSecondary" size="lg" onClick={() => window.location.href = 'mailto:matt@grpl.com.au?subject=Discovery Call Request'}>
               Book Discovery Call
               <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
             </Button>
           </div>
           
           <div className="mt-12 text-sm text-grpl-white/60 font-light">
-            <p>Questions? Email us at <a href="mailto:hello@grpl.co" className="underline hover:text-grpl-white transition-colors">hello@grpl.co</a></p>
+            <p>Questions? Email us at <a href="mailto:matt@grpl.com.au" className="underline hover:text-grpl-white transition-colors">matt@grpl.com.au</a></p>
           </div>
         </div>
       </div>

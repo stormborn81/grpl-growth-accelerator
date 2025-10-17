@@ -105,7 +105,7 @@ const QuizResults = ({ result, answers, onRestart }: QuizResultsProps) => {
           <Button 
             size="lg"
             className="bg-accent hover:bg-accent/90 text-white"
-            onClick={() => window.location.href = 'mailto:hello@grpl.co?subject=Discovery Call Request'}
+            onClick={() => window.location.href = 'mailto:matt@grpl.com.au?subject=Discovery Call Request'}
           >
             {result.cta.primary}
             <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
@@ -114,14 +114,14 @@ const QuizResults = ({ result, answers, onRestart }: QuizResultsProps) => {
             variant="outline" 
             size="lg"
             className="border-white/30 text-white hover:bg-white/10"
-            onClick={() => window.location.href = 'mailto:hello@grpl.co?subject=Marketing Audit Request'}
+            onClick={() => window.location.href = 'mailto:matt@grpl.com.au?subject=Marketing Audit Request'}
           >
             {result.cta.secondary}
             <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
           </Button>
         </div>
         <div className="mt-8 text-sm text-white/60">
-          <p>Questions? Email us at <a href="mailto:hello@grpl.co" className="underline hover:text-white transition-colors">hello@grpl.co</a></p>
+          <p>Questions? Email us at <a href="mailto:matt@grpl.com.au" className="underline hover:text-white transition-colors">matt@grpl.com.au</a></p>
         </div>
       </div>
 
