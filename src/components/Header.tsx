@@ -1,9 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo-horizontal.png";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (sectionId: string) => {
+    if (location.pathname === '/') {
+      // On homepage, scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // On other pages, navigate to homepage with hash
+      navigate(`/#${sectionId}`);
+      // After navigation, scroll to section
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
@@ -14,15 +35,15 @@ const Header = () => {
           </button>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+            <button onClick={() => handleNavClick('services')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Services
-            </a>
-            <a href="#about" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+            </button>
+            <button onClick={() => handleNavClick('about')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               About
-            </a>
-            <a href="#insights" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+            </button>
+            <button onClick={() => handleNavClick('insights')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Insights
-            </a>
+            </button>
             <button onClick={() => navigate('/contact')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Contact
             </button>
