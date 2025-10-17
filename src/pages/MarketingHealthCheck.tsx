@@ -49,7 +49,7 @@ const MarketingHealthCheck = () => {
     const result = calculateQuizResult(answers);
     return (
       <div className="min-h-screen bg-background">
-        <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-50">
+        <header className="border-b border-border bg-background sticky top-0 z-50 shadow-sm">
           <div className="container mx-auto px-6 lg:px-8 py-4">
             <Link to="/">
               <img src={logoHorizontal} alt="GRPL" className="h-8" />
@@ -66,7 +66,7 @@ const MarketingHealthCheck = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-50">
+      <header className="border-b border-border bg-background sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-6 lg:px-8 py-4">
           <Link to="/">
             <img src={logoHorizontal} alt="GRPL" className="h-8" />
@@ -112,6 +112,7 @@ const MarketingHealthCheck = () => {
           <div className="flex justify-between items-center gap-4">
             <Button
               variant="outline"
+              size="lg"
               onClick={handlePrevious}
               disabled={currentQuestion === 0}
               className="gap-2"
@@ -121,9 +122,10 @@ const MarketingHealthCheck = () => {
             </Button>
 
             <Button
+              size="lg"
               onClick={handleNext}
               disabled={!isAnswered}
-              className="gap-2"
+              className="gap-2 bg-accent hover:bg-accent/90"
             >
               {currentQuestion === QUIZ_QUESTIONS.length - 1 ? 'View Results' : 'Next'}
               <ArrowRight className="w-4 h-4" />

@@ -103,16 +103,17 @@ const QuizResults = ({ result, answers, onRestart }: QuizResultsProps) => {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button 
-            variant="hero" 
             size="lg"
+            className="bg-accent hover:bg-accent/90 text-white"
             onClick={() => window.location.href = 'mailto:hello@grpl.co?subject=Discovery Call Request'}
           >
             {result.cta.primary}
             <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
           </Button>
           <Button 
-            variant="heroSecondary" 
+            variant="outline" 
             size="lg"
+            className="border-white/30 text-white hover:bg-white/10"
             onClick={() => window.location.href = 'mailto:hello@grpl.co?subject=Marketing Audit Request'}
           >
             {result.cta.secondary}
