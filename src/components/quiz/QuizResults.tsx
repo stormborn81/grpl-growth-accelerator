@@ -101,23 +101,14 @@ const QuizResults = ({ result, answers, onRestart }: QuizResultsProps) => {
               : 'build a solid marketing foundation that drives sustainable growth'
           }.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex justify-center">
           <Button 
             size="lg"
             className="bg-accent hover:bg-accent/90 text-white"
-            onClick={() => window.location.href = 'mailto:matt@grpl.com.au?subject=Discovery Call Request'}
+            onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
           >
-            {result.cta.primary}
+            Book a Discovery Call
             <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-white/30 text-white hover:bg-white/10"
-            onClick={() => window.location.href = 'mailto:matt@grpl.com.au?subject=Marketing Audit Request'}
-          >
-            {result.cta.secondary}
-            <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
           </Button>
         </div>
         <div className="mt-8 text-sm text-white/60">
