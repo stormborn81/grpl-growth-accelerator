@@ -16,7 +16,7 @@ const Team = () => {
             {/* Octagon Image */}
             <div className="flex-shrink-0">
               <div 
-                className="relative w-40 h-40"
+                className="relative w-40 h-40 border-2 border-accent transition-all duration-300 hover:border-primary group"
                 style={{
                   clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"
                 }}
@@ -24,7 +24,7 @@ const Team = () => {
                 <img
                   src={mattGudge}
                   alt="Matt Gudge, Founder of GRPL"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             </div>
