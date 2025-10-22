@@ -47,25 +47,28 @@ const Hero = () => {
               <div className="absolute -bottom-2 left-0 w-32 h-0.5 bg-gradient-to-r from-accent via-accent to-transparent"></div>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-start gap-4 pt-8">
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="w-full sm:w-auto"
-                onClick={() => navigate('/marketing-health-check')}
-              >
-                Run Marketing Health Check
-                <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
-              </Button>
-              <Button 
-                variant="heroSecondary" 
-                size="lg" 
-                className="w-full sm:w-auto"
-                onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
-              >
-                Book Discovery Call
-                <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
-              </Button>
+            <div className="flex flex-col items-start gap-2 pt-8">
+              <div className="flex flex-col sm:flex-row items-start gap-4">
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="w-full sm:w-auto"
+                  onClick={() => navigate('/marketing-health-check')}
+                >
+                  Run Marketing Health Check
+                  <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
+                </Button>
+                <Button 
+                  variant="heroSecondary" 
+                  size="lg" 
+                  className="w-full sm:w-auto"
+                  onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
+                >
+                  Book Discovery Call
+                  <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
+                </Button>
+              </div>
+              <p className="text-sm text-muted-foreground font-light">Free, confidential, instant results</p>
             </div>
           </div>
         </div>

@@ -25,15 +25,18 @@ const CTA = () => {
             to explore how GRPL can accelerate your growth
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="lg" onClick={() => navigate('/marketing-health-check')}>
-              Run Marketing Health Check
-              <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
-            </Button>
-            <Button variant="heroSecondary" size="lg" onClick={() => window.location.href = 'mailto:matt@grpl.com.au?subject=Discovery Call Request'}>
-              Book Discovery Call
-              <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
-            </Button>
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button variant="hero" size="lg" onClick={() => navigate('/marketing-health-check')}>
+                Run Marketing Health Check
+                <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
+              </Button>
+              <Button variant="heroSecondary" size="lg" onClick={() => window.location.href = 'mailto:matt@grpl.com.au?subject=Discovery Call Request'}>
+                Book Discovery Call
+                <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
+              </Button>
+            </div>
+            <p className="text-sm text-grpl-white/60 font-light">Free, confidential, instant results</p>
           </div>
           
           <div className="mt-12 text-sm text-grpl-white/60 font-light">
