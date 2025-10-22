@@ -68,7 +68,7 @@ const Hero = () => {
                   <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground font-light">Free, confidential, instant results</p>
+              <p className="text-sm text-muted-foreground font-light text-center w-full">Free, confidential, instant results</p>
             </div>
           </div>
         </div>
