@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "GRPL didn't just give us a logo and a tagline, they built our entire market presence from scratch. They developed our positioning, crafted a distinctive voice and visual system, and put together the tools and playbooks we needed to launch. The result was a confident entry into the market: Clients understood our story, early partners knew what we stood for, and our team had a clear roadmap for growth.",
+    quote: "GRPL didn't just give us a logo and a tagline, they built our market presence from the ground up. Their ability to quickly grasp complex categories, identify our true competitive advantage, and translate it into a sharp, differentiated positioning has been invaluable. They crafted a distinctive voice and visual identity, then armed us with the playbooks and tools to activate it. The result was a confident market entry, clients understood our story, partners knew what we stood for, and our team had a clear roadmap for growth.",
     author: "Mark Grace",
     title: "Founder",
     company: "Mangrove Digital",
