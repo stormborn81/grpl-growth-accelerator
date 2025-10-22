@@ -40,7 +40,10 @@ const Team = () => {
                 a consultancy built for companies ready to bridge the gap between business strategy and 
                 creative execution. With over 15 years of experience leading marketing for brands across 
                 finance, healthcare, and technology, Matt specialises in unlocking growth by aligning 
-                leadership vision, commercial priorities, and brand strategy.
+                leadership vision, commercial priorities, and brand strategy. Known for his ability to 
+                quickly grasp complex categories and define sharp positioning, Matt helps CEOs and founders 
+                clarify their competitive advantage, build cohesive go-to-market strategies, and scale 
+                high-performing marketing functions without the overhead of a full-time executive.
               </p>
             </div>
           </div>
