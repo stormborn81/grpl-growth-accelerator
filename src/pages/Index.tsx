@@ -11,6 +11,7 @@ const Testimonials = lazy(() => import("@/components/Testimonials"));
 const UseCases = lazy(() => import("@/components/UseCases"));
 const Services = lazy(() => import("@/components/Services"));
 const About = lazy(() => import("@/components/About"));
+const Team = lazy(() => import("@/components/Team"));
 const CTA = lazy(() => import("@/components/CTA"));
 
 const Index = () => {
@@ -27,6 +28,7 @@ const Index = () => {
           <UseCases />
           <Services />
           <About />
+          <Team />
           <CTA />
         </Suspense>
       </main>
