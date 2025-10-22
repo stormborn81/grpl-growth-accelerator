@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/assets/logo-horizontal.png";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleNavClick = (sectionId: string) => {
+    setMobileMenuOpen(false); // Close mobile menu on navigation
     if (location.pathname === '/') {
       // On homepage, scroll to section
       const element = document.getElementById(sectionId);
@@ -61,11 +66,71 @@ const Header = () => {
             <Button 
               variant="hero" 
               size="sm" 
-              className="text-xs"
+              className="text-xs hidden md:inline-flex"
               onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
             >
               Book Call
             </Button>
+
+            {/* Mobile Menu */}
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm" className="md:hidden">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <nav className="flex flex-col gap-6 mt-8">
+                  <button 
+                    onClick={() => handleNavClick('services')} 
+                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
+                  >
+                    Services
+                  </button>
+                  <button 
+                    onClick={() => handleNavClick('about')} 
+                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
+                  >
+                    About
+                  </button>
+                  <button 
+                    onClick={() => handleNavClick('insights')} 
+                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
+                  >
+                    Insights
+                  </button>
+                  <button 
+                    onClick={() => {
+                      navigate('/contact');
+                      setMobileMenuOpen(false);
+                    }} 
+                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
+                  >
+                    Contact
+                  </button>
+                  <button 
+                    onClick={() => {
+                      navigate('/marketing-health-check');
+                      setMobileMenuOpen(false);
+                    }} 
+                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
+                  >
+                    Health Check
+                  </button>
+                  <Button 
+                    variant="hero" 
+                    size="lg" 
+                    className="mt-4"
+                    onClick={() => {
+                      window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank');
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    Book Call
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
