@@ -12,9 +12,9 @@ const Team = () => {
             <div className="w-12 h-0.5 bg-accent mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
             {/* Octagon Image */}
-            <div className="flex justify-center">
+            <div className="flex-shrink-0">
               <div 
                 className="relative w-40 h-40"
                 style={{
@@ -30,7 +30,7 @@ const Team = () => {
             </div>
 
             {/* Profile Summary */}
-            <div className="space-y-6">
+            <div className="space-y-6 flex-1 max-w-3xl">
               <div>
                 <h3 className="text-3xl font-bold mb-2">Matt Gudge</h3>
                 <p className="text-accent font-semibold text-lg">Founder & Chief Marketing Officer</p>
