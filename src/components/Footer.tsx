@@ -62,7 +62,6 @@ const Footer = () => {
               <h4 className="font-bold text-sm mb-4 tracking-tight">Company</h4>
               <ul className="space-y-3 text-sm text-muted-foreground font-light">
                 <li><a href="#about" className="hover:text-foreground transition-colors">About</a></li>
-                <li><a href="#insights" className="hover:text-foreground transition-colors">Insights</a></li>
                 <li><a href="#contact" className="hover:text-foreground transition-colors">Contact</a></li>
                 <li><button onClick={() => navigate('/privacy')} className="hover:text-foreground transition-colors">Privacy Policy</button></li>
               </ul>

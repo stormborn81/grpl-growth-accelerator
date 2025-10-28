@@ -49,9 +49,6 @@ const Header = () => {
             <button onClick={() => navigate('/hiring-cmo')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Hiring
             </button>
-            <button onClick={() => handleNavClick('insights')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
-              Insights
-            </button>
             <button onClick={() => navigate('/contact')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Contact
             </button>
@@ -104,12 +101,6 @@ const Header = () => {
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     Hiring
-                  </button>
-                  <button 
-                    onClick={() => handleNavClick('insights')} 
-                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
-                  >
-                    Insights
                   </button>
                   <button 
                     onClick={() => {
