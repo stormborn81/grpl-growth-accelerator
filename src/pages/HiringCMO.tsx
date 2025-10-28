@@ -151,14 +151,14 @@ const HiringCMO = () => {
                 <div>
                   <h3 className="text-xl font-bold mb-3">1. Define the Gap</h3>
                   <p className="text-lg text-foreground/80 leading-relaxed">
-                    We assess your existing marketing capability, structure and strategy to understand what's really missing — not just who's missing.
+                    We assess your existing marketing capability, structure and strategy to understand what's really missing, not just who's missing.
                   </p>
                 </div>
                 
                 <div>
                   <h3 className="text-xl font-bold mb-3">2. Clarify the Role</h3>
                   <p className="text-lg text-foreground/80 leading-relaxed">
-                    We translate your commercial goals into a clear growth mandate and leadership scope — ensuring the role reflects where you're going, not just where you are.
+                    We translate your commercial goals into a clear growth mandate and leadership scope, ensuring the role reflects where you're going, not just where you are.
                   </p>
                 </div>
                 
