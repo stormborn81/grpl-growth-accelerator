@@ -123,7 +123,7 @@ const HiringCMO = () => {
               </ul>
               <div className="pt-4 space-y-2">
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  Hiring the wrong CMO is expensive — in money, time, and momentum.
+                  Hiring the wrong CMO is expensive, in money, time, and momentum.
                 </p>
                 <p className="text-lg font-medium text-foreground">
                   Hiring right is transformative.
