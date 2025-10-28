@@ -70,7 +70,7 @@ const HiringCMO = () => {
                   </li>
                   <li className="text-lg text-foreground/80 leading-relaxed flex items-start gap-3">
                     <span className="text-accent mt-1">•</span>
-                    <span>Translate that into the exact profile — behaviours, skills, and mindset — you need.</span>
+                    <span>Translate that into the exact profile, behaviours, skills, and mindset you need.</span>
                   </li>
                   <li className="text-lg text-foreground/80 leading-relaxed flex items-start gap-3">
                     <span className="text-accent mt-1">•</span>
