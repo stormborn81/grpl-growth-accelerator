@@ -191,12 +191,12 @@ const HiringCMO = () => {
                 Why GRPL
               </h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                We've led marketing across some of Australia's most ambitious brands — from start-up to scale-up to enterprise.<br />
-                We've hired CMOs, replaced them, and acted as them.<br />
+                We've led marketing across some of Australia's most ambitious brands, from start-up to scale-up, across B2B, B2C and Marketplaces and managed $ millions in media, technology and teams.<br />
+                We've seen, worked for, worked as and stepped into support marketers across every discipline and know what it takes to win. Hire the role, not the person!<br />
                 We know what good looks like because we've been in the seat.
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Our work blends strategic insight with practical execution — no theory, just clarity that drives commercial outcomes.
+                Our work blends strategic insight with practical execution, no theory, just clarity that drives commercial outcomes.
               </p>
             </div>
           </div>
