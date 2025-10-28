@@ -46,6 +46,9 @@ const Header = () => {
             <button onClick={() => handleNavClick('about')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               About
             </button>
+            <button onClick={() => navigate('/hiring-cmo')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+              Hiring
+            </button>
             <button onClick={() => handleNavClick('insights')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Insights
             </button>
@@ -92,6 +95,15 @@ const Header = () => {
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     About
+                  </button>
+                  <button 
+                    onClick={() => {
+                      navigate('/hiring-cmo');
+                      setMobileMenuOpen(false);
+                    }} 
+                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
+                  >
+                    Hiring
                   </button>
                   <button 
                     onClick={() => handleNavClick('insights')} 
