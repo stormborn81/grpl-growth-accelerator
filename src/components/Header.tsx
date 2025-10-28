@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -59,16 +58,22 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-3">
-            <InteractiveHoverButton
-              text="Health Check"
-              className="hidden sm:inline-flex text-xs w-auto px-4"
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="hidden sm:inline-flex text-xs"
               onClick={() => navigate('/marketing-health-check')}
-            />
-            <InteractiveHoverButton
-              text="Book Call"
-              className="text-xs hidden md:inline-flex w-auto px-4"
+            >
+              Health Check
+            </Button>
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="text-xs hidden md:inline-flex"
               onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
-            />
+            >
+              Book Call
+            </Button>
 
             {/* Mobile Menu */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
