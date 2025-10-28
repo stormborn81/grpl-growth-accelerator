@@ -1,7 +1,9 @@
 const metrics = [
-  { value: "40%", label: "Increase in qualified leads", period: "within 6 months" },
-  { value: "22%", label: "Reduction in wasted spend", period: "year one" },
-  { value: "3.2x", label: "Marketing ROI improvement", period: "average" },
+  { value: "60%+", label: "Growth in revenue", period: "RedBalloon brand" },
+  { value: "$5m+", label: "Secured in incremental marketing investments", period: "" },
+  { value: "22%", label: "Reduction in wasted spend", period: "" },
+  { value: "80%", label: "Increase in site traffic", period: "with stable CVR%" },
+  { value: "40%+", label: "Increase in lead gen", period: "B2B SaaS" },
 ];
 
 const Outcomes = () => {
@@ -21,7 +23,7 @@ const Outcomes = () => {
             <div className="w-12 h-0.5 bg-accent mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-12 md:gap-8">
             {metrics.map((metric, index) => (
               <div key={index} className="text-center relative group">
                 {/* Octagon border frame */}
