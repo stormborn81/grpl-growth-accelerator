@@ -26,14 +26,14 @@ const HiringCMO = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-4xl mx-auto space-y-6">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Most founders don't fail because they pick the wrong marketer.<br />
-                They fail because they didn't know what they needed before they hired.
+                Most founders don't miss because they pick the wrong marketer.<br />
+                They miss because they didn't know what they needed before they hired.
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                The market for marketing is complex — brand, performance, growth, product, data — and it's changing faster than ever. The right CMO can accelerate your business; the wrong one can stall it for years.
+                The market for marketing is complex, brand, performance, growth, product, data, martech and more. It's changing faster than ever. The right CMO can accelerate your business; the wrong one can stall it for years.
               </p>
               <p className="text-lg font-medium text-foreground">
-                Before you hire, get clear on what success really looks like.
+                Before you hire, get clear on what success really looks like and hire the marketer ready to take on your growth challenge.
               </p>
             </div>
           </div>
