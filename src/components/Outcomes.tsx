@@ -1,5 +1,5 @@
 const metrics = [
-  { value: "60%+", label: "Growth in revenue", period: "RedBalloon brand" },
+  { value: "60%+", label: "Growth in revenue", period: "tourism" },
   { value: "$5m+", label: "Secured in incremental marketing investments", period: "" },
   { value: "22%", label: "Reduction in wasted spend", period: "" },
   { value: "80%", label: "Increase in site traffic", period: "with stable CVR%" },
