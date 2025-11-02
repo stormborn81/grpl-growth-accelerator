@@ -41,7 +41,7 @@ const Hero = () => {
             
             <div className="relative">
               <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl font-light leading-relaxed">
-                Access executive‑level marketing strategy and revenue growth planning without the overhead of a full‑time CMO
+                Helping leaders grapple with growth. Sharpening strategy, positioning, and performance where it matters most
               </p>
               {/* Octagon highlight accent */}
               <div className="absolute -bottom-2 left-0 w-32 h-0.5 bg-gradient-to-r from-accent via-accent to-transparent"></div>
