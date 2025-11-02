@@ -20,11 +20,11 @@ const useCases = [
 
 const UseCases = () => {
   return (
-    <section className="py-24 md:py-32 bg-secondary">
+    <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4 text-grpl-white">
               Fractional CMO Use Cases
             </h2>
             <div className="w-12 h-0.5 bg-accent mx-auto"></div>
@@ -36,18 +36,18 @@ const UseCases = () => {
               return (
                 <div key={index} className="text-center relative p-8 group">
                   {/* Octagon block background */}
-                  <div className="absolute inset-0 bg-background/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  <div className="absolute inset-0 bg-grpl-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                        style={{clipPath: "polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%)"}}></div>
                   <div className="relative mb-6 flex justify-center">
-                    <div className="w-16 h-16 bg-background flex items-center justify-center group-hover:bg-accent/10 transition-colors duration-500"
+                    <div className="w-16 h-16 bg-grpl-white/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-500"
                          style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
-                      <Icon className="h-7 w-7 text-foreground group-hover:text-accent transition-colors duration-500" strokeWidth={1.5} />
+                      <Icon className="h-7 w-7 text-grpl-white group-hover:text-accent transition-colors duration-500" strokeWidth={1.5} />
                     </div>
                   </div>
-                  <h3 className="relative text-2xl font-black mb-4 tracking-tight">
+                  <h3 className="relative text-2xl font-black mb-4 tracking-tight text-grpl-white">
                     {useCase.title}
                   </h3>
-                  <p className="relative text-muted-foreground leading-relaxed font-light">
+                  <p className="relative text-grpl-white/70 leading-relaxed font-light">
                     {useCase.description}
                   </p>
                 </div>

@@ -17,13 +17,13 @@ const TrustedBy = () => {
   const duplicatedClients = [...clients, ...clients, ...clients];
   
   return (
-    <section className="py-16 bg-secondary overflow-hidden">
+    <section className="py-16 bg-grpl-black text-grpl-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-8">
+          <h3 className="text-sm font-bold text-grpl-white/70 uppercase tracking-wide mb-8">
             Trusted by Leading Brands
           </h3>
-          <p className="text-lg text-foreground font-medium">
+          <p className="text-lg text-grpl-white font-medium">
             Across healthcare, finance, retail and technology
           </p>
         </div>

@@ -140,39 +140,85 @@ const HiringCMO = () => {
         </div>
 
         {/* The GRPL Approach */}
-        <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto space-y-12">
-              <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">
-                The GRPL Approach
-              </h2>
-              
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-bold mb-3">1. Define the Gap</h3>
-                  <p className="text-lg text-foreground/80 leading-relaxed">
-                    We assess your existing marketing capability, structure and strategy to understand what's really missing, not just who's missing.
-                  </p>
+        <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
+          {/* Octagon background decoration */}
+          <div className="absolute top-20 right-20 w-80 h-80 opacity-[0.04] pointer-events-none hidden lg:block">
+            <img src="/src/assets/octagon-outline.png" alt="" className="w-full h-full" />
+          </div>
+          
+          <div className="container mx-auto px-6 lg:px-8 relative z-10">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-20">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4 text-grpl-white">
+                  The GRPL Approach
+                </h2>
+                <div className="w-12 h-0.5 bg-accent mx-auto"></div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                <div className="text-center relative group">
+                  {/* Octagon border frame */}
+                  <div className="absolute inset-0 -m-8" 
+                       style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
+                    <div className="w-full h-full border border-accent/20 group-hover:border-accent/40 transition-colors duration-500"></div>
+                  </div>
+                  <div className="relative mb-6">
+                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">
+                      1
+                    </div>
+                  </div>
+                  <div className="relative space-y-3">
+                    <h3 className="text-xl font-bold text-grpl-white">Define the Gap</h3>
+                    <p className="text-base text-grpl-white/70 font-light leading-relaxed">
+                      We assess your existing marketing capability, structure and strategy to understand what's really missing, not just who's missing.
+                    </p>
+                  </div>
                 </div>
-                
-                <div>
-                  <h3 className="text-xl font-bold mb-3">2. Clarify the Role</h3>
-                  <p className="text-lg text-foreground/80 leading-relaxed">
-                    We translate your commercial goals into a clear growth mandate and leadership scope, ensuring the role reflects where you're going, not just where you are.
-                  </p>
+
+                <div className="text-center relative group">
+                  {/* Octagon border frame */}
+                  <div className="absolute inset-0 -m-8" 
+                       style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
+                    <div className="w-full h-full border border-accent/20 group-hover:border-accent/40 transition-colors duration-500"></div>
+                  </div>
+                  <div className="relative mb-6">
+                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">
+                      2
+                    </div>
+                  </div>
+                  <div className="relative space-y-3">
+                    <h3 className="text-xl font-bold text-grpl-white">Clarify the Role</h3>
+                    <p className="text-base text-grpl-white/70 font-light leading-relaxed">
+                      We translate your commercial goals into a clear growth mandate and leadership scope, ensuring the role reflects where you're going, not just where you are.
+                    </p>
+                  </div>
                 </div>
-                
-                <div>
-                  <h3 className="text-xl font-bold mb-3">3. Craft the Hire</h3>
-                  <p className="text-lg text-foreground/80 leading-relaxed">
-                    We co-design the job description, success measures, and onboarding plan that sets your new leader (and your business) up to win.
-                  </p>
+
+                <div className="text-center relative group">
+                  {/* Octagon border frame */}
+                  <div className="absolute inset-0 -m-8" 
+                       style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
+                    <div className="w-full h-full border border-accent/20 group-hover:border-accent/40 transition-colors duration-500"></div>
+                  </div>
+                  <div className="relative mb-6">
+                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">
+                      3
+                    </div>
+                  </div>
+                  <div className="relative space-y-3">
+                    <h3 className="text-xl font-bold text-grpl-white">Craft the Hire</h3>
+                    <p className="text-base text-grpl-white/70 font-light leading-relaxed">
+                      We co-design the job description, success measures, and onboarding plan that sets your new leader (and your business) up to win.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <p className="text-lg text-foreground/80 leading-relaxed pt-4">
-                Every engagement ends with a crystal-clear hiring brief you can take straight to market or use to evaluate existing candidates.
-              </p>
+              <div className="text-center mt-16">
+                <p className="text-lg text-grpl-white/70 leading-relaxed max-w-3xl mx-auto">
+                  Every engagement ends with a crystal-clear hiring brief you can take straight to market or use to evaluate existing candidates.
+                </p>
+              </div>
             </div>
           </div>
         </section>

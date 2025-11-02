@@ -3,17 +3,17 @@ import { LinkedinIcon } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-secondary">
+    <section id="about" className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4 text-grpl-white">
               About GRPL
             </h2>
             <div className="w-12 h-0.5 bg-accent mx-auto"></div>
           </div>
 
-          <div className="space-y-8 text-lg text-muted-foreground font-light leading-relaxed">
+          <div className="space-y-8 text-lg text-grpl-white/70 font-light leading-relaxed">
             <p>
               GRPL partners with ambitious ANZ businesses to transform marketing from a cost centre 
               into a strategic growth engine. Our fractional CMO and Chief Growth Officer services 
