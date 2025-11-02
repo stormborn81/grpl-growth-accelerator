@@ -32,8 +32,8 @@ const WhyChoose = () => {
   return (
     <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
       {/* Octagon background decoration */}
-      <div className="absolute bottom-10 left-10 w-64 h-64 opacity-[0.05] pointer-events-none">
-        <img src="/src/assets/octagon-rings.png" alt="" className="w-full h-full" />
+      <div className="absolute bottom-10 left-10 w-64 h-64 opacity-[0.08] pointer-events-none">
+        <img src="/src/assets/octagon-rings.png" alt="" className="w-full h-full brightness-0 invert" />
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -51,7 +51,7 @@ const WhyChoose = () => {
               return (
                 <div key={index} className="group relative">
                   {/* Octagon block shape background */}
-                  <div className="absolute -inset-4 bg-grpl-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
+                  <div className="absolute -inset-4 bg-grpl-white/10 border border-grpl-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
                        style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
                   </div>
                   <div className="relative mb-6">
