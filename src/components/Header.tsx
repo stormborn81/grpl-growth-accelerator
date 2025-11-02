@@ -35,7 +35,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
-          <button onClick={() => navigate('/')} className="flex-shrink-0">
+          <button onClick={() => {
+            if (location.pathname === '/') {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+              navigate('/');
+            }
+          }} className="flex-shrink-0">
             <img src={logo} alt="GRPL" className="h-7" />
           </button>
           
