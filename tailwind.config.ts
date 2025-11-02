@@ -60,6 +60,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "grpl-black": "hsl(var(--grpl-black))",
+        "grpl-white": "hsl(var(--grpl-white))",
+        "grpl-orange": "hsl(var(--grpl-orange))",
       },
       borderRadius: {
         lg: "var(--radius)",
