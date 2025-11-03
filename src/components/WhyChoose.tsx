@@ -1,4 +1,5 @@
 import { DollarSign, Zap, Target, TrendingUp, Eye } from "lucide-react";
+import octagonRings from "@/assets/octagon-rings.png";
 
 const reasons = [
   {
@@ -33,7 +34,7 @@ const WhyChoose = () => {
     <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
       {/* Octagon background decoration */}
       <div className="absolute bottom-10 left-10 w-64 h-64 opacity-[0.08] pointer-events-none">
-        <img src="/src/assets/octagon-rings.png" alt="" className="w-full h-full brightness-0 invert" />
+        <img src={octagonRings} alt="" className="w-full h-full brightness-0 invert" />
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -49,18 +50,14 @@ const WhyChoose = () => {
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
-                <div key={index} className="group relative">
-                  {/* Octagon block shape background */}
-                  <div className="absolute -inset-4 bg-grpl-white/10 border border-grpl-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
-                       style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
-                  </div>
-                  <div className="relative mb-6">
+                <div key={index} className="relative">
+                  <div className="mb-6">
                     <Icon className="h-8 w-8 text-grpl-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="relative text-xl font-bold mb-3 tracking-tight text-grpl-white">
+                  <h3 className="text-xl font-bold mb-3 tracking-tight text-grpl-white">
                     {reason.title}
                   </h3>
-                  <p className="relative text-grpl-white/70 leading-relaxed font-light">
+                  <p className="text-grpl-white/70 leading-relaxed font-light">
                     {reason.description}
                   </p>
                 </div>
