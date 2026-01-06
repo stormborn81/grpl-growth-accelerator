@@ -54,6 +54,8 @@ const Index = () => {
         <main id="main-content">
           <Hero />
           <WhyChoose />
+          <Services />
+          <About />
           <Suspense fallback={<SectionLoader />}>
             <Outcomes />
           </Suspense>
@@ -66,8 +68,6 @@ const Index = () => {
           <Suspense fallback={<SectionLoader />}>
             <UseCases />
           </Suspense>
-          <Services />
-          <About />
           <Suspense fallback={<SectionLoader />}>
             <Team />
           </Suspense>
