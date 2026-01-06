@@ -1,23 +1,26 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+
+// Critical SEO sections - NOT lazy loaded
+import WhyChoose from "@/components/WhyChoose";
+import Services from "@/components/Services";
+import About from "@/components/About";
 
 // Lazy load below-the-fold components
-const WhyChoose = lazy(() => import("@/components/WhyChoose"));
 const Outcomes = lazy(() => import("@/components/Outcomes"));
 const TrustedBy = lazy(() => import("@/components/TrustedBy"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const UseCases = lazy(() => import("@/components/UseCases"));
-const Services = lazy(() => import("@/components/Services"));
-const About = lazy(() => import("@/components/About"));
 const Team = lazy(() => import("@/components/Team"));
 const CTA = lazy(() => import("@/components/CTA"));
 
 const SectionLoader = () => (
   <div className="min-h-[200px] flex items-center justify-center">
-    <span className="text-muted-foreground animate-pulse">Loading...</span>
+    <span className="animate-pulse text-muted-foreground">Loading...</span>
   </div>
 );
 
@@ -37,12 +40,9 @@ const ErrorFallback = () => (
 );
 
 const Index = () => {
-  useEffect(() => {
-    document.title = "GRPL | Executive-level growth leadership without the full time cost";
-  }, []);
-
   return (
     <div className="min-h-screen">
+      <SEO />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
@@ -53,9 +53,7 @@ const Index = () => {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <main id="main-content">
           <Hero />
-          <Suspense fallback={<SectionLoader />}>
-            <WhyChoose />
-          </Suspense>
+          <WhyChoose />
           <Suspense fallback={<SectionLoader />}>
             <Outcomes />
           </Suspense>
@@ -68,12 +66,8 @@ const Index = () => {
           <Suspense fallback={<SectionLoader />}>
             <UseCases />
           </Suspense>
-          <Suspense fallback={<SectionLoader />}>
-            <Services />
-          </Suspense>
-          <Suspense fallback={<SectionLoader />}>
-            <About />
-          </Suspense>
+          <Services />
+          <About />
           <Suspense fallback={<SectionLoader />}>
             <Team />
           </Suspense>
