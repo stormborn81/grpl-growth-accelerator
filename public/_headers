@@ -1,0 +1,11 @@
+/llms.txt
+  X-Robots-Tag: all
+  Access-Control-Allow-Origin: *
+
+/robots.txt
+  X-Robots-Tag: all
+  Access-Control-Allow-Origin: *
+
+/sitemap.xml
+  X-Robots-Tag: all
+  Access-Control-Allow-Origin: *
