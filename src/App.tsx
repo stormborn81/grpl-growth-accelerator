@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,13 +6,26 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
-import MarketingHealthCheck from "./pages/MarketingHealthCheck";
-import ContactUs from "./pages/ContactUs";
-import Privacy from "./pages/Privacy";
-import HiringCMO from "./pages/HiringCMO";
 import NotFound from "./pages/NotFound";
 
+const MarketingHealthCheck = lazy(() => import("./pages/MarketingHealthCheck"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const HiringCMO = lazy(() => import("./pages/HiringCMO"));
+const Blog = lazy(() => import("./pages/Blog"));
+const FractionalCMOAustraliaGuide = lazy(() => import("./pages/blog/FractionalCMOAustraliaGuide"));
+const FractionalCMOvsMarketingAgency = lazy(() => import("./pages/blog/FractionalCMOvsMarketingAgency"));
+const WhatDoesChiefGrowthOfficerDo = lazy(() => import("./pages/blog/WhatDoesChiefGrowthOfficerDo"));
+const FractionalCMOCostAustralia = lazy(() => import("./pages/blog/FractionalCMOCostAustralia"));
+const AIReshapingCMORole2026 = lazy(() => import("./pages/blog/AIReshapingCMORole2026"));
+
 const queryClient = new QueryClient();
+
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <span className="animate-pulse text-muted-foreground">Loading...</span>
+  </div>
+);
 
 const App = () => (
   <HelmetProvider>
@@ -20,15 +34,23 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/marketing-health-check" element={<MarketingHealthCheck />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/hiring-cmo" element={<HiringCMO />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/marketing-health-check" element={<MarketingHealthCheck />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/hiring-cmo" element={<HiringCMO />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/fractional-cmo-australia-guide" element={<FractionalCMOAustraliaGuide />} />
+              <Route path="/blog/fractional-cmo-vs-marketing-agency" element={<FractionalCMOvsMarketingAgency />} />
+              <Route path="/blog/what-does-chief-growth-officer-do" element={<WhatDoesChiefGrowthOfficerDo />} />
+              <Route path="/blog/fractional-cmo-cost-australia" element={<FractionalCMOCostAustralia />} />
+              <Route path="/blog/ai-reshaping-cmo-role-2026" element={<AIReshapingCMORole2026 />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
