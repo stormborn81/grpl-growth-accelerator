@@ -49,7 +49,8 @@ const FlipCard = ({ card, index }: { card: CardData; index: number }) => {
   return (
     <motion.div
       ref={ref}
-      className="perspective-1000 h-[320px] md:h-[360px] cursor-pointer"
+      className="h-[320px] md:h-[360px] cursor-pointer"
+      style={{ perspective: "1000px" }}
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.15 }}
@@ -67,7 +68,7 @@ const FlipCard = ({ card, index }: { card: CardData; index: number }) => {
         {/* Front */}
         <div
           className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-foreground text-primary-foreground rounded-lg border border-primary-foreground/10"
-          style={{ backfaceVisibility: "hidden" }}
+          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
         >
           <span className="text-xs font-bold tracking-widest uppercase text-accent mb-4">{card.label}</span>
           <p className="text-center text-lg font-medium leading-snug">{card.oneLiner}</p>
@@ -77,7 +78,7 @@ const FlipCard = ({ card, index }: { card: CardData; index: number }) => {
         {/* Back */}
         <div
           className="absolute inset-0 flex flex-col justify-center p-8 bg-accent text-accent-foreground rounded-lg overflow-y-auto"
-          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
           <span className="text-xs font-bold tracking-widest uppercase mb-4">{card.label}</span>
           {card.back}
