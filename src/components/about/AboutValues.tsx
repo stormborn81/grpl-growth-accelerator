@@ -13,7 +13,7 @@ const cards: CardData[] = [
     oneLiner: "A world where every ambitious business has access to the marketing leadership it deserves.",
     back: (
       <p className="text-sm font-light leading-relaxed">
-        Too many businesses are trapped between two bad options: hire a $300K+ CMO they cannot yet afford, or muddle through with junior talent and fragmented agency relationships. GRPL exists to eliminate that gap — providing enterprise-grade marketing and growth leadership at a price point and engagement model that matches where the business actually is. Our vision is a market where the quality of your marketing leadership is determined by ambition, not budget.
+        Too many businesses are trapped between two bad options: hire a $300K+ CMO they cannot yet afford, or muddle through with junior talent and fragmented agency relationships. GRPL exists to eliminate that gap, providing enterprise-grade marketing and growth leadership at a price point and engagement model that matches where the business actually is. Our vision is a market where the quality of your marketing leadership is determined by ambition, not budget.
       </p>
     ),
   },
@@ -22,7 +22,7 @@ const cards: CardData[] = [
     oneLiner: "Embed senior marketing leadership inside ANZ businesses to build functions that drive measurable growth.",
     back: (
       <p className="text-sm font-light leading-relaxed">
-        We do not advise from the outside. We do not submit recommendations and walk away. GRPL leaders embed inside your business — attending your leadership meetings, managing your teams, owning your strategy, and being accountable for commercial results. Our mission is to build marketing and growth functions that work — not just while we are there, but long after we have transitioned out. Every engagement is designed to leave the business stronger, more capable, and more self-sufficient than we found it.
+        We do not advise from the outside. We do not submit recommendations and walk away. GRPL leaders embed inside your business, attending your leadership meetings, managing your teams, owning your strategy, and being accountable for commercial results. Our mission is to build marketing and growth functions that work, not just while we are there, but long after we have transitioned out. Every engagement is designed to leave the business stronger, more capable, and more self-sufficient than we found it.
       </p>
     ),
   },
@@ -31,10 +31,10 @@ const cards: CardData[] = [
     oneLiner: "Five principles that govern every engagement.",
     back: (
       <div className="text-sm font-light leading-relaxed space-y-3">
-        <p><span className="font-bold">Outcomes over activity.</span> We measure success in revenue, pipeline, and market position — not deliverables produced or hours logged.</p>
+        <p><span className="font-bold">Outcomes over activity.</span> We measure success in revenue, pipeline, and market position, not deliverables produced or hours logged.</p>
         <p><span className="font-bold">Honesty over comfort.</span> We will tell you what you need to hear, not what you want to hear. Polite dishonesty is expensive.</p>
         <p><span className="font-bold">Execution over elegance.</span> A good strategy executed beats a perfect strategy in a slide deck. We ship.</p>
-        <p><span className="font-bold">Systems over heroics.</span> We build repeatable processes and capable teams — not dependency on any individual, including us.</p>
+        <p><span className="font-bold">Systems over heroics.</span> We build repeatable processes and capable teams, not dependency on any individual, including us.</p>
         <p><span className="font-bold">Collective over individual.</span> No single person has every answer. We bring the right combination of expertise to every engagement.</p>
       </div>
     ),
