@@ -86,7 +86,7 @@ const Header = () => {
               About
             </button>
             <button onClick={() => navigate('/blog')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
-              Blog
+              Insights
             </button>
             <button onClick={() => navigate('/hiring-cmo')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Hiring
@@ -156,7 +156,7 @@ const Header = () => {
                     onClick={() => { navigate('/blog'); setMobileMenuOpen(false); }} 
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
-                    Blog
+                    Insights
                   </button>
                   <button 
                     onClick={() => { navigate('/hiring-cmo'); setMobileMenuOpen(false); }} 
