@@ -145,9 +145,14 @@ const ChiefGrowthOfficer = () => (
 
           <FAQSection faqs={faqs} />
 
-          <div className="pb-16">
+          <div className="pb-8">
             <LeadForm heading="Explore CGO Services" subtext="Tell us about your growth challenges and we'll discuss whether integrated growth leadership is the right approach." />
           </div>
+
+          <section className="pb-16">
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-4">We Work With Businesses Across Australia</h2>
+            <p className="text-muted-foreground font-light leading-relaxed">GRPL provides fractional CMO and Chief Growth Officer services in <Link to="/fractional-cmo-sydney" className="text-accent underline underline-offset-4 hover:text-accent/80">Sydney</Link>, <Link to="/fractional-cmo-melbourne" className="text-accent underline underline-offset-4 hover:text-accent/80">Melbourne</Link>, <Link to="/fractional-cmo-brisbane" className="text-accent underline underline-offset-4 hover:text-accent/80">Brisbane</Link>, and <Link to="/fractional-cmo-perth" className="text-accent underline underline-offset-4 hover:text-accent/80">Perth</Link> - with flexible engagement models that work regardless of geography.</p>
+          </section>
         </div>
       </div>
     </main>
