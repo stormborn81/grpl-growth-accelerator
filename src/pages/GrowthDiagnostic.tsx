@@ -298,7 +298,7 @@ export default function GrowthDiagnostic() {
   return (
     <div className="min-h-screen bg-foreground text-background">
       <SEO
-        title="Free Growth Diagnostic | Discover What's Holding Your Business Back | GRPL"
+        title="Free Growth Diagnostic | Unlock A Clear View | GRPL"
         description="Take GRPL's free 3-minute Growth Diagnostic. Discover your growth stage, identify hidden gaps in your marketing, and get a personalised action plan."
         canonical="https://www.grpl.com.au/growth-diagnostic"
         jsonLd={[jsonLd]}
