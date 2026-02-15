@@ -82,7 +82,7 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <button onClick={() => handleNavClick('about')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+            <button onClick={() => navigate('/about')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               About
             </button>
             <button onClick={() => navigate('/blog')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
@@ -147,7 +147,7 @@ const Header = () => {
                     )}
                   </div>
                   <button 
-                    onClick={() => handleNavClick('about')} 
+                    onClick={() => { navigate('/about'); setMobileMenuOpen(false); }} 
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     About
