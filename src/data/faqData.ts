@@ -196,6 +196,123 @@ export const faqCategories: FAQCategory[] = [
       },
     ],
   },
+  {
+    id: "brand-foundation",
+    label: "Brand Foundation",
+    heading: "Brand Foundation",
+    faqs: [
+      {
+        question: "What is GRPL's Brand Foundation service?",
+        answer: "Brand Foundation is a structured 4-week sprint that builds a complete, investor-ready brand from the ground up: strategic foundation (vision, mission, values, positioning), visual identity (logo suite, colour palette, typography), brand voice and tone of voice guidelines, and real-world application (website messaging framework, pitch deck narrative, social media starter kit). It is designed for founders and early-stage businesses that need a professional brand fast, without the 4-6 month timeline and $50,000-$100,000 cost of a traditional branding agency.",
+      },
+      {
+        question: "Who is Brand Foundation designed for?",
+        answer: "Brand Foundation is ideal for three types of businesses: (1) Pre-revenue founders preparing to launch and needing a brand that signals credibility to investors, customers, and partners. (2) Early-stage businesses (under $3M revenue) that bootstrapped a logo and some messaging in the early days and now need a cohesive brand that matches their ambition. (3) Businesses pivoting or repositioning that need to rebuild their brand foundation to reflect a new direction. The common thread is a business that needs to move fast but cannot afford to build on a weak identity.",
+      },
+      {
+        question: "How long does the Brand Foundation sprint take?",
+        answer: "Four weeks from kickoff to final delivery. Week 1 covers strategic foundation (vision, mission, values, positioning through facilitated workshops). Week 2 is visual identity development (logo suite, colour palette, typography system). Week 3 focuses on brand voice, real-world application, and playbook creation. Week 4 is final delivery and handoff. The compressed timeline works because the process is structured to produce decisions, not endless rounds of options.",
+      },
+      {
+        question: "Do I need to have a clear idea of my brand before starting?",
+        answer: "No, that is exactly what this process is designed to extract. GRPL's facilitated workshops are built to draw out what already exists in your head and shape it into a coherent strategic foundation. Most founders have strong instincts about what their brand should feel like; they need a structured process to turn those instincts into a defined identity that can be consistently applied across every touchpoint.",
+      },
+      {
+        question: "What do I actually receive at the end?",
+        answer: "A comprehensive Brand Playbook (professionally designed PDF plus editable formats) containing: all logo files in every format needed (SVG, PNG, EPS, favicon, social media sizes), colour palette with exact hex codes and usage guidelines, typography system (heading and body fonts with specifications), brand voice guidelines with real-world before-and-after examples, website messaging framework (headlines and key messaging for core pages), pitch deck narrative structure, social media starter kit with example posts, and brand usage do's and don'ts. Everything a designer, developer, or copywriter needs to maintain brand consistency as you grow.",
+      },
+      {
+        question: "How much does Brand Foundation cost?",
+        answer: "The fixed project fee ranges from $12,000 to $25,000 depending on complexity and scope. A pre-revenue founder building a brand from scratch is typically at the lower end; a business repositioning with existing brand equity to consider is at the higher end. GRPL provides a specific quote after an initial conversation about your situation. For founders who continue into ongoing fractional CMO services, the sprint fee is credited against the first two months' retainer.",
+      },
+      {
+        question: "Can Brand Foundation work for a business that already has some branding?",
+        answer: "Yes. Many clients come to the sprint with a basic logo and inconsistent messaging that served the early days but no longer reflects where the business is heading. The sprint can rebuild the entire brand from the strategic foundation while preserving elements that are working. It is a reset, not necessarily a blank slate.",
+      },
+      {
+        question: "Is this suitable for pre-revenue startups seeking investment?",
+        answer: "Absolutely, and it is one of the ideal use cases. Investors evaluate founders partly on how professionally and clearly they present their business. A strong, cohesive brand signals strategic clarity, operational competence, and market readiness. The Brand Foundation helps founders fundraise more effectively by demonstrating they have thought deeply about who they are, who they serve, and where they are going. The pitch deck narrative component is specifically designed to support investor conversations.",
+      },
+    ],
+  },
+  {
+    id: "growth-projects",
+    label: "Growth Projects",
+    heading: "Growth Projects",
+    faqs: [
+      {
+        question: "What are GRPL Growth Projects?",
+        answer: "Growth Projects are defined, fixed-fee strategic marketing engagements led by senior GRPL leaders, designed for businesses that need experienced marketing leadership for a specific initiative without committing to an ongoing retainer. Project types include product and market launches, brand strategy and rebrands, market validation and opportunity sizing, growth sprints, marketing leadership mentoring, and facilitated strategy workshops. Each project has a clear scope, timeline, deliverables, and investment agreed upfront.",
+      },
+      {
+        question: "How is a Growth Project different from hiring an agency?",
+        answer: "An agency project is execution-focused: they build the website, create the campaign, design the collateral. A GRPL Growth Project is strategy-focused: we define what should be built, why, for whom, and how to measure success. We provide the strategic architecture that ensures the execution (whether done by your internal team or an agency) is pointed in the right direction and tied to commercial outcomes. Think of it as hiring the strategic brain before hiring the hands.",
+      },
+      {
+        question: "What types of Growth Projects does GRPL offer?",
+        answer: "Six project types: (1) Product and Market Launch, complete go-to-market strategy including positioning, channel strategy, messaging, and launch timeline ($15,000-$35,000, 6-12 weeks). (2) Brand Strategy and Rebrand, competitive analysis, positioning, messaging architecture, and creative direction ($15,000-$30,000, 8-12 weeks). (3) Market Validation, structured market analysis, competitive mapping, and opportunity sizing ($10,000-$20,000, 4-8 weeks). (4) Growth Sprint, intensive, time-boxed engagement to solve a specific growth challenge ($8,000-$18,000, 4-6 weeks). (5) Marketing Leadership Mentoring, one-on-one executive mentoring for emerging marketing leaders ($4,000-$7,000/month, 3-6 months). (6) Strategy Workshop, facilitated half-day or full-day session for leadership teams ($5,000-$10,000, 1-2 days).",
+      },
+      {
+        question: "Can a Growth Project lead into a fractional CMO engagement?",
+        answer: "Yes, and this is a common path. Many clients engage GRPL for a specific project, a go-to-market strategy, a brand repositioning, a growth sprint, and then realise they need ongoing strategic leadership to execute against the strategy. If this happens, the project work carries directly into the fractional CMO engagement with full context preserved. There is no obligation or expectation to continue, but the option is always there.",
+      },
+      {
+        question: "How do you prevent scope creep on projects?",
+        answer: "Every Growth Project starts with a written proposal that defines the exact scope, deliverables, timeline, and fixed investment. If additional needs emerge during the project (which is natural, good strategy often reveals new opportunities), GRPL discusses them transparently and provides a separate proposal for the additional work. The original scope and fee never change without mutual agreement. This protects both sides and keeps the project focused.",
+      },
+      {
+        question: "What is the minimum investment for a Growth Project?",
+        answer: "Growth Projects start at $5,000 for facilitated strategy workshops and range to $35,000+ for comprehensive product launch or brand strategy projects. Most projects fall in the $10,000-$25,000 range. GRPL provides a specific quote after a free 30-minute scoping call where we understand the challenge, desired outcome, and timeline.",
+      },
+      {
+        question: "Do you handle execution or just strategy?",
+        answer: "It depends on the project type and what you need. For strategy projects (go-to-market, brand strategy, market validation), GRPL delivers the strategic framework and supports implementation. For growth sprints, GRPL works alongside your team through both strategy and execution. For mentoring engagements, GRPL coaches your team through execution. The balance is defined in the proposal so there are no surprises.",
+      },
+    ],
+  },
+  {
+    id: "interim-cmo",
+    label: "Interim CMO",
+    heading: "Interim CMO",
+    faqs: [
+      {
+        question: "What is an interim CMO?",
+        answer: "An interim CMO is a senior marketing executive who steps into a full-time-equivalent leadership role on a temporary basis, typically to bridge a gap while you recruit a permanent CMO. Unlike a fractional CMO (who works part-time on an ongoing basis), an interim CMO operates at near-full-time intensity (3-4 days per week) for a defined period, usually 3-6 months. GRPL's interim CMOs operate with full executive authority from day one, leading the team, managing agencies, reporting to the CEO and board, and maintaining strategic continuity so the business does not lose momentum during the transition.",
+      },
+      {
+        question: "When do I need an interim CMO?",
+        answer: "Five common scenarios: (1) Sudden departure, your CMO has resigned or been made redundant and you need immediate marketing leadership. (2) First CMO hire, the business is hiring its first senior marketing leader but recruitment will take months. (3) Performance exit, you have removed an underperforming CMO and need someone to stabilise the function. (4) M&A or restructure, the business needs experienced marketing leadership to manage a transition or integration. (5) Parental leave or extended absence, your marketing leader is on leave for 6-12 months and the function needs senior leadership.",
+      },
+      {
+        question: "How quickly can an interim CMO start?",
+        answer: "GRPL can typically have an interim CMO operational within 1-2 weeks of agreement. The rapid assessment phase begins immediately in the first week, team leadership is established, and agencies receive direction. Compare this to the 3-6 months it takes to recruit a permanent CMO. The speed advantage is one of the most compelling reasons to engage an interim.",
+      },
+      {
+        question: "How much does an interim CMO cost?",
+        answer: "Interim CMO engagements are priced at $15,000 to $22,000 per month for 3-4 days per week. The premium over fractional CMO pricing ($8,000-$18,000/month) reflects the higher intensity, urgency, and near-full-time executive presence required. However, it is substantially less than the fully loaded cost of a full-time CMO ($300,000-$450,000 per year including super, bonuses, leave, and recruiter fees) and avoids the risk of a rushed permanent hire. Minimum engagement term is 3 months.",
+      },
+      {
+        question: "How is an interim CMO different from a fractional CMO?",
+        answer: "The difference is intensity, duration, and purpose. An interim CMO is a temporary, higher-intensity engagement (3-4 days per week, 3-6 months) designed to bridge a specific leadership gap until a permanent hire is made. A fractional CMO is an ongoing, part-time role (1-3 days per week, 6-12+ months) designed as the long-term marketing leadership solution for businesses that do not need or want a full-time CMO. Both are led by the same calibre of GRPL senior leader. If you are filling a gap, interim is the right model. If you want ongoing leadership without the full-time cost, fractional is the right model.",
+      },
+      {
+        question: "What happens when we hire our permanent CMO?",
+        answer: "GRPL conducts a structured handoff including a comprehensive briefing document covering strategy, team, agencies, technology, measurement, and outstanding initiatives. There is a face-to-face transition session with the incoming CMO, plus a 2-week availability window for questions and support. The permanent CMO inherits a functioning, well-documented marketing operation, not chaos. Many incoming CMOs have told us the GRPL handoff was the best onboarding experience they have had.",
+      },
+      {
+        question: "Can the interim CMO help recruit the permanent replacement?",
+        answer: "Yes. GRPL can advise on the role specification, participate in candidate evaluation, and assess whether candidates have the strategic capability the business needs. This is a natural extension of the interim role. Your GRPL leader understands the business deeply after months of embedded work and can provide informed perspective on what the permanent hire needs to deliver.",
+      },
+      {
+        question: "What if we decide we do not need a full-time CMO after all?",
+        answer: "This happens more often than you might expect. Sometimes the interim engagement demonstrates that a fractional CMO model is actually the better long-term solution, giving the business enterprise-grade marketing leadership without the $300K+ annual commitment. If this is the case, GRPL can transition the engagement from interim to ongoing fractional seamlessly, with the same leader, the same strategic context, just a different engagement structure and investment level.",
+      },
+      {
+        question: "Will the interim CMO make major changes to our marketing?",
+        answer: "The primary mandate is continuity, ensuring the existing strategy continues to execute and the marketing function remains productive. However, if the assessment reveals fundamental problems (strategy misaligned with business objectives, budget being wasted on underperforming channels, critical capability gaps), the interim CMO will recommend and implement changes with CEO approval. The goal is to leave the function in better shape than they found it, not just keep it on life support.",
+      },
+    ],
+  },
 ];
 
 // Flatten all FAQs for JSON-LD schema
