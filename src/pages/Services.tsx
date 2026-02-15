@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import CTABanner from "@/components/CTABanner";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
-import { ArrowRight, Target, TrendingUp, ClipboardCheck, Users } from "lucide-react";
+import { ArrowRight, Target, TrendingUp, ClipboardCheck, Users, Palette, Rocket, UserCheck } from "lucide-react";
 
 const services = [
   {
@@ -31,6 +31,24 @@ const services = [
     link: "/services/outsourced-marketing-department",
     icon: Users,
   },
+  {
+    title: "Brand Foundation",
+    description: "Build your brand from the ground up - from vision and values to visual identity and market presence. GRPL's Brand Foundation sprint gives founders a complete, investor-ready brand in weeks, not months.",
+    link: "/services/brand-foundation",
+    icon: Palette,
+  },
+  {
+    title: "Growth Projects",
+    description: "Strategic marketing projects with clear scope, timeline, and deliverables. From product launches and rebrand initiatives to market validation and growth sprints - senior-led project work without an ongoing retainer.",
+    link: "/services/growth-projects",
+    icon: Rocket,
+  },
+  {
+    title: "Interim CMO",
+    description: "Immediate marketing leadership to bridge the gap while you recruit a permanent CMO. GRPL's interim CMO service ensures strategy stays on track, teams stay productive, and momentum is not lost during the transition.",
+    link: "/services/interim-cmo",
+    icon: UserCheck,
+  },
 ];
 
 const steps = [
@@ -48,7 +66,7 @@ const jsonLd = [
     url: "https://www.grpl.com.au/services",
     provider: { "@type": "Organization", name: "GRPL", url: "https://www.grpl.com.au" },
     areaServed: [{ "@type": "Country", name: "Australia" }, { "@type": "Country", name: "New Zealand" }],
-    serviceType: ["Fractional CMO", "Chief Growth Officer", "Marketing Audit", "Outsourced Marketing Department"],
+    serviceType: ["Fractional CMO", "Chief Growth Officer", "Marketing Audit", "Outsourced Marketing Department", "Brand Foundation", "Growth Projects", "Interim CMO"],
   },
   {
     "@context": "https://schema.org",

@@ -11,6 +11,9 @@ const serviceLinks = [
   { label: "Chief Growth Officer", path: "/services/chief-growth-officer" },
   { label: "Marketing Audit", path: "/services/marketing-audit" },
   { label: "Outsourced Marketing", path: "/services/outsourced-marketing-department" },
+  { label: "Brand Foundation", path: "/services/brand-foundation" },
+  { label: "Growth Projects", path: "/services/growth-projects" },
+  { label: "Interim CMO", path: "/services/interim-cmo" },
 ];
 
 const Header = () => {
