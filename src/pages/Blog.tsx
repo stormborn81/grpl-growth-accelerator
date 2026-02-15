@@ -9,7 +9,7 @@ const blogJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "GRPL Blog — Marketing Leadership Insights",
+    name: "GRPL Blog - Marketing Leadership Insights",
     description: "Expert insights on fractional CMO services, growth strategy, and marketing leadership for ANZ businesses.",
     url: "https://www.grpl.com.au/blog",
   },
@@ -27,7 +27,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Blog — Marketing Leadership Insights"
+        title="Blog - Marketing Leadership Insights"
         description="Expert insights on fractional CMO services, growth strategy, and marketing leadership for Australian businesses."
         canonical="https://www.grpl.com.au/blog"
         jsonLd={blogJsonLd}

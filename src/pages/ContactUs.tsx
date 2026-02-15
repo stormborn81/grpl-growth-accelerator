@@ -15,7 +15,7 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Contact Us — Book a Discovery Call | GRPL"
+        title="Contact Us - Book a Discovery Call | GRPL"
         description="Schedule a free discovery call with GRPL to discuss your marketing leadership needs. Fractional CMO and growth strategy for ANZ businesses."
         canonical="https://www.grpl.com.au/contact"
         jsonLd={breadcrumbJsonLd}

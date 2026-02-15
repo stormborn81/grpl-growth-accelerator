@@ -135,7 +135,7 @@ const Privacy = () => {
                   <li>Deliver targeted or relevant advertising</li>
                 </ul>
                 <p className="text-foreground/70 leading-relaxed mt-4">
-                  You can control or block cookies via your browser settings, but note this may affect functionality. Our Site may also integrate third-party tools (e.g. Google Analytics, Facebook Pixel, advertising networks) which collect data about your use of our Site—this may be governed by their respective privacy policies.
+                  You can control or block cookies via your browser settings, but note this may affect functionality. Our Site may also integrate third-party tools (e.g. Google Analytics, Facebook Pixel, advertising networks) which collect data about your use of our Site. This may be governed by their respective privacy policies.
                 </p>
               </section>
 
