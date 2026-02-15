@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
 
 // Critical SEO sections - NOT lazy loaded
 import WhyChoose from "@/components/WhyChoose";
@@ -139,6 +140,18 @@ const Index = () => {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <main id="main-content">
           <Hero />
+          {/* Diagnostic CTA */}
+          <section className="py-16 md:py-20 bg-foreground text-background">
+            <div className="container mx-auto px-6 lg:px-8 text-center">
+              <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4">Not sure what you need? Start here.</h2>
+              <p className="text-background/70 font-light mb-8 max-w-xl mx-auto">
+                Take GRPL's free Growth Diagnostic. 3 minutes to understand where your marketing is stuck and what to do about it.
+              </p>
+              <Button variant="hero" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/85" asChild>
+                <a href="/growth-diagnostic">Take the Diagnostic</a>
+              </Button>
+            </div>
+          </section>
           <WhyChoose />
           <Services />
           <About />

@@ -33,6 +33,7 @@ const FractionalCMOSydney = lazy(() => import("./pages/FractionalCMOSydney"));
 const FractionalCMOMelbourne = lazy(() => import("./pages/FractionalCMOMelbourne"));
 const FractionalCMOBrisbane = lazy(() => import("./pages/FractionalCMOBrisbane"));
 const FractionalCMOPerth = lazy(() => import("./pages/FractionalCMOPerth"));
+const GrowthDiagnostic = lazy(() => import("./pages/GrowthDiagnostic"));
 
 const queryClient = new QueryClient();
 
@@ -78,6 +79,7 @@ const App = () => (
               <Route path="/fractional-cmo-melbourne" element={<FractionalCMOMelbourne />} />
               <Route path="/fractional-cmo-brisbane" element={<FractionalCMOBrisbane />} />
               <Route path="/fractional-cmo-perth" element={<FractionalCMOPerth />} />
+              <Route path="/growth-diagnostic" element={<GrowthDiagnostic />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
