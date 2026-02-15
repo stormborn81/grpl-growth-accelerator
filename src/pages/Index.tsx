@@ -17,6 +17,7 @@ const Testimonials = lazy(() => import("@/components/Testimonials"));
 const UseCases = lazy(() => import("@/components/UseCases"));
 const Team = lazy(() => import("@/components/Team"));
 const CTA = lazy(() => import("@/components/CTA"));
+const Insights = lazy(() => import("@/components/Insights"));
 
 const SectionLoader = () => (
   <div className="min-h-[200px] flex items-center justify-center">
@@ -155,6 +156,9 @@ const Index = () => {
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <Team />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Insights />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <CTA />
