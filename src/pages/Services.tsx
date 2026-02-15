@@ -136,6 +136,27 @@ const Services = () => (
         </div>
       </div>
 
+      {/* Location Cards */}
+      <div className="container mx-auto px-6 lg:px-8 pb-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-8">Local Marketing Leadership Across Australia</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { city: "Sydney", desc: "Fractional CMO and growth leadership for Sydney's tech, SaaS, and financial services businesses.", link: "/fractional-cmo-sydney" },
+              { city: "Melbourne", desc: "Fractional CMO services for Melbourne's thriving scale-up ecosystem and professional services sector.", link: "/fractional-cmo-melbourne" },
+              { city: "Brisbane", desc: "Fractional CMO for Brisbane businesses capitalising on Southeast Queensland's unprecedented growth.", link: "/fractional-cmo-brisbane" },
+              { city: "Perth", desc: "Fractional CMO for Perth companies diversifying beyond resources into technology and professional services.", link: "/fractional-cmo-perth" },
+            ].map((loc) => (
+              <Link key={loc.city} to={loc.link} className="group p-6 rounded-lg border border-border hover:border-accent/30 transition-colors">
+                <h3 className="text-lg font-black tracking-tight mb-2 group-hover:text-accent transition-colors">{loc.city}</h3>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed mb-3">{loc.desc}</p>
+                <span className="text-sm font-medium text-accent inline-flex items-center gap-1">Learn More <ArrowRight className="h-3 w-3" /></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <CTABanner
         headline="Ready to discuss your growth challenges?"
         subtext="Book a free 30-minute strategy call with GRPL."

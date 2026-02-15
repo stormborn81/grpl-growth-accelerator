@@ -10,7 +10,7 @@ const Footer = () => {
     <footer id="contact" className="bg-background py-16 border-t border-border/50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
             <div className="md:col-span-2 lg:col-span-1">
               <img src={logo} alt="GRPL" className="h-8 mb-6" />
               <p className="text-muted-foreground font-light leading-relaxed max-w-md">
@@ -61,6 +61,16 @@ const Footer = () => {
               </ul>
             </div>
             
+            <div>
+              <h4 className="font-bold text-sm mb-4 tracking-tight">Locations</h4>
+              <ul className="space-y-3 text-sm text-muted-foreground font-light">
+                <li><button onClick={() => navigate('/fractional-cmo-sydney')} className="hover:text-foreground transition-colors">Fractional CMO Sydney</button></li>
+                <li><button onClick={() => navigate('/fractional-cmo-melbourne')} className="hover:text-foreground transition-colors">Fractional CMO Melbourne</button></li>
+                <li><button onClick={() => navigate('/fractional-cmo-brisbane')} className="hover:text-foreground transition-colors">Fractional CMO Brisbane</button></li>
+                <li><button onClick={() => navigate('/fractional-cmo-perth')} className="hover:text-foreground transition-colors">Fractional CMO Perth</button></li>
+              </ul>
+            </div>
+
             <div>
               <h4 className="font-bold text-sm mb-4 tracking-tight">Company</h4>
               <ul className="space-y-3 text-sm text-muted-foreground font-light">

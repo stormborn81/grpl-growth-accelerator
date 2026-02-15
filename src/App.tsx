@@ -29,6 +29,10 @@ const ServiceOutsourcedMarketing = lazy(() => import("./pages/services/Outsource
 const ServiceBrandFoundation = lazy(() => import("./pages/services/BrandFoundation"));
 const ServiceGrowthProjects = lazy(() => import("./pages/services/GrowthProjects"));
 const ServiceInterimCMO = lazy(() => import("./pages/services/InterimCMO"));
+const FractionalCMOSydney = lazy(() => import("./pages/FractionalCMOSydney"));
+const FractionalCMOMelbourne = lazy(() => import("./pages/FractionalCMOMelbourne"));
+const FractionalCMOBrisbane = lazy(() => import("./pages/FractionalCMOBrisbane"));
+const FractionalCMOPerth = lazy(() => import("./pages/FractionalCMOPerth"));
 
 const queryClient = new QueryClient();
 
@@ -70,6 +74,10 @@ const App = () => (
               <Route path="/services/growth-projects" element={<ServiceGrowthProjects />} />
               <Route path="/services/interim-cmo" element={<ServiceInterimCMO />} />
               <Route path="/hiring-cmo" element={<ServiceInterimCMO />} />
+              <Route path="/fractional-cmo-sydney" element={<FractionalCMOSydney />} />
+              <Route path="/fractional-cmo-melbourne" element={<FractionalCMOMelbourne />} />
+              <Route path="/fractional-cmo-brisbane" element={<FractionalCMOBrisbane />} />
+              <Route path="/fractional-cmo-perth" element={<FractionalCMOPerth />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

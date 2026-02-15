@@ -178,9 +178,14 @@ const InterimCMO = () => (
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <FAQSection faqs={faqs} />
-          <div className="pb-16">
+          <div className="pb-8">
             <LeadForm heading="Discuss Interim CMO Support" subtext="Tell us about your situation and timeline. We'll schedule a call to discuss how GRPL can provide immediate marketing leadership." />
           </div>
+
+          <section className="pb-16">
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-4">We Work With Businesses Across Australia</h2>
+            <p className="text-muted-foreground font-light leading-relaxed">GRPL provides interim CMO and fractional CMO services in <Link to="/fractional-cmo-sydney" className="text-accent underline underline-offset-4 hover:text-accent/80">Sydney</Link>, <Link to="/fractional-cmo-melbourne" className="text-accent underline underline-offset-4 hover:text-accent/80">Melbourne</Link>, <Link to="/fractional-cmo-brisbane" className="text-accent underline underline-offset-4 hover:text-accent/80">Brisbane</Link>, and <Link to="/fractional-cmo-perth" className="text-accent underline underline-offset-4 hover:text-accent/80">Perth</Link> - with flexible engagement models that work regardless of geography.</p>
+          </section>
         </div>
       </div>
     </main>
