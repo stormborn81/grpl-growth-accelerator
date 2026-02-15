@@ -13,32 +13,26 @@ const clients = [
 ];
 
 const TrustedBy = () => {
-  // Duplicate clients array for seamless infinite scroll
   const duplicatedClients = [...clients, ...clients, ...clients];
   
   return (
-    <section className="py-16 bg-grpl-black text-grpl-white overflow-hidden">
+    <section className="py-10 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h3 className="text-sm font-bold text-grpl-white/70 uppercase tracking-wide mb-8">
-            Trusted by Leading Brands
-          </h3>
-          <p className="text-lg text-grpl-white font-medium">
-            Across healthcare, finance, retail and technology
-          </p>
-        </div>
+        <p className="text-center text-sm text-muted-foreground font-light mb-8">
+          Trusted by leaders across healthcare, finance, technology, and retail
+        </p>
 
         <div className="relative">
           <div className="flex animate-scroll-logos">
             {duplicatedClients.map((client, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 mx-8 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                className="flex-shrink-0 mx-8 grayscale opacity-50 hover:opacity-80 transition-all duration-300"
               >
                 <img
                   src={client.logo}
                   alt={`${client.name} logo`}
-                  className="h-12 w-auto object-contain"
+                  className="h-10 w-auto object-contain"
                 />
               </div>
             ))}

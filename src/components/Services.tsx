@@ -1,35 +1,48 @@
-import { Search, Map, Zap, BarChart, GraduationCap, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import { UserCheck, TrendingUp, Search, Building2, Palette, Rocket, Shield } from "lucide-react";
 
 const services = [
   {
+    icon: UserCheck,
+    title: "Fractional CMO",
+    description: "Enterprise-grade marketing leadership on a part-time basis: positioning, demand generation, team building, and measurement. 2-4 days per week.",
+    link: "/services/fractional-cmo",
+  },
+  {
+    icon: TrendingUp,
+    title: "Chief Growth Officer",
+    description: "Integrated growth leadership spanning marketing, sales, product, and customer success, for when growth is a system problem, not just a marketing problem.",
+    link: "/services/chief-growth-officer",
+  },
+  {
     icon: Search,
-    title: "Market & Customer Insights",
-    description: "Deep analysis of your market position and customer needs",
+    title: "Marketing Audit",
+    description: "A six-dimension diagnostic that reveals what is actually broken in your marketing and builds the roadmap to fix it. Completed in 4 weeks.",
+    link: "/services/marketing-audit",
   },
   {
-    icon: Map,
-    title: "Growth Strategy & Roadmap",
-    description: "Clear, actionable plans aligned with business objectives",
+    icon: Building2,
+    title: "Outsourced Marketing Department",
+    description: "A complete marketing function without the overhead of building one in-house: strategic leadership combined with execution capability.",
+    link: "/services/outsourced-marketing-department",
   },
   {
-    icon: Zap,
-    title: "Campaign Execution",
-    description: "End-to-end management and optimisation of marketing initiatives",
+    icon: Palette,
+    title: "Brand Foundation",
+    description: "Build your brand from the ground up: vision, identity, positioning, and market presence for founders. Complete in 4 weeks.",
+    link: "/services/brand-foundation",
   },
   {
-    icon: BarChart,
-    title: "MarTech & Analytics",
-    description: "Integration and optimisation of marketing technology stack",
+    icon: Rocket,
+    title: "Growth Projects",
+    description: "Strategic marketing projects with clear scope, timeline, and deliverables, from product launches to rebrands to growth sprints. Fixed fee.",
+    link: "/services/growth-projects",
   },
   {
-    icon: GraduationCap,
-    title: "Team Development",
-    description: "Mentoring and capability uplift for internal teams",
-  },
-  {
-    icon: Sparkles,
-    title: "Creative Excellence",
-    description: "Elevate your creative output with executive‑level alignment and vision.",
+    icon: Shield,
+    title: "Interim CMO",
+    description: "Immediate marketing leadership to bridge the gap while you recruit a permanent CMO. Operational within 1-2 weeks.",
+    link: "/services/interim-cmo",
   },
 ];
 
@@ -40,11 +53,11 @@ const Services = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
-              Our Services
+              What We Do
             </h2>
             <div className="w-12 h-0.5 bg-accent mx-auto mb-6"></div>
             <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
-              Comprehensive marketing leadership, unlocking your next growth phase
+              Comprehensive marketing and growth leadership, from diagnostic to execution.
             </p>
           </div>
 
@@ -52,19 +65,20 @@ const Services = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="relative bg-secondary p-8 group hover:shadow-lg transition-all duration-500"
-                     style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}>
-                  {/* Octagon border accent */}
-                  <div className="absolute inset-0 border border-transparent group-hover:border-accent/30 transition-colors duration-500"
-                       style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}></div>
+                <Link
+                  key={index}
+                  to={service.link}
+                  className="relative bg-secondary p-8 group hover:shadow-lg transition-all duration-500 rounded-lg border border-border hover:border-accent/30"
+                >
                   <Icon className="h-8 w-8 text-foreground mb-6 group-hover:text-accent transition-colors duration-500" strokeWidth={1.5} />
                   <h3 className="text-xl font-bold mb-3 tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed font-light">
+                  <p className="text-muted-foreground leading-relaxed font-light mb-4">
                     {service.description}
                   </p>
-                </div>
+                  <span className="text-sm text-accent font-medium">Learn more →</span>
+                </Link>
               );
             })}
           </div>

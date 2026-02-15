@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import mattGudge from "@/assets/matt-gudge.png";
 
 const Team = () => {
@@ -7,7 +8,7 @@ const Team = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
-              Our Team
+              Leadership
             </h2>
             <div className="w-12 h-0.5 bg-accent mx-auto"></div>
           </div>
@@ -36,14 +37,13 @@ const Team = () => {
                 <p className="text-accent font-semibold text-lg">Founder & Chief Marketing Officer</p>
               </div>
               <p className="text-foreground/80 leading-relaxed text-lg font-light">
-                Matt Gudge is a Chief Marketing Officer, senior marketing strategist and founder of GRPL, 
-                a consultancy built for companies ready to bridge the gap between business strategy and 
-                creative execution. With over 15 years of experience leading marketing for brands across 
-                finance, healthcare, and technology, Matt specialises in unlocking growth by aligning 
-                leadership vision, commercial priorities, and brand strategy. Known for his ability to 
-                quickly grasp complex categories and define sharp positioning, Matt helps CEOs and founders 
-                clarify their competitive advantage, build cohesive go-to-market strategies, and scale 
-                high-performing marketing functions without the overhead of a full-time executive.
+                Matt Gudge is the founder of GRPL and a senior marketing strategist with over 15 years of experience leading marketing across finance, healthcare, and technology. Matt specialises in aligning leadership vision, commercial priorities, and brand strategy to unlock growth, building high-performing marketing functions for businesses between $2M and $30M. Matt leads GRPL's collective of senior marketing and growth specialists.
+              </p>
+              <p className="text-muted-foreground font-light text-sm">
+                GRPL engagements are supported by a network of senior specialists across brand strategy, demand generation, content, marketing technology, creative, revenue operations, AI, and research.{" "}
+                <Link to="/about" className="text-accent hover:text-accent/80 transition-colors font-medium">
+                  Meet the collective →
+                </Link>
               </p>
             </div>
           </div>
