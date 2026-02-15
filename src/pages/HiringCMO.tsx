@@ -334,7 +334,7 @@ const HiringCMO = () => {
                 <Button 
                   variant="hero" 
                   size="lg"
-                  onClick={() => window.open('https://calendly.com/d/cvbv-65p-v73', '_blank')}
+                  onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
                 >
                   Book a Discovery Call →
                 </Button>

@@ -44,10 +44,14 @@ const ContactUs = () => {
             </div>
             
             <div className="bg-card rounded-lg p-6 shadow-lg">
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/d/cvbv-65p-v73"
-                style={{ minWidth: "320px", height: "700px" }}
+              <iframe 
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2aEHN-quI3FFLXnJ_fBgsVi9-Z6_2WK-Ws5-lArN72_NsDR08H-s93os7bSdsacJA4nl0YSRID?gv=true" 
+                style={{ border: 0 }} 
+                width="100%" 
+                height="600" 
+                frameBorder="0"
+                title="Google Calendar Appointment Scheduling"
+                loading="lazy"
               />
             </div>
           </div>

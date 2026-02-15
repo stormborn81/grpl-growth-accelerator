@@ -105,7 +105,7 @@ const QuizResults = ({ result, answers, onRestart }: QuizResultsProps) => {
           <Button 
             size="lg"
             className="bg-accent hover:bg-accent/90 text-white"
-            onClick={() => window.open('https://calendly.com/d/cvbv-65p-v73', '_blank')}
+            onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
           >
             Book a Discovery Call
             <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
