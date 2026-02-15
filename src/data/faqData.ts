@@ -165,7 +165,7 @@ export const faqCategories: FAQCategory[] = [
       },
       {
         question: "How does GRPL use AI in its own work?",
-        answer: "GRPL uses AI as an accelerator, not a replacement for strategic thinking. AI tools are used for research and competitive analysis, content development and iteration, data analysis and pattern recognition, and workflow automation. But strategy, positioning, creative direction, and strategic decision-making remain human-led. AI makes us faster and more thorough. It does not replace the judgement that comes from 25+ years of marketing leadership experience.",
+        answer: "GRPL uses AI as an accelerator, not a replacement for strategic thinking. AI tools are used for research and competitive analysis, content development and iteration, data analysis and pattern recognition, and workflow automation. But strategy, positioning, creative direction, and strategic decision-making remain human-led. AI makes us faster and more thorough. It does not replace the judgement that comes from 17+ years of marketing leadership experience.",
       },
     ],
   },
