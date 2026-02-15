@@ -1,0 +1,48 @@
+import { Link } from "react-router-dom";
+import BlogPostLayout from "@/components/BlogPostLayout";
+import { blogPosts } from "@/data/blogPosts";
+
+const post = blogPosts.find((p) => p.slug === "marketing-audit-framework")!;
+
+const MarketingAuditFramework = () => (
+  <BlogPostLayout
+    post={post}
+    relatedSlugs={["fractional-cmo-australia-guide", "when-ready-for-fractional-cmo", "fractional-cmo-cost-australia"]}
+  >
+    <h1>The Marketing Audit Framework That Reveals What Is Actually Broken</h1>
+
+    <p>Most marketing audits fail before they begin because they audit the wrong things. A typical marketing audit inventories what a business is doing—the channels, the campaigns, the tools, the team structure—and reports on it. This is useful as a checklist but almost useless for strategy. The business learns that it runs LinkedIn ads and email marketing, that it uses HubSpot and Google Ads, and that its team has three people. But this inventory does not reveal what is actually broken or what to fix. GRPL developed a diagnostic audit framework that diagnoses strategy, not just activity. It reveals the root causes of marketing underperformance and surfaces the 2-3 levers that will actually move the needle.</p>
+
+    <h2>Why Most Marketing Audits Fail</h2>
+
+    <p>The fundamental problem with most marketing audits is they confuse activity with effectiveness. A consultant observes that the business is running a blog, LinkedIn, paid ads, and events. They report back: "You have good channel diversity." In reality, the business might be running all of these channels poorly, with no coherent strategy connecting them. Or it might be pursuing the wrong channels entirely because they were chosen based on best practices rather than customer behaviour. Or the channels might be fine, but the positioning is wrong, so all the channels amplify a weak message. An audit that does not surface these issues is just theatre—it makes the business feel like something happened without changing anything.</p>
+
+    <p>Another common failure is looking inward instead of outward. Many audits analyse only what the company is doing without examining the market context or competitor positioning. A business learns its website gets 5,000 visits per month, but has no understanding of whether this is good or bad relative to competitor website traffic or whether the market would sustain higher demand if the positioning were clearer. Without market context, the audit is meaningless.</p>
+
+    <h2>The Six Dimensions of GRPL Audit</h2>
+
+    <p>GRPL audit framework examines six critical dimensions. Dimension 1 is Strategic Alignment. Does the marketing strategy align with the business strategy? Can the marketing team articulate the target customer, the value proposition, the key message, and how the business is different? Do sales and product agree with marketing view of the customer? Does the positioning resonate with actual customer research, or is it an invention? Dimension 2 is Channel Effectiveness. Which channels are actually generating qualified pipeline? Are some channels producing low-quality leads that waste sales time? Is spend allocated proportionally to channel performance, or is it allocated based on team comfort level? Does the channel mix match where the target customer actually spends time?</p>
+
+    <p>Dimension 3 is Team Capability. Does the marketing team have the skills needed to execute the strategy? If strategy requires product expertise and demand generation excellence, but the team is strong in creative and weak in analytics, there is a capability gap. Is the team structured to execute the strategy, or is it organised around functions? Dimension 4 is Technology Stack. Is the business using tools that support the strategy, or has the tools tail started wagging the strategy dog? Too many businesses adopt sophisticated tools without clarity on what problem they are solving. Is the technology stack integrated, or are there data silos that prevent measurement? Dimension 5 is Customer Intelligence. Does the business understand who its customers are, how they buy, what messaging resonates, what concerns are top of mind? Is this intelligence data-driven, or based on founder assumptions? Dimension 6 is Competitive Positioning. How is the business positioned relative to the competition? Is the positioning defensible? Is it based on genuine differentiation, or is it claiming something the competitor already owns?</p>
+
+    <h2>What Each Dimension Examines</h2>
+
+    <p>In the Strategic Alignment dimension, good looks like: a clearly documented target customer profile with specific firmographic and behavioural characteristics; a value proposition that is articulated consistently across sales and marketing; a market positioning statement that is differentiated and defensible; agreement between marketing, sales, and product on what the business is and why customers prefer it. In the Channel Effectiveness dimension, good looks like: a documented view of where the target customer seeks information; channel investment proportional to customer acquisition results; clear SLAs between marketing and sales on lead quality; regular channel performance review and reallocation when results shift.</p>
+
+    <p>In the Team Capability dimension, good looks like: marketing team members with appropriate seniority and skills for their responsibilities; a team structure aligned to the marketing strategy, not just functional silos; documented capability development plan; cross-functional collaboration between marketing, sales, and product. In the Technology Stack dimension, good looks like: tools that directly support execution of the strategy; data integration enabling measurement across channels; clear owners for each platform; regular evaluation of tool ROI. In the Customer Intelligence dimension, good looks like: documented customer research including interviews, surveys, and usage data; regular updates to customer understanding as the business evolves; customer feedback incorporated into product and marketing decisions. In the Competitive Positioning dimension, good looks like: documented competitive analysis; positioning based on unique capabilities or market focus, not just claim-making; customer research validating that differentiation is valued.</p>
+
+    <h2>Common Failure Patterns</h2>
+
+    <p>Approximately 80% of businesses GRPL works with have a channel mix problem. They are investing in channels because "that is where best practices say we should be," but those channels do not match where their customers actually are. A B2B SaaS company might invest heavily in TikTok because everyone says social media is essential, but their target customer—a CFO evaluating enterprise software—does not use TikTok. A professional services firm might invest in Google Ads when the target customer is making decisions through trusted referrals and relationships. A channel mix problem is often the easiest to fix because it is visible; the business is often not getting returns from a channel and can reallocate toward better-performing channels.</p>
+
+    <p>Approximately 60% of businesses have a measurement gap. They track activity—emails sent, ads spent, content published—but do not measure what actually matters: pipeline generated, customer acquisition cost, customer lifetime value, revenue influenced. They have no clear view of which marketing efforts are generating revenue versus which are expensive busywork. Fixing a measurement gap requires establishing clear SLAs between marketing and sales, implementing tracking across the customer journey, and regularly reviewing what is working. About 40% of businesses have a positioning problem. They are claiming something the market has already claimed, or they are positioning too broadly. They say they are "great at customer service" when every competitor makes the same claim. They serve "any growing business" when actually they serve fast-growing B2B SaaS companies in Series A. A positioning problem is the hardest to fix because it requires honesty about what the business is actually good at and what market segment will value it most.</p>
+
+    <h2>What Happens After the Audit</h2>
+
+    <p>A marketing audit that does not lead to action is just a report. GRPL audits are always followed by a 90-day roadmap that translates findings into specific actions. If the audit reveals a positioning problem, the roadmap includes customer research to clarify positioning, rewriting of key messaging, and rollout of new positioning across website and sales materials. If the audit reveals a team capability gap, the roadmap includes hiring or upskilling decisions, cross-functional training, or external support. If the audit reveals a channel mix problem, the roadmap includes reallocation of budget from underperforming to high-potential channels, with clear metrics for success. If the audit reveals a measurement gap, the roadmap includes implementation of tracking, definition of SLAs between marketing and sales, and establishment of weekly or monthly performance reviews.</p>
+
+    <p>The 90-day roadmap is the bridge between diagnosis and execution. It ensures the audit findings actually drive change rather than sitting in a report. Each action in the roadmap has an owner, a deadline, and a success metric. This discipline transforms audit insights into business impact. Without the roadmap, even a brilliant audit generates limited value because the insights remain abstract. With the roadmap, the audit becomes a catalyst for meaningful transformation.</p>
+  </BlogPostLayout>
+);
+
+export default MarketingAuditFramework;

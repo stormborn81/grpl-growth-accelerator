@@ -18,6 +18,9 @@ const FractionalCMOvsMarketingAgency = lazy(() => import("./pages/blog/Fractiona
 const WhatDoesChiefGrowthOfficerDo = lazy(() => import("./pages/blog/WhatDoesChiefGrowthOfficerDo"));
 const FractionalCMOCostAustralia = lazy(() => import("./pages/blog/FractionalCMOCostAustralia"));
 const AIReshapingCMORole2026 = lazy(() => import("./pages/blog/AIReshapingCMORole2026"));
+const MarketingAuditFramework = lazy(() => import("./pages/blog/MarketingAuditFramework"));
+const WhenReadyForFractionalCMO = lazy(() => import("./pages/blog/WhenReadyForFractionalCMO"));
+const B2BMarketingLeadership = lazy(() => import("./pages/blog/B2BMarketingLeadership"));
 
 const queryClient = new QueryClient();
 
@@ -47,6 +50,9 @@ const App = () => (
               <Route path="/blog/what-does-chief-growth-officer-do" element={<WhatDoesChiefGrowthOfficerDo />} />
               <Route path="/blog/fractional-cmo-cost-australia" element={<FractionalCMOCostAustralia />} />
               <Route path="/blog/ai-reshaping-cmo-role-2026" element={<AIReshapingCMORole2026 />} />
+              <Route path="/blog/marketing-audit-framework" element={<MarketingAuditFramework />} />
+              <Route path="/blog/when-ready-for-fractional-cmo" element={<WhenReadyForFractionalCMO />} />
+              <Route path="/blog/b2b-marketing-leadership-strategy-execution" element={<B2BMarketingLeadership />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
