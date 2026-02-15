@@ -1,14 +1,38 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Privacy = () => {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.grpl.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://www.grpl.com.au/privacy" }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Privacy Policy | GRPL"
+        description="GRPL's privacy policy outlines how we collect, use, and protect your personal information. Compliant with Australian Privacy Principles."
+        canonical="https://www.grpl.com.au/privacy"
+        jsonLd={breadcrumbJsonLd}
+      />
       <Header />
       
       <main className="pt-20 pb-16">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
+            <nav aria-label="Breadcrumb" className="mb-6 text-sm text-muted-foreground">
+              <ol className="flex items-center gap-2">
+                <li><a href="/" className="hover:text-foreground transition-colors">Home</a></li>
+                <li>/</li>
+                <li className="text-foreground">Privacy Policy</li>
+              </ol>
+            </nav>
+
             <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">Privacy Policy</h1>
             
             <div className="prose prose-neutral dark:prose-invert max-w-none space-y-8">
