@@ -1,5 +1,5 @@
 # Redirects
-/hiring-cmo /services/interim-cmo 301
+/hiring-cmo https://www.grpl.com.au/services/interim-cmo 301
 
 # Serve static files first
 /sitemap.xml /sitemap.xml 200
