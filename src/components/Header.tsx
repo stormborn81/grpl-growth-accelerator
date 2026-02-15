@@ -1,32 +1,35 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/assets/logo-horizontal.png";
+
+const serviceLinks = [
+  { label: "All Services", path: "/services" },
+  { label: "Fractional CMO", path: "/services/fractional-cmo" },
+  { label: "Chief Growth Officer", path: "/services/chief-growth-officer" },
+  { label: "Marketing Audit", path: "/services/marketing-audit" },
+  { label: "Outsourced Marketing", path: "/services/outsourced-marketing-department" },
+];
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const handleNavClick = (sectionId: string) => {
-    setMobileMenuOpen(false); // Close mobile menu on navigation
+    setMobileMenuOpen(false);
     if (location.pathname === '/') {
-      // On homepage, scroll to section
       const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // On other pages, navigate to homepage with hash
       navigate(`/#${sectionId}`);
-      // After navigation, scroll to section
       setTimeout(() => {
         const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     }
   };
@@ -46,9 +49,36 @@ const Header = () => {
           </button>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => handleNavClick('services')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
-              Services
-            </button>
+            {/* Services Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <button
+                className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors inline-flex items-center gap-1"
+                onClick={() => navigate('/services')}
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+                Services <ChevronDown className={`h-3 w-3 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 pt-2 w-56">
+                  <div className="bg-background border border-border rounded-lg shadow-lg py-2">
+                    {serviceLinks.map((link) => (
+                      <button
+                        key={link.path}
+                        onClick={() => { navigate(link.path); setServicesOpen(false); }}
+                        className="block w-full text-left px-4 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors"
+                      >
+                        {link.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
             <button onClick={() => handleNavClick('about')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               About
             </button>
@@ -90,12 +120,29 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col gap-6 mt-8">
-                  <button 
-                    onClick={() => handleNavClick('services')} 
-                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
-                  >
-                    Services
-                  </button>
+                  {/* Mobile Services Accordion */}
+                  <div>
+                    <button
+                      onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                      className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left w-full flex items-center justify-between"
+                      aria-expanded={mobileServicesOpen}
+                    >
+                      Services <ChevronDown className={`h-4 w-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {mobileServicesOpen && (
+                      <div className="mt-3 ml-4 flex flex-col gap-3">
+                        {serviceLinks.map((link) => (
+                          <button
+                            key={link.path}
+                            onClick={() => { navigate(link.path); setMobileMenuOpen(false); }}
+                            className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors text-left"
+                          >
+                            {link.label}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                   <button 
                     onClick={() => handleNavClick('about')} 
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
@@ -103,37 +150,25 @@ const Header = () => {
                     About
                   </button>
                   <button 
-                    onClick={() => {
-                      navigate('/blog');
-                      setMobileMenuOpen(false);
-                    }} 
+                    onClick={() => { navigate('/blog'); setMobileMenuOpen(false); }} 
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     Blog
                   </button>
                   <button 
-                    onClick={() => {
-                      navigate('/hiring-cmo');
-                      setMobileMenuOpen(false);
-                    }} 
+                    onClick={() => { navigate('/hiring-cmo'); setMobileMenuOpen(false); }} 
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     Hiring
                   </button>
                   <button 
-                    onClick={() => {
-                      navigate('/contact');
-                      setMobileMenuOpen(false);
-                    }} 
+                    onClick={() => { navigate('/contact'); setMobileMenuOpen(false); }} 
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     Contact
                   </button>
                   <button 
-                    onClick={() => {
-                      navigate('/marketing-health-check');
-                      setMobileMenuOpen(false);
-                    }} 
+                    onClick={() => { navigate('/marketing-health-check'); setMobileMenuOpen(false); }} 
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     Health Check
@@ -142,10 +177,7 @@ const Header = () => {
                     variant="hero" 
                     size="lg" 
                     className="mt-4"
-                    onClick={() => {
-                      window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank');
-                      setMobileMenuOpen(false);
-                    }}
+                    onClick={() => { window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank'); setMobileMenuOpen(false); }}
                   >
                     Book Call
                   </Button>
