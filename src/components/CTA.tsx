@@ -31,7 +31,7 @@ const CTA = () => {
                 Run Marketing Health Check
                 <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
               </Button>
-              <Button variant="heroSecondary" size="lg" onClick={() => navigate('/contact')}>
+              <Button variant="heroSecondary" size="lg" onClick={() => window.open('https://calendly.com/d/cvbv-65p-v73', '_blank')}>
                 Book Discovery Call
                 <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
               </Button>
