@@ -76,6 +76,7 @@ const Footer = () => {
               <ul className="space-y-3 text-sm text-muted-foreground font-light">
                 <li><button onClick={() => navigate('/about')} className="hover:text-foreground transition-colors">About</button></li>
                 <li><button onClick={() => navigate('/blog')} className="hover:text-foreground transition-colors">Insights</button></li>
+                <li><button onClick={() => navigate('/faq')} className="hover:text-foreground transition-colors">FAQ</button></li>
                 <li><a href="#contact" className="hover:text-foreground transition-colors">Contact</a></li>
                 <li><button onClick={() => navigate('/privacy')} className="hover:text-foreground transition-colors">Privacy Policy</button></li>
               </ul>
