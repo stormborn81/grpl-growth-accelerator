@@ -1,12 +1,85 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+
+const hiringJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.grpl.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Hiring a CMO", "item": "https://www.grpl.com.au/hiring-cmo" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "GRPL — CMO Hiring Advisory",
+    "description": "Expert guidance defining the right CMO role, skillset, and hiring brief so you hire the marketing leader your business actually needs.",
+    "url": "https://www.grpl.com.au/hiring-cmo",
+    "provider": { "@type": "Organization", "name": "GRPL", "url": "https://www.grpl.com.au" },
+    "areaServed": { "@type": "Country", "name": "Australia" },
+    "serviceType": "CMO Hiring Advisory"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why do most senior marketing hires fail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most senior marketing hires fail because the role is defined around a résumé rather than business reality, founders hire for experience instead of alignment, and success metrics aren't defined upfront."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does GRPL help with hiring a CMO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GRPL audits your current marketing capability, defines your growth priorities, translates that into the exact profile and skillset you need, and crafts a job description designed to attract the right leader."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I get at the end of a GRPL hiring engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every engagement ends with a crystal-clear hiring brief you can take straight to market or use to evaluate existing candidates, including role definition, success measures, and an onboarding plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I hire a fractional CMO or a full-time CMO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on your stage and budget. A fractional CMO gives you senior leadership at a fraction of the cost while you scale. GRPL can help you determine which option is right for your business before you commit."
+        }
+      }
+    ]
+  }
+];
 
 const HiringCMO = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Hiring a CMO? Get It Right First Time | GRPL"
+        description="Don't miss on your most important growth hire. GRPL helps define the right CMO role, skillset, and hiring brief for scaling ANZ businesses."
+        canonical="https://www.grpl.com.au/hiring-cmo"
+        jsonLd={hiringJsonLd}
+      />
       <Header />
       <main className="pt-14">
+        <nav aria-label="Breadcrumb" className="container mx-auto px-6 lg:px-8 pt-6">
+          <ol className="flex items-center gap-2 text-sm text-muted-foreground max-w-4xl mx-auto">
+            <li><a href="/" className="hover:text-foreground transition-colors">Home</a></li>
+            <li>/</li>
+            <li className="text-foreground">Hiring a CMO</li>
+          </ol>
+        </nav>
         {/* Hero Section */}
         <section className="py-20 lg:py-28 bg-gradient-to-b from-background to-accent/5">
           <div className="container mx-auto px-6 lg:px-8">

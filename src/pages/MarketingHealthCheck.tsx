@@ -7,7 +7,17 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import logoHorizontal from "@/assets/logo-horizontal.png";
+
+const quizJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.grpl.com.au/" },
+    { "@type": "ListItem", "position": 2, "name": "Marketing Health Check", "item": "https://www.grpl.com.au/marketing-health-check" }
+  ]
+};
 
 const MarketingHealthCheck = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -49,6 +59,13 @@ const MarketingHealthCheck = () => {
     const result = calculateQuizResult(answers);
     return (
       <div className="min-h-screen bg-background">
+        <SEO
+          title="Your Marketing Health Check Results | GRPL"
+          description="View your personalised marketing health check results and discover growth opportunities for your business."
+          canonical="https://www.grpl.com.au/marketing-health-check"
+          noindex={true}
+          jsonLd={quizJsonLd}
+        />
         <header className="border-b border-border bg-background sticky top-0 z-50 shadow-sm">
           <div className="container mx-auto px-6 lg:px-8 py-4">
             <Link to="/">
@@ -66,6 +83,12 @@ const MarketingHealthCheck = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Free Marketing Health Check Quiz | GRPL"
+        description="Take GRPL's free marketing health check to discover where your marketing stands and unlock personalised insights to accelerate growth."
+        canonical="https://www.grpl.com.au/marketing-health-check"
+        jsonLd={quizJsonLd}
+      />
       <header className="border-b border-border bg-background sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-6 lg:px-8 py-4">
           <Link to="/">
@@ -76,6 +99,15 @@ const MarketingHealthCheck = () => {
 
       <main className="py-12 md:py-20">
         <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
+          {/* Breadcrumb */}
+          <nav aria-label="Breadcrumb" className="mb-8 text-sm text-muted-foreground">
+            <ol className="flex items-center gap-2">
+              <li><a href="/" className="hover:text-foreground transition-colors">Home</a></li>
+              <li>/</li>
+              <li className="text-foreground">Marketing Health Check</li>
+            </ol>
+          </nav>
+
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-4">

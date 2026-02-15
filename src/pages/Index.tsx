@@ -39,10 +39,95 @@ const ErrorFallback = () => (
   </div>
 );
 
+const homepageJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GRPL",
+    "url": "https://www.grpl.com.au",
+    "logo": "https://www.grpl.com.au/favicon.png",
+    "description": "Enterprise-grade fractional CMO and Chief Growth Officer services for ANZ businesses.",
+    "foundingDate": "2024",
+    "areaServed": [
+      { "@type": "Country", "name": "Australia" },
+      { "@type": "Country", "name": "New Zealand" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+61-414-838-210",
+      "contactType": "sales",
+      "email": "LetsGo@GRPL.com.au"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/grplstrategy"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "GRPL — Fractional CMO & Growth Leadership",
+    "description": "Enterprise-grade fractional CMO and Chief Growth Officer services for scaling ANZ businesses.",
+    "url": "https://www.grpl.com.au",
+    "provider": {
+      "@type": "Organization",
+      "name": "GRPL",
+      "url": "https://www.grpl.com.au"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Australia" },
+      { "@type": "Country", "name": "New Zealand" }
+    ],
+    "serviceType": ["Fractional CMO", "Chief Growth Officer", "Marketing Strategy", "Marketing Audit", "Growth Leadership"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a fractional CMO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fractional CMO is a senior marketing executive who provides strategic leadership on a part-time or contract basis, giving businesses enterprise-grade marketing capability without the full-time salary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does GRPL's fractional CMO service work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GRPL embeds senior growth leadership into your business on a flexible basis. We define strategy, align teams, optimise channels, and drive measurable growth outcomes — all without the cost and commitment of a full-time executive hire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is GRPL's service designed for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GRPL works with founders, CEOs, and leadership teams at scaling ANZ businesses who need senior marketing expertise but aren't ready for or don't need a full-time CMO."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between a fractional CMO and a marketing consultant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A marketing consultant typically advises from the outside. A fractional CMO from GRPL embeds into your leadership team, owns strategy and execution, leads your marketing function, and is accountable for growth outcomes."
+        }
+      }
+    ]
+  }
+];
+
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <SEO />
+      <SEO
+        title="Enterprise-Grade Fractional CMO & Growth Leadership | GRPL"
+        description="GRPL delivers enterprise-grade fractional CMO and Chief Growth Officer services for ANZ businesses. Senior marketing leadership without the full-time cost."
+        canonical="https://www.grpl.com.au/"
+        jsonLd={homepageJsonLd}
+      />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
