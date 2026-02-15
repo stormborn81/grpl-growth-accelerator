@@ -729,15 +729,15 @@ export default function GrowthDiagnostic() {
 
             {/* Share / Save */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="flex flex-wrap items-center justify-center gap-3 pb-12">
-              <Button variant="outline" size="sm" className="border-background/20 text-background/60 hover:text-background hover:bg-background/5" onClick={handlePrint}>
+              <button onClick={handlePrint} className="px-4 py-2 rounded-full border border-background/20 text-background/60 hover:text-background hover:border-background/40 bg-transparent text-sm font-semibold transition-all">
                 Download PDF
-              </Button>
-              <Button variant="outline" size="sm" className="border-background/20 text-background/60 hover:text-background hover:bg-background/5" onClick={handleShareLinkedIn}>
+              </button>
+              <button onClick={handleShareLinkedIn} className="px-4 py-2 rounded-full border border-background/20 text-background/60 hover:text-background hover:border-background/40 bg-transparent text-sm font-semibold transition-all">
                 Share on LinkedIn
-              </Button>
-              <Button variant="outline" size="sm" className="border-background/20 text-background/60 hover:text-background hover:bg-background/5" onClick={handleCopyLink}>
+              </button>
+              <button onClick={handleCopyLink} className="px-4 py-2 rounded-full border border-background/20 text-background/60 hover:text-background hover:border-background/40 bg-transparent text-sm font-semibold transition-all">
                 Copy Link
-              </Button>
+              </button>
             </motion.div>
           </div>
         </div>
