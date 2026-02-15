@@ -15,11 +15,11 @@ const WhenReadyForFractionalCMO = () => (
 
     <h2>Signal 1: Revenue and Marketing Spend</h2>
 
-    <p>The first signal is straightforward: your business is large enough to have meaningful marketing budget but small enough that you cannot justify a full-time CMO salary. If your revenue is between $1 million and $30 million and you are spending more than $10,000 per month on marketing—salaries, agencies, tools, advertising—you have enough budget to hire a fractional CMO. The fractional model becomes cost-effective at this point. Below $1 million revenue, you are typically better served by hiring a strong marketing manager or a fractional <Link to="/blog/what-does-chief-growth-officer-do">chief growth officer</Link> who can wear broader hats. Above $30 million revenue, the complexity often justifies a full-time CMO.</p>
+    <p>The first signal is straightforward: your business is large enough to have meaningful marketing budget but small enough that you cannot justify a full-time CMO salary. If your revenue is between $1 million and $30 million and you are spending more than $10,000 per month on marketing (salaries, agencies, tools, advertising) you have enough budget to hire a fractional CMO. The fractional model becomes cost-effective at this point. Below $1 million revenue, you are typically better served by hiring a strong marketing manager or a fractional <Link to="/blog/what-does-chief-growth-officer-do">chief growth officer</Link> who can wear broader hats. Above $30 million revenue, the complexity often justifies a full-time CMO.</p>
 
     <h2>Signal 2: CEO Making Marketing Decisions</h2>
 
-    <p>If the CEO is still the de facto Chief Marketing Officer—making positioning decisions, approving campaigns, choosing channels, setting strategy—this is a clear signal that you need a fractional CMO. This situation indicates that the business either lacks a dedicated marketing leader or the marketing leader is not senior enough to own strategy. The CEO should be focused on overall business direction, not day-to-day marketing decisions. If the CEO is spending 15-20% of their time on marketing decisions, a fractional CMO can free that time and provide better decision-making because they have specialised expertise.</p>
+    <p>If the CEO is still the de facto Chief Marketing Officer - making positioning decisions, approving campaigns, choosing channels, setting strategy - this is a clear signal that you need a fractional CMO. This situation indicates that the business either lacks a dedicated marketing leader or the marketing leader is not senior enough to own strategy. The CEO should be focused on overall business direction, not day-to-day marketing decisions. If the CEO is spending 15-20% of their time on marketing decisions, a fractional CMO can free that time and provide better decision-making because they have specialised expertise.</p>
 
     <h2>Signal 3: Agency Underperformance</h2>
 
@@ -39,7 +39,7 @@ const WhenReadyForFractionalCMO = () => (
 
     <h2>Signal 7: Marketing Spending Without ROI</h2>
 
-    <p>If the business is spending money on marketing—agencies, tools, advertising, content—but cannot articulate what ROI it is generating, you need a fractional CMO. This signal indicates that measurement is broken or strategy is absent. A fractional CMO will establish clear measurement frameworks, attribute spending to outcomes, and make ruthless tradeoff decisions about what is working and what is not. They will often recommend cutting spending from underperforming initiatives and reallocating to proven channels. This often generates ROI improvement immediately, not because marketing is more creative, but because spending is being allocated to what actually works.</p>
+    <p>If the business is spending money on marketing (agencies, tools, advertising, content) but cannot articulate what ROI it is generating, you need a fractional CMO. This signal indicates that measurement is broken or strategy is absent. A fractional CMO will establish clear measurement frameworks, attribute spending to outcomes, and make ruthless tradeoff decisions about what is working and what is not. They will often recommend cutting spending from underperforming initiatives and reallocating to proven channels. This often generates ROI improvement immediately, not because marketing is more creative, but because spending is being allocated to what actually works.</p>
 
     <h2>When You Are NOT Ready</h2>
 

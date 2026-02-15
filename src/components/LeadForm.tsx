@@ -54,7 +54,7 @@ const LeadForm = ({
     return (
       <div className="bg-secondary rounded-lg p-8 md:p-12 text-center">
         <div className="text-4xl mb-4">✓</div>
-        <h3 className="text-xl font-black tracking-tight mb-2">Thanks — we'll be in touch within 24 hours</h3>
+        <h3 className="text-xl font-black tracking-tight mb-2">Thanks - we'll be in touch within 24 hours</h3>
         <p className="text-muted-foreground font-light">We'll schedule your free strategy call shortly.</p>
       </div>
     );
