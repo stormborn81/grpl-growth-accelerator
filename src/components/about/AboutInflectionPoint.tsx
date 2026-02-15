@@ -8,7 +8,7 @@ const checkItems = [
   "You are between $2M and $30M in revenue and growth has stalled or become chaotic.",
   "You have outgrown founder-led marketing but a full-time CMO is not yet the right move.",
   "You are spending on marketing but cannot connect it to revenue with confidence.",
-  "Your marketing feels tactical — lots of activity, no strategic coherence.",
+  "Your marketing feels tactical, with lots of activity but no strategic coherence.",
   "You have hired marketing people but nobody is leading the function.",
   "You know you need to invest in brand and positioning but do not know where to start.",
   "Your board or investors are asking about marketing strategy and you do not have a clear answer.",
@@ -66,7 +66,7 @@ const AboutInflectionPoint = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <p className="text-muted-foreground font-light text-sm">
-            If three or more of these resonate, the next step is a conversation — no pitch, no commitment. Just a candid discussion about where you are and whether GRPL is the right fit.
+            If three or more of these resonate, the next step is a conversation. No pitch, no commitment. Just a candid discussion about where you are and whether GRPL is the right fit.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button variant="hero" size="lg" asChild>

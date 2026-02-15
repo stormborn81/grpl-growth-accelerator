@@ -8,11 +8,11 @@ const nodes = [
   },
   {
     label: "Demand Generation & Growth",
-    description: "Performance marketers and growth operators who build full-funnel demand generation engines — from awareness to pipeline to revenue. Specialists in paid media, content marketing, SEO, and marketing automation.",
+    description: "Performance marketers and growth operators who build full-funnel demand generation engines, from awareness to pipeline to revenue. Specialists in paid media, content marketing, SEO, and marketing automation.",
   },
   {
     label: "Content & Thought Leadership",
-    description: "Experienced content strategists, writers, and editors who create content that builds authority and drives commercial outcomes. Not content for content's sake — content that positions, differentiates, and converts.",
+    description: "Experienced content strategists, writers, and editors who create content that builds authority and drives commercial outcomes. Not content for content's sake, but content that positions, differentiates, and converts.",
   },
   {
     label: "Marketing Technology",
@@ -24,7 +24,7 @@ const nodes = [
   },
   {
     label: "Sales Enablement & RevOps",
-    description: "Revenue operations specialists who bridge marketing and sales — building the handoff processes, lead scoring models, pipeline reporting, and sales enablement content that turn marketing leads into closed revenue.",
+    description: "Revenue operations specialists who bridge marketing and sales, building the handoff processes, lead scoring models, pipeline reporting, and sales enablement content that turn marketing leads into closed revenue.",
   },
   {
     label: "AI & Digital Transformation",
@@ -32,7 +32,7 @@ const nodes = [
   },
   {
     label: "Research & Insights",
-    description: "Market researchers, customer insight specialists, and data analysts who ensure every strategy is built on evidence — not assumptions. Qualitative and quantitative research, customer segmentation, and competitive intelligence.",
+    description: "Market researchers, customer insight specialists, and data analysts who ensure every strategy is built on evidence, not assumptions. Qualitative and quantitative research, customer segmentation, and competitive intelligence.",
   },
 ];
 
@@ -52,13 +52,11 @@ const AboutNetwork = () => {
         >
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4">The Collective</h2>
           <p className="text-primary-foreground/60 font-light max-w-2xl mx-auto">
-            GRPL is not one person. It is a curated network of senior specialists — each one a proven operator in their domain.
+            GRPL is not one person. It is a curated network of senior specialists, each one a proven operator in their domain.
           </p>
         </motion.div>
 
-        {/* Network visualisation */}
         <div className="max-w-4xl mx-auto">
-          {/* Centre hub */}
           <motion.div
             className="flex justify-center mb-12"
             initial={{ scale: 0 }}
@@ -73,7 +71,6 @@ const AboutNetwork = () => {
             </div>
           </motion.div>
 
-          {/* Node grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {nodes.map((node, i) => (
               <motion.button
@@ -98,7 +95,6 @@ const AboutNetwork = () => {
             ))}
           </div>
 
-          {/* Active node description */}
           <AnimatePresence mode="wait">
             {activeNode !== null && (
               <motion.div
@@ -122,7 +118,7 @@ const AboutNetwork = () => {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 1 }}
         >
-          Every GRPL engagement is assembled from this network — the right combination of strategic leadership and specialist execution for your specific challenge. No generalists pretending to be experts. No junior staff learning on your budget. Senior operators who have done this before, brought together by GRPL to deliver results for your business.
+          Every GRPL engagement is assembled from this network: the right combination of strategic leadership and specialist execution for your specific challenge. No generalists pretending to be experts. No junior staff learning on your budget. Senior operators who have done this before, brought together by GRPL to deliver results for your business.
         </motion.p>
       </div>
     </section>

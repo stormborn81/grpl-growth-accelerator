@@ -33,10 +33,10 @@ const AboutPhilosophy = () => {
             <p>The first type produces impressive strategic documents. Detailed research. Beautiful frameworks. Comprehensive recommendations. The work looks exceptional in a boardroom presentation. Then it sits in a shared drive and nothing changes.</p>
             <p>The second type jumps straight into execution. Run ads. Post content. Build funnels. Activity is high, but there is no strategic coherence. Every campaign is an isolated bet.</p>
             <p className="text-foreground font-medium">GRPL exists at the intersection.</p>
-            <p>We bring the analytical depth of a management consultancy — rigorous diagnostics, evidence-based strategy, frameworks that have been tested across dozens of businesses and industries. But we couple it with the operational intensity of an in-house marketing leader who has a number to hit and a team to manage.</p>
+            <p>We bring the analytical depth of a management consultancy: rigorous diagnostics, evidence-based strategy, frameworks that have been tested across dozens of businesses and industries. But we couple it with the operational intensity of an in-house marketing leader who has a number to hit and a team to manage.</p>
             <p className="text-foreground font-bold">We believe the best strategy in the world is worthless if nobody executes it.</p>
             <p>And the best execution in the world is wasted if it is pointed in the wrong direction.</p>
-            <p>Every GRPL engagement combines both. Strategy that is designed to be executed. Execution that is anchored in strategy. Plans that are prioritised, resourced, and delivered — not filed away.</p>
+            <p>Every GRPL engagement combines both. Strategy that is designed to be executed. Execution that is anchored in strategy. Plans that are prioritised, resourced, and delivered, not filed away.</p>
           </motion.div>
 
           {/* Venn diagram */}
