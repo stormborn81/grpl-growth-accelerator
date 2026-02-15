@@ -94,6 +94,9 @@ const Header = () => {
             <button onClick={() => navigate('/contact')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Contact
             </button>
+            <button onClick={() => navigate('/growth-diagnostic')} className="text-xs font-semibold text-accent hover:text-accent/80 transition-colors">
+              Growth Diagnostic
+            </button>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -175,6 +178,12 @@ const Header = () => {
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     Health Check
+                  </button>
+                  <button 
+                    onClick={() => { navigate('/growth-diagnostic'); setMobileMenuOpen(false); }} 
+                    className="text-lg font-semibold text-accent hover:text-accent/80 transition-colors text-left"
+                  >
+                    Growth Diagnostic
                   </button>
                   <Button 
                     variant="hero" 
