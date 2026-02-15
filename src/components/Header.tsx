@@ -109,7 +109,7 @@ const Header = () => {
               variant="hero" 
               size="sm" 
               className="text-xs hidden md:inline-flex"
-              onClick={() => window.open('https://calendly.com/d/cvbv-65p-v73', '_blank')}
+              onClick={() => navigate('/contact')}
             >
               Book Call
             </Button>
@@ -180,7 +180,7 @@ const Header = () => {
                     variant="hero" 
                     size="lg" 
                     className="mt-4"
-                    onClick={() => { window.open('https://calendly.com/d/cvbv-65p-v73', '_blank'); setMobileMenuOpen(false); }}
+                    onClick={() => { navigate('/contact'); setMobileMenuOpen(false); }}
                   >
                     Book Call
                   </Button>
