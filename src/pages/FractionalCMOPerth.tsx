@@ -13,7 +13,7 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "GRPL - Fractional CMO Perth",
-    description: "Fractional CMO services for Perth businesses. Senior marketing leadership for resources, technology, and professional services companies in Western Australia.",
+    description: "Enterprise-grade fractional CMO services for Perth businesses. Senior marketing leadership for resources, technology, and professional services companies diversifying and growing in Western Australia.",
     url: "https://www.grpl.com.au/fractional-cmo-perth",
     areaServed: {
       "@type": "City",
@@ -35,12 +35,30 @@ const jsonLd = [
 ];
 
 const faqs = [
-  { question: "What is a fractional CMO and how does it work for Perth businesses?", answer: "A fractional CMO is a senior marketing executive who provides strategic leadership on a part-time basis - typically 2-4 days per week. For Perth businesses, this means experienced marketing leadership that understands the unique dynamics of the Western Australian market - from resources sector cycles to the challenges of geographic isolation - without the $225,000+ annual cost of a full-time CMO. GRPL's fractional CMOs work as embedded members of your leadership team with flexible remote and on-site arrangements." },
-  { question: "How much does a fractional CMO cost in Perth?", answer: "GRPL's fractional CMO engagements range from $8,000 to $18,000 per month depending on scope and time commitment. Compare this to a full-time CMO in Perth: $190,000-$270,000 base salary plus superannuation, bonuses, leave, and recruiter fees - totalling $270,000-$380,000+ per year. The fractional model delivers the same strategic leadership at 60-70% less cost, with immediate availability and zero recruitment risk." },
-  { question: "Can a fractional CMO work remotely with a Perth business?", answer: "Yes - and this is one of the strengths of the model for Perth businesses. GRPL's fractional CMO service is designed around strategic impact, not physical proximity. Regular video calls, shared dashboards, and structured communication cadences ensure alignment. Many Perth clients combine periodic on-site strategy sessions with ongoing remote engagement. The geographic isolation that makes full-time CMO recruitment difficult actually makes the fractional model more attractive." },
-  { question: "What industries do you work with in Perth?", answer: "GRPL works with Perth businesses across resources services and mining technology, professional services, technology and SaaS, construction, engineering, and high-growth B2B companies between $2M and $30M revenue. GRPL also works with businesses diversifying beyond traditional resources into critical minerals, clean energy, and technology sectors - where marketing sophistication needs to match the business ambition." },
-  { question: "How does a fractional CMO help Perth businesses compete nationally?", answer: "Perth businesses often struggle to build national visibility because the market defaults to Sydney and Melbourne. A fractional CMO helps Perth businesses build digital-first marketing strategies that overcome geographic barriers: thought leadership that establishes national authority, content strategies that generate inbound enquiry regardless of location, and brand positioning that communicates credibility beyond the WA market. The goal is to make geography irrelevant to your buyer's perception of your capability." },
-  { question: "What is the minimum engagement period?", answer: "GRPL recommends a 6-month minimum for fractional CMO engagements. The first month covers diagnostic and strategy, months 2-4 focus on implementation and optimisation, and months 5-6 allow measurement and refinement. After the initial period, engagements continue on a rolling monthly basis with no lock-in contracts." },
+  {
+    question: "What is a fractional CMO and how does it work for Perth businesses?",
+    answer: "A fractional CMO is a senior marketing executive who provides strategic leadership on a part-time basis - typically 2-4 days per week. For Perth businesses, this means experienced marketing leadership that understands the WA market context, can navigate the unique challenges of geographic isolation, and builds marketing strategies designed for both local and national reach. GRPL's fractional CMOs operate as embedded members of your leadership team with flexible engagement structures.",
+  },
+  {
+    question: "How much does a fractional CMO cost in Perth?",
+    answer: "GRPL's fractional CMO engagements range from $8,000 to $18,000 per month depending on scope and commitment. Compared to a full-time CMO in Perth ($200,000-$260,000 base plus super, bonuses, leave, and recruiter fees - totalling $275,000-$375,000+), the fractional model delivers equivalent strategic leadership at 60-70% less. No recruitment risk, no 6-month hiring process, and results from month one.",
+  },
+  {
+    question: "Can a fractional CMO help Perth businesses compete nationally?",
+    answer: "Yes - and this is one of the most valuable applications of a fractional CMO for Perth companies. Geographic isolation no longer needs to limit your market, but many Perth businesses still market as if it does. A fractional CMO builds the digital marketing infrastructure - content strategy, thought leadership, AI search optimisation, and online brand presence - that positions your business as a credible option for buyers in Sydney, Melbourne, and beyond. GRPL helps Perth businesses build national (and international) visibility without requiring a physical presence in every market.",
+  },
+  {
+    question: "What industries do you work with in Perth?",
+    answer: "GRPL works with Perth businesses across mining services, critical minerals, clean energy, technology, professional services, and high-growth B2B. The common thread is businesses between $2M and $30M revenue that need experienced marketing leadership to drive their next phase of growth - whether that is diversifying beyond resources clients, entering east coast markets, building inbound demand, or establishing thought leadership in emerging sectors.",
+  },
+  {
+    question: "How does the engagement work given Perth's time zone difference?",
+    answer: "Perth's 2-3 hour time difference from the east coast is easily managed within GRPL's engagement model. Strategy sessions, team meetings, and leadership check-ins are scheduled within overlapping business hours. Day-to-day execution, content development, and campaign management operate asynchronously. Many Perth clients find the time zone difference is a non-issue once the engagement rhythm is established.",
+  },
+  {
+    question: "What is the minimum engagement for Perth businesses?",
+    answer: "GRPL recommends a 6-month minimum engagement: month 1 for diagnostic and strategy, months 2-4 for implementation and optimisation, and months 5-6 for measurement and refinement. After the initial period, engagements continue month-to-month with no lock-in contracts. Some Perth clients engage for 12-18 months as they build their marketing function; others transition to a full-time CMO with GRPL managing the handover.",
+  },
 ];
 
 const FractionalCMOPerth = () => (
@@ -89,15 +107,15 @@ const FractionalCMOPerth = () => (
             <div className="grid gap-6 md:grid-cols-3">
               <div className="p-6 rounded-lg border border-border">
                 <h3 className="font-bold mb-3">The Diversification Imperative</h3>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">Perth's economy is actively diversifying. The WA Government has invested $6.5 billion to drive a decarbonised, diversified economy. Critical minerals are opening new supply chains, clean energy is creating new categories, and technology adoption across mining is spawning a services ecosystem that needs marketing far more sophisticated than the traditional resources sector playbook.</p>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">Perth's economy is actively diversifying. The WA Government has invested $6.5 billion to drive a decarbonised, diversified economy. Critical minerals are opening new supply chains, clean energy is creating new categories, and technology adoption across mining (autonomous trucks, drones, AI-driven operations) is spawning a services ecosystem that needs marketing far more sophisticated than the traditional resources sector playbook. A fractional CMO brings the strategic capability to market across both established and emerging sectors.</p>
               </div>
               <div className="p-6 rounded-lg border border-border">
                 <h3 className="font-bold mb-3">Geographic Challenge, Digital Opportunity</h3>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">Perth is the most geographically isolated capital city in the world. This creates unique marketing challenges - particularly for businesses looking to win clients on the east coast or internationally. A fractional CMO helps Perth businesses build digital marketing strategies that overcome geographic barriers: thought leadership that builds authority nationally and content strategies that attract inbound enquiry regardless of location.</p>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">Perth is the most geographically isolated capital city in the world. This creates unique marketing challenges - particularly for businesses looking to win clients on the east coast or internationally. A fractional CMO helps Perth businesses build digital marketing strategies that overcome geographic barriers: thought leadership that builds authority nationally, content strategies that attract inbound enquiry regardless of location, and brand positioning that communicates credibility beyond the local market.</p>
               </div>
               <div className="p-6 rounded-lg border border-border">
                 <h3 className="font-bold mb-3">Talent Scarcity</h3>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">Perth's talent shortages extend beyond mining and construction into marketing leadership. An ageing workforce and competition from the resources sector for top talent make recruiting a senior marketing leader exceptionally difficult. A fractional CMO sidesteps this challenge entirely - you get immediate access to experienced strategic marketing leadership without entering the competitive Perth talent market.</p>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">Perth's talent shortages extend beyond mining and construction into marketing leadership. Skill shortages in specialised areas, an ageing workforce, and competition from the resources sector for top talent make recruiting a senior marketing leader exceptionally difficult. A fractional CMO sidesteps this challenge entirely - you get immediate access to experienced strategic marketing leadership without entering the competitive Perth talent market.</p>
               </div>
             </div>
           </section>
@@ -107,20 +125,20 @@ const FractionalCMOPerth = () => (
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-8">Who This Is For - Perth Market Focus</h2>
             <div className="space-y-10">
               <div>
-                <h3 className="font-bold text-lg mb-2">Resources Services & Mining Technology</h3>
-                <p className="text-muted-foreground font-light leading-relaxed">Perth's mining services and mining technology (METS) sector is worth over $100 billion and serves global mining operations. But many METS companies have grown through procurement relationships and industry networks rather than strategic marketing. As the sector evolves - with autonomous operations, AI-driven analytics, and sustainability requirements creating new buying criteria - these businesses need marketing that positions them for the future, not the past. A fractional CMO brings the strategic framework to market technical products and services to increasingly sophisticated buyers.</p>
+                <h3 className="font-bold text-lg mb-2">Resources & Mining Services</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">Perth is home to 438+ active mining companies and 8 of the world's 14 largest resource corporations. But many mining services companies - from exploration technology to environmental consultants, safety providers to logistics firms - market themselves the same way they did a decade ago: relationship-driven, tender-response focused, and reactive. A fractional CMO introduces proactive marketing discipline: brand positioning that differentiates in a competitive services landscape, content that builds authority with procurement teams, and digital presence that generates inbound enquiry from beyond your existing network.</p>
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-2">Critical Minerals & Clean Energy</h3>
-                <p className="text-muted-foreground font-light leading-relaxed">Western Australia is positioning itself as a global leader in critical minerals processing and clean energy. Companies in lithium, rare earths, hydrogen, and renewable energy need to build brands and market presence from scratch - often to audiences that have never heard of them. A fractional CMO provides the strategic capability to build awareness, establish credibility, and generate demand in emerging markets where the rules are still being written.</p>
+                <p className="text-muted-foreground font-light leading-relaxed">The critical minerals boom - led by lithium, cobalt, graphite, and rare earth elements - is creating a new generation of Perth businesses competing for investment, partners, and customers on the global stage. These businesses need marketing that speaks to international investors, global OEMs, and government procurement - audiences that require sophisticated positioning, compelling narrative, and digital credibility. A fractional CMO with B2B experience provides the strategic framework to market to these audiences effectively.</p>
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-2">Professional Services</h3>
-                <p className="text-muted-foreground font-light leading-relaxed">Perth's professional services sector - engineering, consulting, legal, accounting - has historically served the resources sector. As the economy diversifies, these firms need to build visibility in new sectors and geographies. A fractional CMO introduces the marketing discipline to move beyond sector-specific referral networks and build a broader, more resilient client pipeline.</p>
+                <h3 className="font-bold text-lg mb-2">Technology & Innovation</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">Perth's technology sector is growing as mining drives adoption of AI, automation, big data, and autonomous systems. The Technology and Innovation sector is recognised as a key driver of Perth's economic diversity. Tech companies serving the resources sector - and those diversifying beyond it - need marketing strategies that communicate their value proposition to both mining and non-mining audiences. GRPL helps Perth tech companies build dual-market positioning that maximises their addressable market.</p>
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-2">Technology & SaaS</h3>
-                <p className="text-muted-foreground font-light leading-relaxed">Perth's tech sector is growing, driven partly by the resources sector's embrace of automation, data analytics, and digital operations. SaaS companies and tech startups building solutions for both resources and broader markets need experienced marketing leadership to scale beyond the WA market and compete nationally and internationally. A fractional CMO provides the go-to-market expertise to build demand generation engines that work beyond the Perth network.</p>
+                <h3 className="font-bold text-lg mb-2">Professional & B2B Services</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">Perth's professional services sector - legal, accounting, engineering, consulting - is growing alongside the diversifying economy. But many firms remain heavily dependent on mining-sector clients and referral networks. A fractional CMO builds marketing capability that diversifies revenue: targeting new sectors, building inbound demand generation, establishing thought leadership positioning, and creating systematic lead generation that reduces reliance on any single client or referral source.</p>
               </div>
             </div>
           </section>
@@ -130,10 +148,10 @@ const FractionalCMOPerth = () => (
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-8">What GRPL's Fractional CMO Delivers in Perth</h2>
             <div className="space-y-8">
               {[
-                { phase: "Month 1", title: "Market & Business Diagnostic", text: "GRPL's six-dimension marketing audit tailored for Perth's unique market dynamics. This includes an assessment of competitive positioning within both the WA market and national landscape, readiness to capitalise on diversification trends, and identification of the highest-impact marketing opportunities.", link: "/services/marketing-audit", linkText: "Explore the marketing audit" },
-                { phase: "Months 2-3", title: "Strategy & Positioning", text: "A marketing strategy built for Perth's specific challenges - geographic isolation, sector concentration, talent constraints - and opportunities - diversification, critical minerals growth, national expansion. The strategy covers brand positioning, ICP definition, digital-first channel strategy, budget allocation, and a 12-month execution roadmap." },
-                { phase: "Months 4-6", title: "Execution & National Reach", text: "GRPL leads execution with a particular focus on building national and international visibility for Perth businesses. This includes thought leadership programs, content strategies that establish authority beyond WA, digital demand generation, and measurement frameworks that connect marketing activity to pipeline and revenue." },
-                { phase: "Ongoing", title: "Scale & Independence", text: "Building the marketing function so the business is not dependent on any individual. GRPL develops systems, processes, and team capability - whether that means hiring the right people in Perth, building a remote marketing capability, or both." },
+                { phase: "Month 1", title: "WA Market Diagnostic", text: "GRPL's six-dimension marketing audit adapted for Perth's unique business context. This includes an assessment of your positioning relative to both local Perth competitors and east coast/international alternatives, an evaluation of your digital presence and national visibility, and identification of the highest-impact growth opportunities for your specific market.", link: "/services/marketing-audit", linkText: "Learn about the marketing audit framework" },
+                { phase: "Months 2-3", title: "Strategic Plan", text: "A marketing strategy designed for Perth's business reality - acknowledging the geographic challenges, leveraging the unique strengths of the WA market, and building a plan that drives growth locally, nationally, and internationally as appropriate for your business. This covers brand positioning, target market refinement, channel strategy (including AI search optimisation for national visibility), budget allocation, and a 12-month execution roadmap." },
+                { phase: "Months 4-6", title: "Execution & Market Building", text: "GRPL leads execution - managing your team, coordinating agencies, driving campaigns, and measuring results against pipeline and revenue contribution. For Perth businesses targeting national or international markets, this phase includes building the digital marketing infrastructure and content assets that establish credibility beyond the WA market." },
+                { phase: "Ongoing", title: "Capability Building", text: "GRPL builds your marketing function for independence - developing systems, processes, team capability, and strategic frameworks that outlast any individual engagement. Whether you transition to a full-time CMO, retain the fractional model, or build a self-sufficient team, the foundation is solid." },
               ].map((t) => (
                 <div key={t.phase} className="flex gap-6">
                   <div className="flex-shrink-0 w-24 text-right">
@@ -152,22 +170,22 @@ const FractionalCMOPerth = () => (
       </div>
 
       <CTABanner
-        headline="Ready to build marketing that matches Perth's ambitions?"
-        subtext="GRPL's fractional CMO service helps WA businesses build marketing functions that drive growth beyond resources."
+        headline="Ready to build marketing that matches Western Australia's ambitions?"
+        subtext="GRPL helps Perth businesses build marketing functions that drive growth across established and emerging markets."
         buttonText="Book a Strategy Call"
         buttonLink="/contact"
       />
 
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          {/* Perth Business Landscape */}
+          {/* Perth Business Outlook */}
           <section className="py-16">
-            <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-6">Perth's Economic Transformation - Why Now</h2>
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-6">Perth's Business Outlook - Why Strategic Marketing Matters Now</h2>
             <div className="space-y-4 text-muted-foreground font-light leading-relaxed">
-              <p>Western Australia's economy in 2026 is at an inflection point. The resources sector remains strong, but the conversation has shifted from extraction to processing, sustainability, and technology enablement. The WA Government's $6.5 billion investment in economic diversification is creating new sectors and new business opportunities.</p>
-              <p>For Perth businesses, this means the market is expanding but so is competition. Companies that invest in strategic marketing leadership now - building brands, establishing digital presence, and creating demand generation systems - will be positioned to capture the opportunities that diversification creates. Those that continue to rely solely on industry relationships and procurement networks will find themselves competing with national and international entrants who bring sophisticated marketing capabilities.</p>
-              <p>A fractional CMO provides the strategic leadership to navigate this transition: building marketing functions that work for both traditional and emerging sectors, establishing national visibility, and creating sustainable demand generation that reduces dependence on any single sector or relationship.</p>
-              <p><Link to="/blog/fractional-cmo-cost-australia" className="text-accent underline underline-offset-4 hover:text-accent/80">Full cost analysis: Fractional CMO in Australia</Link></p>
+              <p>Western Australia's 2026 business outlook is defined by transition. Iron ore remains the backbone, but gold exports are rising rapidly, critical minerals are expanding, and the $1.2 billion Strategic Reserve programme signals serious government commitment to diversification. EXA 2026 - Energy Exchange Australia - at the Perth Convention and Exhibition Centre will attract 6,000+ attendees from 33 countries, underscoring Perth's growing profile as a global energy and resources hub.</p>
+              <p>For Perth businesses, this means the window for establishing market leadership in emerging sectors is open now. Businesses that invest in strategic marketing today - building brand equity, thought leadership, and digital presence - will be positioned as category leaders as these markets mature. Those that wait will be competing for attention in increasingly crowded spaces.</p>
+              <p>A fractional CMO provides the strategic clarity to make decisive moves in this window - building marketing functions that drive growth today and position the business for the opportunities ahead.</p>
+              <p><Link to="/blog/ai-reshaping-cmo-role-2026" className="text-accent underline underline-offset-4 hover:text-accent/80">How AI is reshaping marketing leadership in 2026</Link></p>
             </div>
           </section>
 
@@ -177,17 +195,17 @@ const FractionalCMOPerth = () => (
             <div className="grid gap-6 md:grid-cols-3">
               <Link to="/services/chief-growth-officer" className="group p-6 rounded-lg border border-border hover:border-accent/30 transition-colors">
                 <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Chief Growth Officer</h3>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">When growth requires alignment across marketing, sales, product, and customer success - particularly relevant for Perth businesses diversifying into new markets.</p>
-                <span className="text-sm text-accent inline-flex items-center gap-1 mt-3">Learn more <ArrowRight className="h-3 w-3" /></span>
-              </Link>
-              <Link to="/services/brand-foundation" className="group p-6 rounded-lg border border-border hover:border-accent/30 transition-colors">
-                <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Brand Foundation</h3>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">Building a new brand for an emerging sector? GRPL's Brand Foundation sprint delivers a complete brand in weeks.</p>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">When growth requires alignment across marketing, sales, and revenue functions. Particularly relevant for Perth businesses entering new markets.</p>
                 <span className="text-sm text-accent inline-flex items-center gap-1 mt-3">Learn more <ArrowRight className="h-3 w-3" /></span>
               </Link>
               <Link to="/services/marketing-audit" className="group p-6 rounded-lg border border-border hover:border-accent/30 transition-colors">
                 <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Marketing Audit</h3>
                 <p className="text-sm text-muted-foreground font-light leading-relaxed">Start with a diagnostic to understand where your marketing stands before committing to a broader engagement.</p>
+                <span className="text-sm text-accent inline-flex items-center gap-1 mt-3">Learn more <ArrowRight className="h-3 w-3" /></span>
+              </Link>
+              <Link to="/services/interim-cmo" className="group p-6 rounded-lg border border-border hover:border-accent/30 transition-colors">
+                <h3 className="font-bold mb-2 group-hover:text-accent transition-colors">Interim CMO</h3>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">Need immediate marketing leadership to cover a gap? GRPL's interim CMO service provides full-time-equivalent coverage on a temporary basis.</p>
                 <span className="text-sm text-accent inline-flex items-center gap-1 mt-3">Learn more <ArrowRight className="h-3 w-3" /></span>
               </Link>
             </div>
@@ -196,7 +214,7 @@ const FractionalCMOPerth = () => (
           {/* Cross-city links */}
           <section className="pb-16">
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-4">Also Serving Businesses Across Australia</h2>
-            <p className="text-muted-foreground font-light leading-relaxed">GRPL provides fractional CMO and marketing leadership services across Australia, including <Link to="/fractional-cmo-sydney" className="text-accent underline underline-offset-4 hover:text-accent/80">Sydney</Link>, <Link to="/fractional-cmo-melbourne" className="text-accent underline underline-offset-4 hover:text-accent/80">Melbourne</Link>, and <Link to="/fractional-cmo-brisbane" className="text-accent underline underline-offset-4 hover:text-accent/80">Brisbane</Link>. Perth businesses get the same engagement quality regardless of geography - GRPL's model is built for strategic impact, not physical proximity.</p>
+            <p className="text-muted-foreground font-light leading-relaxed">GRPL provides fractional CMO and marketing leadership services across Australia, including <Link to="/fractional-cmo-sydney" className="text-accent underline underline-offset-4 hover:text-accent/80">Sydney</Link>, <Link to="/fractional-cmo-melbourne" className="text-accent underline underline-offset-4 hover:text-accent/80">Melbourne</Link>, and <Link to="/fractional-cmo-brisbane" className="text-accent underline underline-offset-4 hover:text-accent/80">Brisbane</Link>. For Perth businesses working with east coast clients, GRPL's national coverage ensures consistent marketing leadership across all markets.</p>
           </section>
 
           <FAQSection faqs={faqs} heading="Frequently Asked Questions - Fractional CMO Perth" />
