@@ -9,13 +9,13 @@ import { ArrowRight, Target, TrendingUp, ClipboardCheck, Users } from "lucide-re
 const services = [
   {
     title: "Fractional CMO",
-    description: "Enterprise-grade marketing leadership on a part-time basis. GRPL's fractional CMO service provides the strategic direction, team leadership, and executive accountability of a full-time Chief Marketing Officer — at a fraction of the cost. Ideal for businesses between $2M and $30M in revenue.",
+    description: "Enterprise-grade marketing leadership on a part-time basis. GRPL's fractional CMO service provides the strategic direction, team leadership, and executive accountability of a full-time Chief Marketing Officer - at a fraction of the cost. Ideal for businesses between $2M and $30M in revenue.",
     link: "/services/fractional-cmo",
     icon: Target,
   },
   {
     title: "Chief Growth Officer",
-    description: "Integrated growth leadership spanning marketing, sales, product, and customer success. The CGO role goes beyond marketing to own the entire revenue-generating system — aligning every growth function under one strategic mandate.",
+    description: "Integrated growth leadership spanning marketing, sales, product, and customer success. The CGO role goes beyond marketing to own the entire revenue-generating system - aligning every growth function under one strategic mandate.",
     link: "/services/chief-growth-officer",
     icon: TrendingUp,
   },
@@ -27,7 +27,7 @@ const services = [
   },
   {
     title: "Outsourced Marketing Department",
-    description: "A complete marketing function without the overhead of building one in-house. GRPL provides strategic leadership combined with execution capability — the full stack of marketing competence, scaled to your business needs.",
+    description: "A complete marketing function without the overhead of building one in-house. GRPL provides strategic leadership combined with execution capability - the full stack of marketing competence, scaled to your business needs.",
     link: "/services/outsourced-marketing-department",
     icon: Users,
   },
@@ -36,14 +36,14 @@ const services = [
 const steps = [
   { title: "Diagnostic", text: "Every engagement begins with GRPL's proprietary marketing audit. We assess strategic alignment, channel effectiveness, team capability, technology, customer intelligence, and competitive positioning to understand where the real opportunities and problems are." },
   { title: "Strategy", text: "Based on the diagnostic, GRPL develops a strategic roadmap tied to your revenue targets. This includes positioning, channel mix, budget allocation, measurement frameworks, and a 12-month execution plan. The strategy is designed for your specific market, team, and growth stage." },
-  { title: "Execution & Accountability", text: "GRPL embeds within your leadership team to drive execution against the strategy. This is not a document handoff — it is ongoing leadership, coaching, and accountability for results. We measure success on pipeline, revenue, and customer acquisition — not impressions or activity." },
+  { title: "Execution & Accountability", text: "GRPL embeds within your leadership team to drive execution against the strategy. This is not a document handoff - it is ongoing leadership, coaching, and accountability for results. We measure success on pipeline, revenue, and customer acquisition - not impressions or activity." },
 ];
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "GRPL — Marketing Leadership Services",
+    name: "GRPL - Marketing Leadership Services",
     description: "Enterprise-grade fractional CMO, Chief Growth Officer, marketing audit and outsourced marketing services for Australian businesses.",
     url: "https://www.grpl.com.au/services",
     provider: { "@type": "Organization", name: "GRPL", url: "https://www.grpl.com.au" },
@@ -82,7 +82,7 @@ const Services = () => (
 
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight mb-6">Enterprise-Grade Marketing Leadership for Australian Businesses</h1>
           <p className="text-lg text-muted-foreground font-light mb-16 max-w-3xl leading-relaxed">
-            GRPL provides senior marketing and growth leadership to ANZ businesses that have outgrown founder-led marketing but are not yet ready for a full-time C-suite hire. Every engagement is built around accountability for outcomes — not activity, not deliverables, but measurable business impact.
+            GRPL provides senior marketing and growth leadership to ANZ businesses that have outgrown founder-led marketing but are not yet ready for a full-time C-suite hire. Every engagement is built around accountability for outcomes - not activity, not deliverables, but measurable business impact.
           </p>
 
           {/* Service Cards */}

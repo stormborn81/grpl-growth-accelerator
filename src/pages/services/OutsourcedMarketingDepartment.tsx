@@ -11,7 +11,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "GRPL — Outsourced Marketing Department",
+    name: "GRPL - Outsourced Marketing Department",
     description: "A complete outsourced marketing department for Australian businesses. Strategy, leadership, and execution without the overhead.",
     url: "https://www.grpl.com.au/services/outsourced-marketing-department",
     provider: { "@type": "Organization", name: "GRPL", url: "https://www.grpl.com.au" },
@@ -30,7 +30,7 @@ const jsonLd = [
 ];
 
 const faqs = [
-  { question: "How is this different from hiring a marketing agency?", answer: "An agency delivers marketing deliverables — content, ads, campaigns. GRPL's outsourced marketing department provides the strategic leadership layer that agencies lack, combined with execution capability. You get an embedded CMO who owns strategy and accountability, plus the execution team to deliver against it. An agency gives you hands; GRPL gives you a brain and hands." },
+  { question: "How is this different from hiring a marketing agency?", answer: "An agency delivers marketing deliverables - content, ads, campaigns. GRPL's outsourced marketing department provides the strategic leadership layer that agencies lack, combined with execution capability. You get an embedded CMO who owns strategy and accountability, plus the execution team to deliver against it. An agency gives you hands; GRPL gives you a brain and hands." },
   { question: "What if we already have some marketing capability in-house?", answer: "GRPL's outsourced marketing department is flexible. If you have a marketing coordinator or junior marketer, the fractional CMO provides the strategic direction and coaching they need while supplementing execution capacity in areas they cannot cover. The model scales to complement what you already have." },
   { question: "Can we transition to an in-house team later?", answer: "Yes, and this is often the long-term goal. As the business grows, GRPL helps you define the roles needed, recruit the right people, and transition the marketing function in-house. Many clients start with the full outsourced model and gradually bring capabilities in-house as revenue justifies the investment." },
   { question: "What channels do you cover?", answer: "GRPL's outsourced marketing department covers whatever channels the strategy requires. This typically includes content marketing, SEO, email marketing, LinkedIn, paid search, and paid social. For some businesses it extends to event marketing, account-based marketing, or partner marketing. The channel mix is determined by where your customers are." },
@@ -40,7 +40,7 @@ const faqs = [
 
 const includes = [
   { title: "Strategic Leadership", text: "A senior fractional CMO who owns the marketing strategy, positioning, channel mix, budget allocation, and measurement framework. An executive leader embedded in your business who is accountable for outcomes." },
-  { title: "Campaign Execution", text: "End-to-end campaign management across the channels that matter for your business — content marketing, email, LinkedIn, paid search and social, SEO, events, or account-based marketing." },
+  { title: "Campaign Execution", text: "End-to-end campaign management across the channels that matter for your business - content marketing, email, LinkedIn, paid search and social, SEO, events, or account-based marketing." },
   { title: "Content Production", text: "Blog articles, case studies, white papers, social media content, email sequences, landing pages, and sales enablement materials. Every piece tied to the strategic narrative." },
   { title: "Technology & Operations", text: "CRM configuration, marketing automation setup, analytics implementation, and reporting dashboard creation. Tool selection, setup, and ongoing management." },
   { title: "Measurement & Reporting", text: "Monthly reporting connecting marketing activity to pipeline and revenue. Board-ready quarterly reviews. Clear dashboards showing what is working and where to reallocate." },
@@ -78,8 +78,8 @@ const OutsourcedMarketingDepartment = () => (
           <h2 className="text-xl sm:text-2xl font-bold text-muted-foreground mb-8">A Complete Marketing Function Without the Overhead of Building One</h2>
 
           <div className="space-y-6 mb-16">
-            <p className="text-muted-foreground font-light leading-relaxed">Some businesses do not need a <Link to="/services/fractional-cmo" className="text-accent underline underline-offset-4 hover:text-accent/80">fractional CMO</Link> to sit above an existing team — they need the entire marketing function. The CEO has been handling marketing alongside everything else. There is no marketing team, no agency relationship, and no strategic direction. Revenue has grown through referrals, founder hustle, and product quality. But the business has reached a stage where organic growth is slowing, competition is intensifying, and the market will not wait.</p>
-            <p className="text-muted-foreground font-light leading-relaxed">GRPL's outsourced marketing department provides the complete stack: strategic leadership, campaign execution, content production, channel management, measurement, and reporting. It is a fully functional marketing department — delivered as a service.</p>
+            <p className="text-muted-foreground font-light leading-relaxed">Some businesses do not need a <Link to="/services/fractional-cmo" className="text-accent underline underline-offset-4 hover:text-accent/80">fractional CMO</Link> to sit above an existing team - they need the entire marketing function. The CEO has been handling marketing alongside everything else. There is no marketing team, no agency relationship, and no strategic direction. Revenue has grown through referrals, founder hustle, and product quality. But the business has reached a stage where organic growth is slowing, competition is intensifying, and the market will not wait.</p>
+            <p className="text-muted-foreground font-light leading-relaxed">GRPL's outsourced marketing department provides the complete stack: strategic leadership, campaign execution, content production, channel management, measurement, and reporting. It is a fully functional marketing department - delivered as a service.</p>
           </div>
 
           {/* What's Included */}
@@ -116,7 +116,7 @@ const OutsourcedMarketingDepartment = () => (
             </div>
             <div className="p-6 rounded-lg border border-accent/30 bg-accent/5">
               <h3 className="font-bold mb-2">GRPL Outsourced Marketing</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed">An embedded marketing leader who owns strategy and is accountable for outcomes. Execution driven by strategy. The goal is to build capability — either developing internal team members or providing the function until you are ready to hire.</p>
+              <p className="text-sm text-muted-foreground font-light leading-relaxed">An embedded marketing leader who owns strategy and is accountable for outcomes. Execution driven by strategy. The goal is to build capability - either developing internal team members or providing the function until you are ready to hire.</p>
             </div>
           </div>
 
@@ -126,7 +126,7 @@ const OutsourcedMarketingDepartment = () => (
         </div>
       </div>
 
-      <CTABanner headline="Need a marketing department — without building one?" subtext="GRPL delivers the complete marketing function as a service." buttonText="Book a Strategy Call" buttonLink="/contact" />
+      <CTABanner headline="Need a marketing department - without building one?" subtext="GRPL delivers the complete marketing function as a service." buttonText="Book a Strategy Call" buttonLink="/contact" />
 
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">

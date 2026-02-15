@@ -65,7 +65,7 @@ const homepageJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "GRPL — Fractional CMO & Growth Leadership",
+    "name": "GRPL - Fractional CMO & Growth Leadership",
     "description": "Enterprise-grade fractional CMO and Chief Growth Officer services for scaling ANZ businesses.",
     "url": "https://www.grpl.com.au",
     "provider": {
@@ -96,7 +96,7 @@ const homepageJsonLd = [
         "name": "How does GRPL's fractional CMO service work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "GRPL embeds senior growth leadership into your business on a flexible basis. We define strategy, align teams, optimise channels, and drive measurable growth outcomes — all without the cost and commitment of a full-time executive hire."
+          "text": "GRPL embeds senior growth leadership into your business on a flexible basis. We define strategy, align teams, optimise channels, and drive measurable growth outcomes - all without the cost and commitment of a full-time executive hire."
         }
       },
       {

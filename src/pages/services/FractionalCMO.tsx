@@ -11,7 +11,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "GRPL — Fractional CMO Services",
+    name: "GRPL - Fractional CMO Services",
     description: "Enterprise-grade fractional CMO services for Australian businesses. Senior marketing leadership at a fraction of the full-time cost.",
     url: "https://www.grpl.com.au/services/fractional-cmo",
     provider: { "@type": "Organization", name: "GRPL", url: "https://www.grpl.com.au" },
@@ -30,10 +30,10 @@ const jsonLd = [
 ];
 
 const faqs = [
-  { question: "What is a fractional CMO?", answer: "A fractional CMO is a senior marketing executive who provides strategic leadership on a part-time or contract basis. They bring the same expertise, authority, and accountability as a full-time Chief Marketing Officer but work a fraction of the hours — typically 1 to 3 days per week. This makes enterprise-grade marketing leadership accessible to businesses that cannot justify the $300,000 to $450,000 fully loaded cost of a full-time CMO." },
-  { question: "How is a fractional CMO different from a marketing consultant?", answer: "A marketing consultant typically delivers a strategy document or provides advisory input on a project basis. A fractional CMO is an embedded leadership role — they sit within your executive team, attend leadership meetings, coach your staff, manage agency relationships, and own accountability for marketing outcomes over an extended engagement. The difference is ownership and accountability versus advice." },
+  { question: "What is a fractional CMO?", answer: "A fractional CMO is a senior marketing executive who provides strategic leadership on a part-time or contract basis. They bring the same expertise, authority, and accountability as a full-time Chief Marketing Officer but work a fraction of the hours - typically 1 to 3 days per week. This makes enterprise-grade marketing leadership accessible to businesses that cannot justify the $300,000 to $450,000 fully loaded cost of a full-time CMO." },
+  { question: "How is a fractional CMO different from a marketing consultant?", answer: "A marketing consultant typically delivers a strategy document or provides advisory input on a project basis. A fractional CMO is an embedded leadership role - they sit within your executive team, attend leadership meetings, coach your staff, manage agency relationships, and own accountability for marketing outcomes over an extended engagement. The difference is ownership and accountability versus advice." },
   { question: "How many days per week does a fractional CMO work?", answer: "Typically between 1 and 3 days per week, depending on the business's needs and growth stage. The engagement intensity often starts higher during the diagnostic and strategy phases, then adjusts as the team builds capability and execution systems are established." },
-  { question: "How quickly will we see results?", answer: "Leading indicators — strategic clarity, team alignment, measurement frameworks, campaign quality — typically improve within 90 days. Revenue and pipeline impact usually lags by 6 to 9 months because marketing strategy shifts require time to compound. GRPL establishes clear measurement milestones at the outset so progress is visible and accountable throughout the engagement." },
+  { question: "How quickly will we see results?", answer: "Leading indicators - strategic clarity, team alignment, measurement frameworks, campaign quality - typically improve within 90 days. Revenue and pipeline impact usually lags by 6 to 9 months because marketing strategy shifts require time to compound. GRPL establishes clear measurement milestones at the outset so progress is visible and accountable throughout the engagement." },
   { question: "Can a fractional CMO work alongside our existing agency?", answer: "Yes, this is one of the most common and effective configurations. The fractional CMO provides the strategic direction and oversight that ensures agency execution is aligned with business goals. Many GRPL clients report that their agency performance improves significantly once a fractional CMO is managing the relationship strategically." },
   { question: "What industries does GRPL work with?", answer: "GRPL works across B2B SaaS, professional services, technology, financial services, construction, and high-growth consumer businesses in Australia and New Zealand. The common thread is businesses between $2M and $30M revenue that need strategic marketing leadership to reach their next growth stage." },
   { question: "What happens at the end of the engagement?", answer: "GRPL's goal is to build lasting marketing capability within your organisation. At the end of an engagement, you should have a clear strategy, an empowered team, established measurement frameworks, and the organisational capability to execute independently. Some clients transition to a lighter ongoing advisory arrangement; others are fully self-sufficient." },
@@ -87,7 +87,7 @@ const FractionalCMO = () => (
           <h2 className="text-xl sm:text-2xl font-bold text-muted-foreground mb-8">Enterprise-Grade Marketing Leadership Without the Full-Time Cost</h2>
 
           <div className="prose-section mb-16 space-y-6">
-            <p className="text-muted-foreground font-light leading-relaxed">Australian businesses between $2 million and $30 million in revenue face a common challenge: founder-led marketing no longer scales, agencies are executing without strategic direction, and a full-time CMO costs $300,000 to $450,000 per year once fully loaded. GRPL's fractional CMO service closes this gap — providing the strategic authority, market expertise, and executive accountability of a full-time Chief Marketing Officer on a flexible, part-time basis.</p>
+            <p className="text-muted-foreground font-light leading-relaxed">Australian businesses between $2 million and $30 million in revenue face a common challenge: founder-led marketing no longer scales, agencies are executing without strategic direction, and a full-time CMO costs $300,000 to $450,000 per year once fully loaded. GRPL's fractional CMO service closes this gap - providing the strategic authority, market expertise, and executive accountability of a full-time Chief Marketing Officer on a flexible, part-time basis.</p>
             <p className="text-muted-foreground font-light leading-relaxed">A fractional CMO is not a consultant who delivers a strategy document and leaves. It is an embedded leadership role. GRPL's fractional CMOs sit within your leadership team, attend executive meetings, coach your marketing staff, manage <Link to="/blog/fractional-cmo-vs-marketing-agency" className="text-accent underline underline-offset-4 hover:text-accent/80">agency relationships</Link>, and own accountability for whether marketing is generating revenue. The engagement is structured around outcomes, not hours.</p>
           </div>
 
@@ -137,7 +137,7 @@ const FractionalCMO = () => (
 
       <CTABanner
         headline="See how a fractional CMO could transform your marketing"
-        subtext="Book a free 30-minute strategy call — no obligation, no pitch."
+        subtext="Book a free 30-minute strategy call - no obligation, no pitch."
         buttonText="Book Your Strategy Call"
         buttonLink="/contact"
       />
