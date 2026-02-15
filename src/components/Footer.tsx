@@ -55,6 +55,9 @@ const Footer = () => {
                 <li><button onClick={() => navigate('/services/chief-growth-officer')} className="hover:text-foreground transition-colors">Chief Growth Officer</button></li>
                 <li><button onClick={() => navigate('/services/marketing-audit')} className="hover:text-foreground transition-colors">Marketing Audit</button></li>
                 <li><button onClick={() => navigate('/services/outsourced-marketing-department')} className="hover:text-foreground transition-colors">Outsourced Marketing</button></li>
+                <li><button onClick={() => navigate('/services/brand-foundation')} className="hover:text-foreground transition-colors">Brand Foundation</button></li>
+                <li><button onClick={() => navigate('/services/growth-projects')} className="hover:text-foreground transition-colors">Growth Projects</button></li>
+                <li><button onClick={() => navigate('/services/interim-cmo')} className="hover:text-foreground transition-colors">Interim CMO</button></li>
               </ul>
             </div>
             

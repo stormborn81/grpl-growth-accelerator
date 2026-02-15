@@ -1,3 +1,6 @@
+# Redirects
+/hiring-cmo /services/interim-cmo 301
+
 # Serve static files first
 /sitemap.xml /sitemap.xml 200
 /sitemap.xsl /sitemap.xsl 200
