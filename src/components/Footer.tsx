@@ -51,10 +51,10 @@ const Footer = () => {
             <div>
               <h4 className="font-bold text-sm mb-4 tracking-tight">Services</h4>
               <ul className="space-y-3 text-sm text-muted-foreground font-light">
-                <li><a href="#services" className="hover:text-foreground transition-colors">Fractional CMO</a></li>
-                <li><a href="#services" className="hover:text-foreground transition-colors">Growth Strategy</a></li>
-                <li><a href="#services" className="hover:text-foreground transition-colors">Team Leadership</a></li>
-                <li><a href="#services" className="hover:text-foreground transition-colors">Marketing Health Check</a></li>
+                <li><button onClick={() => navigate('/services/fractional-cmo')} className="hover:text-foreground transition-colors">Fractional CMO</button></li>
+                <li><button onClick={() => navigate('/services/chief-growth-officer')} className="hover:text-foreground transition-colors">Chief Growth Officer</button></li>
+                <li><button onClick={() => navigate('/services/marketing-audit')} className="hover:text-foreground transition-colors">Marketing Audit</button></li>
+                <li><button onClick={() => navigate('/services/outsourced-marketing-department')} className="hover:text-foreground transition-colors">Outsourced Marketing</button></li>
               </ul>
             </div>
             
