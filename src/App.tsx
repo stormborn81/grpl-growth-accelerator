@@ -34,6 +34,7 @@ const FractionalCMOMelbourne = lazy(() => import("./pages/FractionalCMOMelbourne
 const FractionalCMOBrisbane = lazy(() => import("./pages/FractionalCMOBrisbane"));
 const FractionalCMOPerth = lazy(() => import("./pages/FractionalCMOPerth"));
 const GrowthDiagnostic = lazy(() => import("./pages/GrowthDiagnostic"));
+const About = lazy(() => import("./pages/About"));
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
               <Route path="/marketing-health-check" element={<MarketingHealthCheck />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/privacy" element={<Privacy />} />
