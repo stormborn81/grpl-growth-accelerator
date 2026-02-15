@@ -7,18 +7,20 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 
 // Critical SEO sections - NOT lazy loaded
+import TrustedBy from "@/components/TrustedBy";
+import ProblemStatement from "@/components/ProblemStatement";
 import WhyChoose from "@/components/WhyChoose";
 import Services from "@/components/Services";
-import About from "@/components/About";
 
 // Lazy load below-the-fold components
+const HowItWorks = lazy(() => import("@/components/HowItWorks"));
 const Outcomes = lazy(() => import("@/components/Outcomes"));
-const TrustedBy = lazy(() => import("@/components/TrustedBy"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
-const UseCases = lazy(() => import("@/components/UseCases"));
+const About = lazy(() => import("@/components/About"));
 const Team = lazy(() => import("@/components/Team"));
-const CTA = lazy(() => import("@/components/CTA"));
 const Insights = lazy(() => import("@/components/Insights"));
+const Locations = lazy(() => import("@/components/Locations"));
+const CTA = lazy(() => import("@/components/CTA"));
 
 const SectionLoader = () => (
   <div className="min-h-[200px] flex items-center justify-center">
@@ -48,12 +50,14 @@ const homepageJsonLd = [
     "name": "GRPL",
     "url": "https://www.grpl.com.au",
     "logo": "https://www.grpl.com.au/favicon.png",
-    "description": "Enterprise-grade fractional CMO and Chief Growth Officer services for ANZ businesses.",
+    "description": "Enterprise-grade fractional CMO and Chief Growth Officer services for Australian businesses. A collective of senior marketing and growth leaders providing strategic leadership and execution.",
     "foundingDate": "2024",
-    "areaServed": [
-      { "@type": "Country", "name": "Australia" },
-      { "@type": "Country", "name": "New Zealand" }
-    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Australia"
+    },
+    "serviceType": ["Fractional CMO", "Chief Growth Officer", "Marketing Audit", "Brand Foundation", "Growth Projects", "Interim CMO"],
+    "knowsAbout": ["Marketing Strategy", "Growth Leadership", "B2B Marketing", "Brand Strategy", "AI Search Optimisation", "Demand Generation"],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+61-414-838-210",
@@ -75,10 +79,10 @@ const homepageJsonLd = [
       "name": "GRPL",
       "url": "https://www.grpl.com.au"
     },
-    "areaServed": [
-      { "@type": "Country", "name": "Australia" },
-      { "@type": "Country", "name": "New Zealand" }
-    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Australia"
+    },
     "serviceType": ["Fractional CMO", "Chief Growth Officer", "Marketing Strategy", "Marketing Audit", "Growth Leadership"]
   },
   {
@@ -125,8 +129,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Enterprise-Grade Fractional CMO & Growth Leadership | GRPL"
-        description="GRPL delivers enterprise-grade fractional CMO and Chief Growth Officer services for ANZ businesses. Senior marketing leadership without the full-time cost."
+        title="Fractional CMO & Chief Growth Officer Australia | GRPL"
+        description="Enterprise-grade fractional CMO and Chief Growth Officer services for ANZ businesses $2M-$30M. Senior marketing leadership, strategy, and execution — without the full-time cost."
         canonical="https://www.grpl.com.au/"
         jsonLd={homepageJsonLd}
       />
@@ -140,12 +144,14 @@ const Index = () => {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <main id="main-content">
           <Hero />
-          {/* Diagnostic CTA */}
+          <TrustedBy />
+          <ProblemStatement />
+          {/* Growth Diagnostic CTA */}
           <section className="py-16 md:py-20 bg-foreground text-background">
             <div className="container mx-auto px-6 lg:px-8 text-center">
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4">Not sure what you need? Start here.</h2>
               <p className="text-background/70 font-light mb-8 max-w-xl mx-auto">
-                Take GRPL's free Growth Diagnostic. 3 minutes to understand where your marketing is stuck and what to do about it.
+                Take GRPL's free Growth Diagnostic. 3 minutes to discover your growth stage, map your marketing gaps, and get a personalised action plan. No login. No sales pitch. Just clarity.
               </p>
               <Button variant="hero" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/85" asChild>
                 <a href="/growth-diagnostic">Take the Diagnostic</a>
@@ -154,24 +160,26 @@ const Index = () => {
           </section>
           <WhyChoose />
           <Services />
-          <About />
           <Suspense fallback={<SectionLoader />}>
-            <Outcomes />
+            <HowItWorks />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
-            <TrustedBy />
+            <Outcomes />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <Testimonials />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
-            <UseCases />
+            <About />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <Team />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <Insights />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Locations />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <CTA />

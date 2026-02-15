@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { LinkedinIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -15,22 +14,22 @@ const About = () => {
 
           <div className="space-y-8 text-lg text-grpl-white/70 font-light leading-relaxed">
             <p>
-              GRPL partners with ambitious ANZ businesses to transform marketing from a cost centre 
-              into a strategic growth engine. Our fractional CMO and Chief Growth Officer services 
-              deliver C-suite marketing leadership without the overhead of full-time executive salaries.
+              GRPL is a collective of senior marketing and growth leaders who partner with ambitious ANZ businesses to transform marketing from a cost centre into a strategic growth engine.
             </p>
             
             <p>
-              Founded by experienced marketing executives who've scaled businesses across healthcare, 
-              finance, technology and retail, we bring deep strategic expertise combined with hands-on 
-              execution capability.
+              Founded by marketing executives who have scaled businesses across healthcare, finance, technology, and retail, GRPL brings enterprise-grade strategic expertise combined with hands-on execution capability. Every engagement is led by a senior leader and supported by a curated network of specialists: brand strategists, demand generation experts, creative directors, marketing technologists, and revenue operators.
             </p>
             
             <p>
-              Whether you're breaking through a growth plateau, transitioning from founder-led marketing, 
-              or building marketing capability for the next phase, GRPL provides the leadership, 
-              strategy and execution support you need to succeed.
+              Whether you are breaking through a growth plateau, transitioning from founder-led marketing, building your first marketing function, or bridging a leadership gap, GRPL provides the leadership, strategy, and execution to get you there. We plan, prioritise, and deliver.
             </p>
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link to="/about" className="text-sm text-accent hover:text-accent/80 transition-colors font-medium">
+              Learn more about the GRPL collective →
+            </Link>
           </div>
         </div>
       </div>
