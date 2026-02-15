@@ -11,7 +11,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "GRPL — Chief Growth Officer Services",
+    name: "GRPL - Chief Growth Officer Services",
     description: "Fractional CGO services unifying marketing, sales, and product growth. Integrated revenue leadership for Australian businesses.",
     url: "https://www.grpl.com.au/services/chief-growth-officer",
     provider: { "@type": "Organization", name: "GRPL", url: "https://www.grpl.com.au" },
@@ -30,10 +30,10 @@ const jsonLd = [
 ];
 
 const faqs = [
-  { question: "How is a CGO different from a CMO?", answer: "A CMO owns marketing — positioning, demand generation, brand, and marketing operations. A CGO owns the entire revenue-generating system, including marketing, sales alignment, product go-to-market, customer success, and unit economics. The CGO role is broader, more cross-functional, and directly accountable for revenue rather than just pipeline." },
-  { question: "Does my business need a CGO or a CMO?", answer: "If your primary challenge is marketing strategy — you need better positioning, stronger demand generation, clearer channel strategy — a fractional CMO is likely the right fit. If your challenge is growth integration — marketing generates leads but sales cannot convert them, customers churn before generating lifetime value, or your acquisition cost is unsustainable — you likely need a fractional CGO to align the entire growth system." },
+  { question: "How is a CGO different from a CMO?", answer: "A CMO owns marketing - positioning, demand generation, brand, and marketing operations. A CGO owns the entire revenue-generating system, including marketing, sales alignment, product go-to-market, customer success, and unit economics. The CGO role is broader, more cross-functional, and directly accountable for revenue rather than just pipeline." },
+  { question: "Does my business need a CGO or a CMO?", answer: "If your primary challenge is marketing strategy - you need better positioning, stronger demand generation, clearer channel strategy - a fractional CMO is likely the right fit. If your challenge is growth integration - marketing generates leads but sales cannot convert them, customers churn before generating lifetime value, or your acquisition cost is unsustainable - you likely need a fractional CGO to align the entire growth system." },
   { question: "What size business benefits most from a fractional CGO?", answer: "Businesses between $2 million and $30 million in revenue that have achieved product-market fit but need to scale growth systematically. At this stage, a full-time CGO commanding $300,000 to $400,000+ per year is often unaffordable, but the integration problem is real and needs senior leadership to solve." },
-  { question: "How does a fractional CGO work with our existing team?", answer: "The fractional CGO works as a peer to your existing functional leaders — head of sales, head of product, head of marketing. They do not replace these roles; they integrate them. The CGO runs the cross-functional operating rhythm, facilitates alignment, resolves conflicts between functions, and ensures everyone is working toward the same revenue target." },
+  { question: "How does a fractional CGO work with our existing team?", answer: "The fractional CGO works as a peer to your existing functional leaders - head of sales, head of product, head of marketing. They do not replace these roles; they integrate them. The CGO runs the cross-functional operating rhythm, facilitates alignment, resolves conflicts between functions, and ensures everyone is working toward the same revenue target." },
   { question: "What metrics does a CGO focus on?", answer: "Customer acquisition cost (CAC), customer lifetime value (LTV), CAC payback period, net revenue retention, annual contract value, pipeline conversion rates, and total revenue growth. These metrics span all growth functions and require integrated decision-making." },
   { question: "Can we start with a fractional CMO and move to a CGO later?", answer: "Yes, this is a common progression. Many GRPL clients begin with a fractional CMO engagement to establish marketing strategy, then expand to a CGO engagement when they recognise the growth bottleneck extends beyond marketing into sales, product, and customer success alignment." },
 ];
@@ -79,8 +79,8 @@ const ChiefGrowthOfficer = () => (
           <h2 className="text-xl sm:text-2xl font-bold text-muted-foreground mb-8">Integrated Growth Leadership Across Marketing, Sales, Product, and Customer Success</h2>
 
           <div className="space-y-6 mb-16">
-            <p className="text-muted-foreground font-light leading-relaxed">Growth is no longer a marketing problem. It is an integration problem. When marketing optimises for leads, sales optimises for deals, product optimises for features, and customer success optimises for retention — each function pulls in a different direction. The result is wasted spend, misaligned effort, and growth that stalls despite everyone working hard.</p>
-            <p className="text-muted-foreground font-light leading-relaxed">A <Link to="/blog/what-does-chief-growth-officer-do" className="text-accent underline underline-offset-4 hover:text-accent/80">Chief Growth Officer</Link> solves this by owning the entire revenue-generating system. GRPL's fractional CGO service provides the integrating leadership that aligns every growth function under one strategic mandate — accountable not just for demand generation, but for revenue closed and customer lifetime value achieved.</p>
+            <p className="text-muted-foreground font-light leading-relaxed">Growth is no longer a marketing problem. It is an integration problem. When marketing optimises for leads, sales optimises for deals, product optimises for features, and customer success optimises for retention - each function pulls in a different direction. The result is wasted spend, misaligned effort, and growth that stalls despite everyone working hard.</p>
+            <p className="text-muted-foreground font-light leading-relaxed">A <Link to="/blog/what-does-chief-growth-officer-do" className="text-accent underline underline-offset-4 hover:text-accent/80">Chief Growth Officer</Link> solves this by owning the entire revenue-generating system. GRPL's fractional CGO service provides the integrating leadership that aligns every growth function under one strategic mandate - accountable not just for demand generation, but for revenue closed and customer lifetime value achieved.</p>
           </div>
 
           {/* CMO vs CGO */}
@@ -92,7 +92,7 @@ const ChiefGrowthOfficer = () => (
             </div>
             <div className="p-6 rounded-lg border border-accent/30 bg-accent/5">
               <h3 className="font-bold mb-2">A CGO owns growth.</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed">Responsible for the entire revenue system — acquisition, conversion, onboarding, retention, expansion. Metrics: total revenue, CAC, LTV, net revenue retention.</p>
+              <p className="text-sm text-muted-foreground font-light leading-relaxed">Responsible for the entire revenue system - acquisition, conversion, onboarding, retention, expansion. Metrics: total revenue, CAC, LTV, net revenue retention.</p>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ const ChiefGrowthOfficer = () => (
 
           {/* Investment */}
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-4">Investment</h2>
-          <p className="text-muted-foreground font-light leading-relaxed mb-4">Fractional CGO engagements are typically 2-3 days per week at <Link to="/blog/fractional-cmo-cost-australia" className="text-accent underline underline-offset-4 hover:text-accent/80">$12,000 to $17,000 per month</Link>, depending on business complexity and growth stage. Minimum engagement term is 6 months — growth system design requires time to implement and optimise.</p>
+          <p className="text-muted-foreground font-light leading-relaxed mb-4">Fractional CGO engagements are typically 2-3 days per week at <Link to="/blog/fractional-cmo-cost-australia" className="text-accent underline underline-offset-4 hover:text-accent/80">$12,000 to $17,000 per month</Link>, depending on business complexity and growth stage. Minimum engagement term is 6 months - growth system design requires time to implement and optimise.</p>
         </div>
       </div>
 

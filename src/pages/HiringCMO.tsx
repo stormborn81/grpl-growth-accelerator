@@ -15,7 +15,7 @@ const hiringJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "GRPL — CMO Hiring Advisory",
+    "name": "GRPL - CMO Hiring Advisory",
     "description": "Expert guidance defining the right CMO role, skillset, and hiring brief so you hire the marketing leader your business actually needs.",
     "url": "https://www.grpl.com.au/hiring-cmo",
     "provider": { "@type": "Organization", "name": "GRPL", "url": "https://www.grpl.com.au" },
@@ -126,7 +126,7 @@ const HiringCMO = () => {
                 Hire Once. Hire Right. Build Momentum.
               </h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                GRPL works with founders, boards and leadership teams before they make a senior marketing hire — defining the role, the skillset, and the expectations that will drive growth.
+                GRPL works with founders, boards and leadership teams before they make a senior marketing hire - defining the role, the skillset, and the expectations that will drive growth.
               </p>
               <div className="space-y-4">
                 <p className="text-lg text-foreground/80">
@@ -214,7 +214,6 @@ const HiringCMO = () => {
 
         {/* The GRPL Approach */}
         <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
-          {/* Octagon background decoration */}
           <div className="absolute top-20 right-20 w-80 h-80 opacity-[0.04] pointer-events-none hidden lg:block">
             <img src="/src/assets/octagon-outline.png" alt="" className="w-full h-full" />
           </div>
@@ -230,15 +229,12 @@ const HiringCMO = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
                 <div className="text-center relative group">
-                  {/* Octagon border frame */}
                   <div className="absolute inset-0 -m-8" 
                        style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
                     <div className="w-full h-full border border-accent/20 group-hover:border-accent/40 transition-colors duration-500"></div>
                   </div>
                   <div className="relative mb-6">
-                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">
-                      1
-                    </div>
+                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">1</div>
                   </div>
                   <div className="relative space-y-3">
                     <h3 className="text-xl font-bold text-grpl-white">Define the Gap</h3>
@@ -249,15 +245,12 @@ const HiringCMO = () => {
                 </div>
 
                 <div className="text-center relative group">
-                  {/* Octagon border frame */}
                   <div className="absolute inset-0 -m-8" 
                        style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
                     <div className="w-full h-full border border-accent/20 group-hover:border-accent/40 transition-colors duration-500"></div>
                   </div>
                   <div className="relative mb-6">
-                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">
-                      2
-                    </div>
+                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">2</div>
                   </div>
                   <div className="relative space-y-3">
                     <h3 className="text-xl font-bold text-grpl-white">Clarify the Role</h3>
@@ -268,15 +261,12 @@ const HiringCMO = () => {
                 </div>
 
                 <div className="text-center relative group">
-                  {/* Octagon border frame */}
                   <div className="absolute inset-0 -m-8" 
                        style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
                     <div className="w-full h-full border border-accent/20 group-hover:border-accent/40 transition-colors duration-500"></div>
                   </div>
                   <div className="relative mb-6">
-                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">
-                      3
-                    </div>
+                    <div className="text-5xl md:text-6xl font-black tracking-tight text-grpl-white">3</div>
                   </div>
                   <div className="relative space-y-3">
                     <h3 className="text-xl font-bold text-grpl-white">Craft the Hire</h3>
