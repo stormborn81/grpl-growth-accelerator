@@ -129,7 +129,13 @@
   </url>
   <url>
     <loc>https://www.grpl.com.au/privacy</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.grpl.com.au/terms</loc>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
