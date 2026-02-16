@@ -1,30 +1,49 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ArrowUp } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const Privacy = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowBackToTop(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.grpl.com.au/" },
-      { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://www.grpl.com.au/privacy" }
-    ]
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.grpl.com.au/" },
+      { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://www.grpl.com.au/privacy" },
+    ],
   };
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title="Privacy Policy | GRPL"
-        description="GRPL's privacy policy outlines how we collect, use, and protect your personal information. Compliant with Australian Privacy Principles."
+        description="GRPL's Privacy Policy explains how we collect, hold, use, and disclose your personal information in accordance with the Privacy Act 1988 and Australian Privacy Principles."
         canonical="https://www.grpl.com.au/privacy"
         jsonLd={breadcrumbJsonLd}
       />
       <Header />
-      
+
       <main className="pt-20 pb-16">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <nav aria-label="Breadcrumb" className="mb-6 text-sm text-muted-foreground">
               <ol className="flex items-center gap-2">
                 <li><a href="/" className="hover:text-foreground transition-colors">Home</a></li>
@@ -33,167 +52,187 @@ const Privacy = () => {
               </ol>
             </nav>
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">Privacy Policy</h1>
-            
-            <div className="prose prose-neutral dark:prose-invert max-w-none space-y-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">Privacy Policy</h1>
+            <p className="text-center text-muted-foreground mb-4 text-sm">Last updated: February 2026</p>
+            <p className="text-center text-sm text-muted-foreground mb-12">
+              See also our <Link to="/terms" className="text-primary hover:underline">Terms and Conditions</Link>
+            </p>
+
+            <div className="prose prose-neutral dark:prose-invert max-w-none space-y-10 text-foreground/80 leading-relaxed">
               <section>
-                <h2 className="text-2xl font-bold mb-4">Introduction</h2>
-                <p className="text-foreground/70 leading-relaxed">
-                  GRPL ("we", "us", "our", "GRPL") is committed to protecting the privacy and security of your personal information. This Privacy Policy outlines how we collect, use, disclose, store, and protect personal information through our website www.grpl.com.au (the "Site") and related services.
-                </p>
-                <p className="text-foreground/70 leading-relaxed">
-                  By using our Site or providing us with your personal information, you agree to the practices described in this Policy. If you do not agree, please do not use or access the Site or provide us with personal data.
-                </p>
+                <h2 className="text-xl font-bold mb-3 text-accent">1. Introduction</h2>
+                <p>GRPL Pty Ltd (ABN 78 420 400 824) ("we", "us", or "our") is committed to protecting your privacy and handling your personal information in an open and transparent way.</p>
+                <p>This Privacy Policy explains how we collect, hold, use, and disclose your personal information in accordance with the Privacy Act 1988 (Cth) ("Privacy Act") and the Australian Privacy Principles ("APPs").</p>
+                <p>This Privacy Policy applies to all personal information collected through our website located at grpl.com.au ("Website"), as well as any personal information collected in the course of providing our fractional CMO and marketing consulting services.</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">2. Scope and legal basis</h2>
-                <ul className="list-disc pl-6 space-y-2 text-foreground/70">
-                  <li>This Policy applies to personal information collected via the Site, forms, emails, or other interactions with us (unless otherwise stated).</li>
-                  <li>We comply (as applicable) with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).</li>
-                  <li>If you are located outside Australia, additional or different privacy laws (e.g. GDPR) may also apply to you; we endeavour to respect those rights.</li>
-                  <li>If we materially change this Policy, we will update the "Last updated" date and notify users where practical.</li>
+                <h2 className="text-xl font-bold mb-3 text-accent">2. What Personal Information We Collect</h2>
+                <p>We may collect the following types of personal information:</p>
+
+                <h3 className="text-lg font-semibold mt-6 mb-2">2.1 Information you provide directly</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Your name, email address, phone number, and business name (when you contact us via our contact form, email, or phone)</li>
+                  <li>Your name and email address (when you subscribe to our newsletter, download a resource, or register for a lead magnet)</li>
+                  <li>Any other information you choose to provide in correspondence with us</li>
+                </ul>
+
+                <h3 className="text-lg font-semibold mt-6 mb-2">2.2 Information collected automatically</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Your IP address, browser type and version, operating system, and device information</li>
+                  <li>Pages visited, time spent on pages, links clicked, and referring website addresses</li>
+                  <li>Information collected through cookies and similar tracking technologies (see Section 8)</li>
+                </ul>
+
+                <h3 className="text-lg font-semibold mt-6 mb-2">2.3 Sensitive information</h3>
+                <p>We do not collect sensitive information (as defined in the Privacy Act) such as information about your health, racial or ethnic origin, political opinions, religious beliefs, or criminal record. If we ever need to collect sensitive information, we will obtain your explicit consent first.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold mb-3 text-accent">3. How We Collect Personal Information</h2>
+                <p>We collect personal information:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Directly from you, when you fill in a form on our Website, subscribe to our newsletter, contact us by email or phone, or engage our services</li>
+                  <li>Automatically, through cookies and analytics tools when you visit our Website</li>
+                  <li>From third parties, such as referrals from existing clients or business contacts (with your knowledge)</li>
+                </ul>
+                <p className="mt-4">Where practicable, we will collect personal information directly from you. We will not collect personal information unless it is reasonably necessary for one or more of our functions or activities.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold mb-3 text-accent">4. Why We Collect, Hold, Use, and Disclose Personal Information</h2>
+                <p>We collect, hold, use, and disclose your personal information for the following purposes:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>To respond to your enquiries and communicate with you about our services</li>
+                  <li>To provide, manage, and administer our fractional CMO and consulting services</li>
+                  <li>To send you our newsletter, blog updates, and marketing communications (where you have opted in)</li>
+                  <li>To improve our Website, services, and user experience</li>
+                  <li>To comply with our legal obligations</li>
+                  <li>For any other purpose with your consent or as required or authorised by law</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">3. What personal information we collect</h2>
-                <p className="text-foreground/70 leading-relaxed mb-4">
-                  We may collect the following types of personal information, depending on your interactions with us:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-foreground/70">
-                  <li><strong>Contact & identity details:</strong> name, email address, phone number, job title, organisation</li>
-                  <li><strong>Usage data:</strong> IP address, browser type, device identifiers, pages visited, referrer, timestamps</li>
-                  <li><strong>Communications:</strong> messages, enquiries, feedback you send us</li>
-                  <li><strong>Marketing data:</strong> preferences, whether you opt in or out of communications</li>
-                  <li><strong>Third-party data:</strong> information we receive from analytics providers, social media platforms, or other integration partners</li>
-                  <li><strong>Other information:</strong> any other data you voluntarily provide to us (e.g. in surveys, forms, attachments)</li>
+                <h2 className="text-xl font-bold mb-3 text-accent">5. Disclosure of Personal Information</h2>
+                <p>We may disclose your personal information to:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Our professional advisers, including accountants and lawyers, as reasonably required</li>
+                  <li>Third-party service providers who assist us in operating our Website and delivering our services (e.g. web hosting, email marketing, analytics providers)</li>
+                  <li>Government agencies or law enforcement bodies, as required or authorised by law</li>
+                  <li>Any other party with your prior consent</li>
                 </ul>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  We do not collect (unless you explicitly provide) sensitive information (e.g. health data, racial or ethnic origin, religious beliefs, criminal record).
-                </p>
+                <p className="mt-4">We do not sell, rent, or trade your personal information to any third party for marketing purposes.</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">4. How we collect personal information</h2>
-                <p className="text-foreground/70 leading-relaxed mb-4">
-                  We collect personal information by various means, including:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-foreground/70">
-                  <li>When you fill out forms, contact us, or subscribe to communications</li>
-                  <li>Through analytics services (e.g. Google Analytics) and cookies/tracking technologies</li>
-                  <li>Via email or other direct communication</li>
-                  <li>From third-party services, where you've given them permission (e.g. social media login)</li>
-                  <li>Automatically via server logs, browser data, or usage tracking</li>
+                <h2 className="text-xl font-bold mb-3 text-accent">6. Overseas Disclosure</h2>
+                <p>Some of our third-party service providers may store or process your personal information outside of Australia. Where this occurs, we take reasonable steps to ensure that the overseas recipient handles your personal information in accordance with the APPs.</p>
+                <p>The countries where your information may be processed include the United States, due to the location of our service providers' servers (e.g. email marketing platform, website hosting, analytics tools).</p>
+                <p>By providing us with your personal information, you consent to the disclosure of your information to these overseas recipients.</p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold mb-3 text-accent">7. Security of Personal Information</h2>
+                <p>We take reasonable steps to protect your personal information from misuse, interference, loss, unauthorised access, modification, and disclosure. These steps include:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Using secure (SSL/TLS) connections on our Website</li>
+                  <li>Restricting access to personal information to authorised personnel only</li>
+                  <li>Using password protection and encryption where appropriate</li>
+                  <li>Regularly reviewing our information security practices</li>
                 </ul>
+                <p className="mt-4">We will destroy or de-identify personal information when it is no longer needed for the purpose for which it was collected, unless we are required by law to retain it.</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">5. Purpose of collection and use</h2>
-                <p className="text-foreground/70 leading-relaxed mb-4">
-                  We collect and use personal information for the following purposes:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-foreground/70">
-                  <li>To respond to your enquiries, provide services, manage our client relationships</li>
-                  <li>To send you marketing or promotional communications (where you have consented)</li>
-                  <li>To improve our website, services, content, and user experience</li>
-                  <li>To analyse usage patterns, trends, or statistics</li>
-                  <li>To comply with legal or regulatory obligations</li>
-                  <li>To prevent fraud, unauthorised access, or misuse</li>
-                  <li>For any other purpose you consent to or which is reasonably related to the above</li>
-                </ul>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  If you choose not to provide some information, we may not be able to provide certain services or respond effectively to your requests.
-                </p>
+                <h2 className="text-xl font-bold mb-3 text-accent">8. Cookies and Tracking Technologies</h2>
+                <p>Our Website uses cookies and similar technologies to improve your experience and to help us understand how our Website is used.</p>
+
+                <h3 className="text-lg font-semibold mt-6 mb-2">8.1 What are cookies?</h3>
+                <p>Cookies are small text files placed on your device by our Website. They allow us to recognise your browser and remember certain information about your visit.</p>
+
+                <h3 className="text-lg font-semibold mt-6 mb-2">8.2 Types of cookies we use</h3>
+                <div className="my-4 not-prose">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Cookie Type</TableHead>
+                        <TableHead>Purpose</TableHead>
+                        <TableHead>Examples</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="font-medium">Essential</TableCell>
+                        <TableCell>Required for the Website to function</TableCell>
+                        <TableCell>Session management, security</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Analytics</TableCell>
+                        <TableCell>Help us understand how visitors use the site</TableCell>
+                        <TableCell>Google Analytics</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Marketing</TableCell>
+                        <TableCell>Track effectiveness of our marketing</TableCell>
+                        <TableCell>LinkedIn Insight Tag, Meta Pixel (if applicable)</TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </div>
+                <p>You can manage your cookie preferences through your browser settings. Most browsers allow you to refuse cookies or alert you when cookies are being sent. Please note that some features of our Website may not function properly if cookies are disabled.</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">6. Disclosure & cross-border transfers</h2>
-                <p className="text-foreground/70 leading-relaxed mb-4">
-                  We may disclose your personal information to:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-foreground/70">
-                  <li>Service providers and contractors (e.g. email providers, hosting, analytics, CRM)</li>
-                  <li>Affiliates, partners, or consultants engaged in service delivery</li>
-                  <li>Law enforcement, regulators, or courts, where legally compelled or permitted</li>
-                  <li>Other third parties, with your consent or as permitted by law</li>
-                </ul>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  If we transfer personal information outside Australia, we will take reasonable steps to ensure the overseas recipient handles the data in a way consistent with this Policy and relevant privacy laws.
-                </p>
+                <h2 className="text-xl font-bold mb-3 text-accent">9. Direct Marketing</h2>
+                <p>We may use your personal information to send you marketing communications about our services, blog updates, and resources that may be of interest to you. We will only do so where you have opted in to receive such communications (for example, by subscribing to our newsletter).</p>
+                <p>You can opt out of receiving marketing communications from us at any time by clicking the "unsubscribe" link in any marketing email, or by contacting us using the details in Section 13.</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">7. Cookies, tracking & third-party tools</h2>
-                <p className="text-foreground/70 leading-relaxed mb-4">
-                  We (and our third-party partners) use cookies and similar tracking technologies to:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-foreground/70">
-                  <li>Recognise your device and remember settings</li>
-                  <li>Analyse how users use our Site (e.g. which pages are visited)</li>
-                  <li>Improve our services and content</li>
-                  <li>Deliver targeted or relevant advertising</li>
-                </ul>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  You can control or block cookies via your browser settings, but note this may affect functionality. Our Site may also integrate third-party tools (e.g. Google Analytics, Facebook Pixel, advertising networks) which collect data about your use of our Site. This may be governed by their respective privacy policies.
-                </p>
+                <h2 className="text-xl font-bold mb-3 text-accent">10. Access and Correction</h2>
+                <p>You have the right to request access to the personal information we hold about you, and to request that we correct any information that is inaccurate, incomplete, out-of-date, irrelevant, or misleading.</p>
+                <p>To make a request, please contact us using the details in Section 13. We will respond to your request within a reasonable period (and in any event within 30 days). We may require you to verify your identity before processing your request.</p>
+                <p>We will not charge you for making a request or for correcting your personal information. If we refuse access for a lawful reason, we will provide you with a written explanation.</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">8. Data security & retention</h2>
-                <ul className="list-disc pl-6 space-y-2 text-foreground/70">
-                  <li>We take reasonable technical, administrative, and physical measures to protect personal information from unauthorised access, disclosure, alteration, or destruction.</li>
-                  <li>We limit access to personal information to those employees, contractors, or agents who need it to fulfil their roles.</li>
-                  <li>We retain personal information only as long as needed to fulfil the purposes for which it was collected (or as required by law). When no longer needed, we will delete or de-identify it.</li>
-                </ul>
+                <h2 className="text-xl font-bold mb-3 text-accent">11. Notifiable Data Breaches</h2>
+                <p>In the event of a data breach that is likely to result in serious harm to any individuals whose personal information is involved, we will comply with the Notifiable Data Breaches (NDB) scheme under Part IIIC of the Privacy Act. This includes notifying affected individuals and the Office of the Australian Information Commissioner (OAIC) as required.</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">9. Access, correction & rights</h2>
-                <p className="text-foreground/70 leading-relaxed mb-4">
-                  You may:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-foreground/70">
-                  <li>Request access to the personal information we hold about you</li>
-                  <li>Request correction or updating of your personal information</li>
-                  <li>Withdraw your consent (where applicable)</li>
-                  <li>Opt out of marketing communications</li>
-                  <li>Request deletion (subject to legal or contractual retention obligations)</li>
-                </ul>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  To exercise these rights, contact us using the details in Section 12. We may ask you to verify your identity before processing requests.
-                </p>
+                <h2 className="text-xl font-bold mb-3 text-accent">12. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. The updated version will be indicated by the "Last updated" date at the top of this page.</p>
+                <p>We encourage you to review this Privacy Policy periodically. Your continued use of our Website after any changes constitutes your acceptance of the updated Privacy Policy.</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold mb-4">10. Complaints & dispute resolution</h2>
-                <p className="text-foreground/70 leading-relaxed">
-                  If you believe we have breached this Policy or applicable privacy law, please contact us (see Section 12). We will investigate and endeavour to resolve your complaint within a reasonable time.
+                <h2 className="text-xl font-bold mb-3 text-accent">13. How to Contact Us or Make a Complaint</h2>
+                <p>If you have any questions about this Privacy Policy, wish to make a request regarding your personal information, or wish to make a complaint about how we have handled your personal information, please contact us:</p>
+                <p className="mt-2">
+                  GRPL Pty Ltd<br />
+                  Privacy Officer: Matt<br />
+                  Email: <a href="mailto:matt@grpl.com.au" className="text-primary hover:underline">matt@grpl.com.au</a><br />
+                  Website: <a href="https://www.grpl.com.au" className="text-primary hover:underline">grpl.com.au</a>
                 </p>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  If we cannot resolve your complaint satisfactorily, you may have the right to lodge a complaint with the Office of the Australian Information Commissioner (OAIC).
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold mb-4">11. Changes to this Privacy Policy</h2>
-                <p className="text-foreground/70 leading-relaxed">
-                  We may update this Policy from time to time (for example, to reflect changes to our practices or legal obligations). When we make significant changes, we will notify you (via email or prominent notice on the Site). The "Last updated" date above reflects the effective date.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold mb-4">12. Contact us</h2>
-                <p className="text-foreground/70 leading-relaxed">
-                  If you have any questions, requests, or complaints related to this Privacy Policy or your personal information, please contact: <a href="mailto:letsgo@GRPL.com.au" className="text-primary hover:underline">letsgo@GRPL.com.au</a>
-                </p>
+                <p className="mt-4">We will acknowledge your complaint within 7 days and aim to resolve it within 30 days.</p>
               </section>
             </div>
           </div>
         </div>
       </main>
-      
+
       <Footer />
+
+      {showBackToTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 bg-accent text-accent-foreground p-3 rounded-full shadow-lg hover:bg-accent/90 transition-all"
+          aria-label="Back to top"
+        >
+          <ArrowUp className="h-5 w-5" />
+        </button>
+      )}
     </div>
   );
 };

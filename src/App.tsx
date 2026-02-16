@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 const MarketingHealthCheck = lazy(() => import("./pages/MarketingHealthCheck"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
 const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
 const HiringCMO = lazy(() => import("./pages/HiringCMO"));
 const Blog = lazy(() => import("./pages/Blog"));
 const FractionalCMOAustraliaGuide = lazy(() => import("./pages/blog/FractionalCMOAustraliaGuide"));
@@ -59,6 +60,7 @@ const App = () => (
               <Route path="/marketing-health-check" element={<MarketingHealthCheck />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="/hiring-cmo" element={<HiringCMO />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/fractional-cmo-australia-guide" element={<FractionalCMOAustraliaGuide />} />
