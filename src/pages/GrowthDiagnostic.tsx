@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo, lazy, Suspense } from "react";
+import { useState, useCallback, useMemo, lazy, Suspense, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -28,7 +28,13 @@ import type {
   Dimension,
   PointAllocation,
 } from "@/types/diagnostic";
-
+import {
+  trackDiagnosticStart,
+  trackDiagnosticQuestionAnswered,
+  trackDiagnosticFormViewed,
+  trackDiagnosticComplete,
+  trackShareClick,
+} from "@/utils/analytics";
 const INITIAL_SCORES: DimensionScores = { strategy: 0, execution: 0, team: 0, technology: 0, measurement: 0, positioning: 0 };
 
 const jsonLd = {
@@ -100,6 +106,7 @@ export default function GrowthDiagnostic() {
   }, []);
 
   const startDiagnostic = () => {
+    trackDiagnosticStart();
     const q1 = diagnosticQuestions.find(q => q.id === 'q1')!;
     setState(s => ({ ...s, phase: 'questions', questionHistory: [q1.id], currentQuestionIndex: 0 }));
   };
@@ -138,6 +145,7 @@ export default function GrowthDiagnostic() {
   const advanceToQuestion = (nextId: string, newScores: DimensionScores, newAnswers: UserAnswer[], option: any) => {
     setDirection(1);
     if (nextId === 'done') {
+      trackDiagnosticFormViewed();
       setState(s => ({
         ...s, phase: 'email-gate', scores: newScores, answers: newAnswers,
         revenueTier: option?.revenueTier || s.revenueTier,
@@ -147,6 +155,7 @@ export default function GrowthDiagnostic() {
     }
     setState(s => {
       const newHistory = [...s.questionHistory.slice(0, s.currentQuestionIndex + 1), nextId];
+      trackDiagnosticQuestionAnswered(nextId, newHistory.length - 1, QUESTION_ORDER.length);
       return {
         ...s,
         scores: newScores,
@@ -291,7 +300,11 @@ export default function GrowthDiagnostic() {
     }
 
     setIsSubmitting(false);
-    setState(s => ({ ...s, phase: 'results' }));
+    const n = normaliseScores(state.scores);
+    const t = getTotalPercentage(n);
+    const s = getGrowthStage(t);
+    trackDiagnosticComplete(GROWTH_STAGE_INFO[s].title, t);
+    setState(st => ({ ...st, phase: 'results' }));
   };
 
   const normalised = normaliseScores(state.scores);
@@ -314,16 +327,20 @@ export default function GrowthDiagnostic() {
 
   // Share handlers
   const handleCopyLink = () => {
+    trackShareClick('copy_link');
     navigator.clipboard.writeText('https://www.grpl.com.au/growth-diagnostic');
   };
 
   const handleShareLinkedIn = () => {
-    const text = encodeURIComponent("Just took GRPL's Growth Diagnostic. Interesting to see where the gaps actually are. Free tool for any business trying to figure out their marketing priorities.");
+    trackShareClick('linkedin');
     const url = encodeURIComponent('https://www.grpl.com.au/growth-diagnostic');
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
   };
 
-  const handlePrint = () => window.print();
+  const handlePrint = () => {
+    trackShareClick('print');
+    window.print();
+  };
 
   return (
     <div className="min-h-screen bg-foreground text-background">

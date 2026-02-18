@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import buttonOctagon from "@/assets/button-octagon.png";
+import { trackBookCallClick, trackHealthCheckClick } from "@/utils/analytics";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -53,7 +54,7 @@ const Hero = () => {
                   variant="hero" 
                   size="lg" 
                   className="w-full sm:w-auto"
-                  onClick={() => navigate('/marketing-health-check')}
+                  onClick={() => { trackHealthCheckClick('hero'); navigate('/marketing-health-check'); }}
                 >
                   Run Marketing Health Check
                   <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
@@ -62,7 +63,7 @@ const Hero = () => {
                   variant="heroSecondary" 
                   size="lg" 
                   className="w-full sm:w-auto"
-                  onClick={() => navigate('/contact')}
+                  onClick={() => { trackBookCallClick('hero'); navigate('/contact'); }}
                 >
                   Book Discovery Call
                   <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
