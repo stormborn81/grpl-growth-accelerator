@@ -334,7 +334,7 @@ const HiringCMO = () => {
                 <Button 
                   variant="hero" 
                   size="lg"
-                  onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
+                  onClick={() => window.location.href = '/contact'}
                 >
                   Book a Discovery Call →
                 </Button>
