@@ -1,8 +1,24 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 const ContactUs = () => {
+  useEffect(() => {
+    const existing = document.querySelector('script[src*="copper.com/j/wtpyhfwJG2bScj3GvmyLG2"]');
+    if (existing) return;
+
+    const script = document.createElement("script");
+    script.src = "https://forms.copper.com/j/wtpyhfwJG2bScj3GvmyLG2";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
+  }, []);
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -36,24 +52,14 @@ const ContactUs = () => {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
               <p className="text-lg text-foreground/70 mb-4">
-                Schedule a discovery call to discuss your marketing needs
+                Get in touch to discuss your marketing needs
               </p>
               <p className="text-base text-foreground/70">
                 Email us: <a href="mailto:Letsgo@GRPL.com.au" className="text-primary hover:underline">Letsgo@GRPL.com.au</a>
               </p>
             </div>
             
-            <div className="bg-card rounded-lg p-6 shadow-lg">
-              <iframe 
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2aEHN-quI3FFLXnJ_fBgsVi9-Z6_2WK-Ws5-lArN72_NsDR08H-s93os7bSdsacJA4nl0YSRID?gv=true" 
-                style={{ border: 0 }} 
-                width="100%" 
-                height="600" 
-                frameBorder="0"
-                title="Google Calendar Appointment Scheduling"
-                loading="lazy"
-              />
-            </div>
+            <div className="flex justify-center" id="copper-form-container" />
           </div>
         </div>
       </main>
