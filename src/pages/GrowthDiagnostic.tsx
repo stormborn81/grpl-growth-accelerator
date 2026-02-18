@@ -236,7 +236,7 @@ export default function GrowthDiagnostic() {
     }));
   };
 
-  const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/YOUR_HOOK_ID/YOUR_HOOK_PATH/';
+  const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/25153598/ucd8l7z/';
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
