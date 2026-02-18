@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import CTABanner from "@/components/CTABanner";
 import FAQSection from "@/components/FAQSection";
-import LeadForm from "@/components/LeadForm";
+import CopperFormEmbed from "@/components/CopperFormEmbed";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const jsonLd = [
@@ -179,7 +179,7 @@ const InterimCMO = () => (
         <div className="max-w-4xl mx-auto">
           <FAQSection faqs={faqs} />
           <div className="pb-8">
-            <LeadForm heading="Discuss Interim CMO Support" subtext="Tell us about your situation and timeline. We'll schedule a call to discuss how GRPL can provide immediate marketing leadership." />
+            <CopperFormEmbed />
           </div>
 
           <section className="pb-16">

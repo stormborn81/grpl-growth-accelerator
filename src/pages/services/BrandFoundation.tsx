@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import CTABanner from "@/components/CTABanner";
 import FAQSection from "@/components/FAQSection";
-import LeadForm from "@/components/LeadForm";
+import CopperFormEmbed from "@/components/CopperFormEmbed";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const jsonLd = [
@@ -211,7 +211,7 @@ const BrandFoundation = () => (
         <div className="max-w-4xl mx-auto">
           <FAQSection faqs={faqs} />
           <div className="pb-8">
-            <LeadForm heading="Start Your Brand Foundation" subtext="Tell us about your business and where you are in your journey. We'll schedule a call to scope your Brand Foundation sprint." />
+            <CopperFormEmbed />
           </div>
 
           <section className="pb-16">

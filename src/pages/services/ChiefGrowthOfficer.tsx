@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import CTABanner from "@/components/CTABanner";
 import FAQSection from "@/components/FAQSection";
-import LeadForm from "@/components/LeadForm";
+import CopperFormEmbed from "@/components/CopperFormEmbed";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const jsonLd = [
@@ -146,7 +146,7 @@ const ChiefGrowthOfficer = () => (
           <FAQSection faqs={faqs} />
 
           <div className="pb-8">
-            <LeadForm heading="Explore CGO Services" subtext="Tell us about your growth challenges and we'll discuss whether integrated growth leadership is the right approach." />
+            <CopperFormEmbed />
           </div>
 
           <section className="pb-16">

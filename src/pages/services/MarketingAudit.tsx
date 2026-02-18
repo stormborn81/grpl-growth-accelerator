@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import CTABanner from "@/components/CTABanner";
 import FAQSection from "@/components/FAQSection";
-import LeadForm from "@/components/LeadForm";
+import CopperFormEmbed from "@/components/CopperFormEmbed";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const jsonLd = [
@@ -141,7 +141,7 @@ const MarketingAudit = () => (
         <div className="max-w-4xl mx-auto">
           <FAQSection faqs={faqs} />
           <div className="pb-8">
-            <LeadForm heading="Request a Marketing Audit" subtext="Tell us about your business and we'll confirm scope, timing, and investment for your diagnostic." />
+            <CopperFormEmbed />
           </div>
 
           <section className="pb-16">
