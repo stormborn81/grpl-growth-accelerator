@@ -46,50 +46,64 @@ const AboutPhilosophy = () => {
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="relative w-full max-w-md aspect-[4/3]">
+            <div className="relative w-full max-w-lg aspect-[4/3]">
               {/* Left circle */}
               <motion.div
-                className="absolute left-0 top-1/2 -translate-y-1/2 w-[60%] aspect-square rounded-full bg-foreground/5 border border-foreground/10 flex flex-col items-center justify-center p-6"
+                className="absolute left-0 top-[10%] w-[62%] aspect-square rounded-full bg-foreground/5 border border-foreground/10"
                 initial={{ x: -60, opacity: 0 }}
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.7, delay: 0.5 }}
               >
-                <span className="text-xs font-bold tracking-widest uppercase mb-3">Strategic Rigour</span>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  {leftKeywords.map((kw) => (
-                    <span key={kw} className="text-[10px] text-muted-foreground font-light px-2 py-0.5 bg-foreground/5 rounded-full">{kw}</span>
-                  ))}
-                </div>
+                <span className="absolute top-[38%] left-[22%] text-xs font-bold tracking-widest uppercase">Strategic Rigour</span>
               </motion.div>
 
               {/* Right circle */}
               <motion.div
-                className="absolute right-0 top-1/2 -translate-y-1/2 w-[60%] aspect-square rounded-full bg-foreground/5 border border-foreground/10 flex flex-col items-center justify-center p-6"
+                className="absolute right-0 top-[10%] w-[62%] aspect-square rounded-full bg-foreground/5 border border-foreground/10"
                 initial={{ x: 60, opacity: 0 }}
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.7, delay: 0.6 }}
               >
-                <span className="text-xs font-bold tracking-widest uppercase mb-3">Execution Discipline</span>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  {rightKeywords.map((kw) => (
-                    <span key={kw} className="text-[10px] text-muted-foreground font-light px-2 py-0.5 bg-foreground/5 rounded-full">{kw}</span>
-                  ))}
-                </div>
+                <span className="absolute top-[38%] right-[18%] text-xs font-bold tracking-widest uppercase">Execution Discipline</span>
               </motion.div>
 
-              {/* Center overlap */}
+              {/* Center overlap – GRPL orange circle */}
               <motion.div
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[30%] aspect-square rounded-full bg-accent/15 border border-accent/40 flex flex-col items-center justify-center p-3"
+                className="absolute left-1/2 top-[10%] -translate-x-1/2 z-10 w-[32%] aspect-square rounded-full bg-accent/15 border border-accent/40 flex flex-col items-center justify-center p-3"
                 initial={{ scale: 0 }}
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.9, type: "spring" }}
               >
-                <span className="text-[10px] md:text-xs font-black text-accent mb-1">GRPL</span>
+                <span className="text-sm font-black text-accent mb-1">GRPL</span>
                 <div className="flex flex-col items-center gap-0.5">
                   {centerKeywords.map((kw) => (
-                    <span key={kw} className="text-[8px] md:text-[9px] text-accent/80 font-light text-center leading-tight">{kw}</span>
+                    <span key={kw} className="text-[9px] text-accent/80 font-light text-center leading-tight">{kw}</span>
                   ))}
                 </div>
+              </motion.div>
+
+              {/* Left keywords – below circles, left-aligned */}
+              <motion.div
+                className="absolute bottom-0 left-0 w-[48%] flex flex-wrap gap-1.5 justify-center"
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.8 }}
+              >
+                {leftKeywords.map((kw) => (
+                  <span key={kw} className="text-[10px] text-muted-foreground font-light px-2.5 py-1 bg-foreground/5 rounded-full">{kw}</span>
+                ))}
+              </motion.div>
+
+              {/* Right keywords – below circles, right-aligned */}
+              <motion.div
+                className="absolute bottom-0 right-0 w-[48%] flex flex-wrap gap-1.5 justify-center"
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.85 }}
+              >
+                {rightKeywords.map((kw) => (
+                  <span key={kw} className="text-[10px] text-muted-foreground font-light px-2.5 py-1 bg-foreground/5 rounded-full">{kw}</span>
+                ))}
               </motion.div>
             </div>
           </motion.div>
