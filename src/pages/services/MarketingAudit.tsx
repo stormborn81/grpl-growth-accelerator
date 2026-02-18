@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -121,6 +122,18 @@ const MarketingAudit = () => (
           <p className="text-muted-foreground font-light leading-relaxed mb-4">The GRPL Marketing Audit is delivered over 3-4 weeks at a fixed project fee of $8,000 to $15,000 depending on business complexity. For businesses that engage GRPL for ongoing <Link to="/services/fractional-cmo" className="text-accent underline underline-offset-4 hover:text-accent/80">fractional CMO</Link> or <Link to="/services/chief-growth-officer" className="text-accent underline underline-offset-4 hover:text-accent/80">CGO services</Link> following the audit, the audit fee is credited against the first month's retainer.</p>
         </div>
       </div>
+
+      <section className="py-16 md:py-20 bg-foreground text-background">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4">Want a quick snapshot first?</h2>
+          <p className="text-background/70 font-light mb-8 max-w-xl mx-auto">
+            Take GRPL's free Marketing Health Check. 5 minutes to understand where your marketing stands before committing to a full audit.
+          </p>
+          <Button variant="hero" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/85" asChild>
+            <Link to="/marketing-health-check">Take the Health Check</Link>
+          </Button>
+        </div>
+      </section>
 
       <CTABanner headline="Find out what is actually holding your marketing back" subtext="GRPL's marketing audit gives you the clarity to invest with confidence." buttonText="Request a Marketing Audit" buttonLink="/contact" />
 

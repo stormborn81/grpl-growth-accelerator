@@ -98,14 +98,6 @@ const Header = () => {
 
           <div className="flex items-center gap-3">
             <Button 
-              variant="ghost" 
-              size="sm" 
-              className="hidden sm:inline-flex text-xs"
-              onClick={() => navigate('/marketing-health-check')}
-            >
-              Health Check
-            </Button>
-            <Button 
               variant="hero" 
               size="sm" 
               className="text-xs hidden md:inline-flex"
@@ -165,13 +157,7 @@ const Header = () => {
                     Contact
                   </button>
                   <button 
-                    onClick={() => { navigate('/marketing-health-check'); setMobileMenuOpen(false); }} 
-                    className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
-                  >
-                    Health Check
-                  </button>
-                  <button 
-                    onClick={() => { navigate('/growth-diagnostic'); setMobileMenuOpen(false); }} 
+                    onClick={() => { navigate('/growth-diagnostic'); setMobileMenuOpen(false); }}
                     className="text-lg font-semibold text-accent hover:text-accent/80 transition-colors text-left"
                   >
                     Growth Diagnostic

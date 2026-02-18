@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -134,6 +135,18 @@ const FractionalCMO = () => (
           <p className="text-sm text-muted-foreground font-light mb-16">All engagements have a minimum 3-month term. 6-month and 12-month commitments receive preferential rates.</p>
         </div>
       </div>
+
+      <section className="py-16 md:py-20 bg-foreground text-background">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4">Not sure if a Fractional CMO is right for you?</h2>
+          <p className="text-background/70 font-light mb-8 max-w-xl mx-auto">
+            Take GRPL's free Marketing Health Check. 5 minutes to understand where your marketing stands and what to prioritise next.
+          </p>
+          <Button variant="hero" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/85" asChild>
+            <Link to="/marketing-health-check">Take the Health Check</Link>
+          </Button>
+        </div>
+      </section>
 
       <CTABanner
         headline="See how a fractional CMO could transform your marketing"
