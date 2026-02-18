@@ -61,7 +61,7 @@ export default function GrowthDiagnostic() {
     scores: { ...INITIAL_SCORES },
     revenueTier: null,
     growthAmbitionTag: null,
-    formData: { firstName: '', email: '', companyName: '', phone: '' },
+    formData: { firstName: '', lastName: '', email: '', companyName: '', phone: '' },
     interstitialText: null,
   });
 
@@ -242,9 +242,11 @@ export default function GrowthDiagnostic() {
     e.preventDefault();
     const errs: Record<string, string> = {};
     if (!state.formData.firstName.trim()) errs.firstName = 'Required';
+    if (!state.formData.lastName.trim()) errs.lastName = 'Required';
     if (!state.formData.email.trim()) errs.email = 'Required';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.formData.email)) errs.email = 'Invalid email';
     if (state.formData.firstName.length > 100) errs.firstName = 'Too long';
+    if (state.formData.lastName.length > 100) errs.lastName = 'Too long';
     if (state.formData.email.length > 255) errs.email = 'Too long';
     if (state.formData.companyName.length > 200) errs.companyName = 'Too long';
     if (state.formData.phone.length > 30) errs.phone = 'Too long';
@@ -261,6 +263,7 @@ export default function GrowthDiagnostic() {
 
     const payload = {
       first_name: state.formData.firstName.trim(),
+      last_name: state.formData.lastName.trim(),
       email: state.formData.email.trim(),
       company_name: state.formData.companyName.trim(),
       phone: state.formData.phone.trim(),
@@ -575,16 +578,29 @@ export default function GrowthDiagnostic() {
             </p>
 
             <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
-              <div>
-                <Label className="text-background/70 text-xs">First Name *</Label>
-                <Input
-                  value={state.formData.firstName}
-                  onChange={e => setState(s => ({ ...s, formData: { ...s.formData, firstName: e.target.value } }))}
-                  className="bg-background/5 border-background/10 text-background placeholder:text-background/30 mt-1"
-                  placeholder="Your first name"
-                  maxLength={100}
-                />
-                {formErrors.firstName && <p className="text-red-400 text-xs mt-1">{formErrors.firstName}</p>}
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Label className="text-background/70 text-xs">First Name *</Label>
+                  <Input
+                    value={state.formData.firstName}
+                    onChange={e => setState(s => ({ ...s, formData: { ...s.formData, firstName: e.target.value } }))}
+                    className="bg-background/5 border-background/10 text-background placeholder:text-background/30 mt-1"
+                    placeholder="First name"
+                    maxLength={100}
+                  />
+                  {formErrors.firstName && <p className="text-red-400 text-xs mt-1">{formErrors.firstName}</p>}
+                </div>
+                <div>
+                  <Label className="text-background/70 text-xs">Last Name *</Label>
+                  <Input
+                    value={state.formData.lastName}
+                    onChange={e => setState(s => ({ ...s, formData: { ...s.formData, lastName: e.target.value } }))}
+                    className="bg-background/5 border-background/10 text-background placeholder:text-background/30 mt-1"
+                    placeholder="Last name"
+                    maxLength={100}
+                  />
+                  {formErrors.lastName && <p className="text-red-400 text-xs mt-1">{formErrors.lastName}</p>}
+                </div>
               </div>
               <div>
                 <Label className="text-background/70 text-xs">Email *</Label>

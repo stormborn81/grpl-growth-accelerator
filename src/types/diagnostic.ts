@@ -68,6 +68,7 @@ export interface DiagnosticState {
   growthAmbitionTag: GrowthAmbitionTag | null;
   formData: {
     firstName: string;
+    lastName: string;
     email: string;
     companyName: string;
     phone: string;
