@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import CTABanner from "@/components/CTABanner";
 import FAQSection from "@/components/FAQSection";
-import LeadForm from "@/components/LeadForm";
+import CopperFormEmbed from "@/components/CopperFormEmbed";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const jsonLd = [
@@ -159,7 +159,7 @@ const GrowthProjects = () => (
         <div className="max-w-4xl mx-auto">
           <FAQSection faqs={faqs} />
           <div className="pb-8">
-            <LeadForm heading="Scope Your Project" subtext="Tell us about your initiative and we'll schedule a free scoping call to discuss approach, timeline, and investment." />
+            <CopperFormEmbed />
           </div>
 
           <section className="pb-16">
