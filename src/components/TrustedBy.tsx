@@ -3,6 +3,8 @@ import mableLogo from "@/assets/clients/mable.png";
 import healthengineLogo from "@/assets/clients/healthengine.webp";
 import medxLogo from "@/assets/clients/medx.png";
 import mangroveLogo from "@/assets/clients/mangrove.png";
+import adrenalineLogo from "@/assets/clients/adrenaline.webp";
+import redballoonLogo from "@/assets/clients/redballoon.webp";
 
 const clients = [
   { name: "BRG", logo: brgLogo },
@@ -10,6 +12,8 @@ const clients = [
   { name: "Healthengine", logo: healthengineLogo },
   { name: "MedX Finance", logo: medxLogo },
   { name: "Mangrove Digital", logo: mangroveLogo },
+  { name: "Adrenaline", logo: adrenalineLogo },
+  { name: "RedBalloon", logo: redballoonLogo },
 ];
 
 const TrustedBy = () => {
