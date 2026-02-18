@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer } from "recharts";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+// Input removed – Copper form handles lead capture
+// Label removed – Copper form handles lead capture
 import { Slider } from "@/components/ui/slider";
 import { Progress } from "@/components/ui/progress";
 import { diagnosticQuestions, QUESTION_ORDER } from "@/data/diagnosticQuestions";
@@ -525,7 +525,7 @@ export default function GrowthDiagnostic() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="w-full max-w-md text-center"
+            className="w-full max-w-lg text-center"
           >
             <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-4">Complete</p>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-6">Your Growth Profile is ready.</h2>
@@ -541,58 +541,34 @@ export default function GrowthDiagnostic() {
               </ResponsiveContainer>
             </div>
 
-            <p className="text-background/60 font-light mb-8 text-sm">
-              Enter your details below to see your full results, including your Growth Stage, dimension scores, and personalised recommendations.
+            <p className="text-background/60 font-light mb-6 text-sm">
+              Enter your details below to unlock your full results, including your Growth Stage, dimension scores, and personalised recommendations.
             </p>
 
-            <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
-              <div>
-                <Label className="text-background/70 text-xs">First Name *</Label>
-                <Input
-                  value={state.formData.firstName}
-                  onChange={e => setState(s => ({ ...s, formData: { ...s.formData, firstName: e.target.value } }))}
-                  className="bg-background/5 border-background/10 text-background placeholder:text-background/30 mt-1"
-                  placeholder="Your first name"
-                />
-                {formErrors.firstName && <p className="text-red-400 text-xs mt-1">{formErrors.firstName}</p>}
-              </div>
-              <div>
-                <Label className="text-background/70 text-xs">Email *</Label>
-                <Input
-                  type="email"
-                  value={state.formData.email}
-                  onChange={e => setState(s => ({ ...s, formData: { ...s.formData, email: e.target.value } }))}
-                  className="bg-background/5 border-background/10 text-background placeholder:text-background/30 mt-1"
-                  placeholder="you@company.com"
-                />
-                {formErrors.email && <p className="text-red-400 text-xs mt-1">{formErrors.email}</p>}
-              </div>
-              <div>
-                <Label className="text-background/70 text-xs">Company Name</Label>
-                <Input
-                  value={state.formData.companyName}
-                  onChange={e => setState(s => ({ ...s, formData: { ...s.formData, companyName: e.target.value } }))}
-                  className="bg-background/5 border-background/10 text-background placeholder:text-background/30 mt-1"
-                  placeholder="Your company"
-                />
-              </div>
-              <div>
-                <Label className="text-background/70 text-xs">Phone</Label>
-                <Input
-                  type="tel"
-                  value={state.formData.phone}
-                  onChange={e => setState(s => ({ ...s, formData: { ...s.formData, phone: e.target.value } }))}
-                  className="bg-background/5 border-background/10 text-background placeholder:text-background/30 mt-1"
-                  placeholder="+61 4XX XXX XXX"
-                />
-              </div>
-              <Button type="submit" variant="hero" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/85">
-                See My Results
-              </Button>
-              <p className="text-background/30 text-xs text-center font-light">
-                We will send you a copy of your results. No spam, just your diagnostic.
-              </p>
-            </form>
+            {/* Copper CRM Form */}
+            <div className="flex justify-center mb-6">
+              <iframe
+                src="https://forms.copper.com/j/7zn2WJVA31afeznSzk77t9?type=embed"
+                id="7zn2WJVA31afeznSzk77t9"
+                title="Unlock Your Results"
+                width="500"
+                height="700"
+                frameBorder="0"
+                className="max-w-full rounded-lg"
+              />
+            </div>
+
+            <Button
+              variant="hero"
+              size="lg"
+              className="w-full bg-accent text-accent-foreground hover:bg-accent/85"
+              onClick={() => setState(s => ({ ...s, phase: 'results' }))}
+            >
+              See My Results
+            </Button>
+            <p className="text-background/30 text-xs text-center font-light mt-3">
+              We will send you a copy of your results. No spam, just your diagnostic.
+            </p>
           </motion.div>
         </div>
       )}
