@@ -1,24 +1,8 @@
-import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 const ContactUs = () => {
-  useEffect(() => {
-    const existing = document.querySelector('script[src*="copper.com/j/wtpyhfwJG2bScj3GvmyLG2"]');
-    if (existing) return;
-
-    const script = document.createElement("script");
-    script.src = "https://forms.copper.com/j/wtpyhfwJG2bScj3GvmyLG2";
-    script.type = "text/javascript";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      script.remove();
-    };
-  }, []);
-
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -59,7 +43,16 @@ const ContactUs = () => {
               </p>
             </div>
             
-            <div className="flex justify-center" id="copper-form-container" />
+            <div className="flex justify-center">
+              <iframe
+                src="https://forms.copper.com/j/wtpyhfwJG2bScj3GvmyLG2?type=embed"
+                title="Contact Form"
+                width="500"
+                height="700"
+                frameBorder="0"
+                className="max-w-full"
+              />
+            </div>
           </div>
         </div>
       </main>
