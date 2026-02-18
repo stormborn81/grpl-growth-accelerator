@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import WhyChoose from "@/components/WhyChoose";
 import Services from "@/components/Services";
 import About from "@/components/About";
+import CopperFormWidget from "@/components/CopperFormWidget";
 
 // Lazy load below-the-fold components
 const Outcomes = lazy(() => import("@/components/Outcomes"));
@@ -155,6 +156,7 @@ const Index = () => {
           <WhyChoose />
           <Services />
           <About />
+          <CopperFormWidget />
           <Suspense fallback={<SectionLoader />}>
             <Outcomes />
           </Suspense>
