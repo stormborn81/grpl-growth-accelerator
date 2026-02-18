@@ -580,7 +580,7 @@ export default function GrowthDiagnostic() {
             {/* Animated full radar */}
             <div className="w-56 h-56 mx-auto mb-8">
               <ResponsiveContainer width="100%" height="100%">
-                <RadarChart data={radarData}>
+                <RadarChart data={radarData} outerRadius="60%">
                   <PolarGrid stroke="hsl(0, 0%, 30%)" />
                   <PolarAngleAxis dataKey="dimension" tick={{ fontSize: 9, fill: 'hsl(0, 0%, 60%)' }} />
                   <Radar dataKey="score" fill="hsl(20, 100%, 50%)" fillOpacity={0.3} stroke="hsl(20, 100%, 50%)" strokeWidth={2} isAnimationActive />
@@ -706,7 +706,7 @@ export default function GrowthDiagnostic() {
               <h3 className="text-xl font-black tracking-tight mb-6 text-center">Your Growth Profile</h3>
               <div className="w-full max-w-[400px] h-[350px] mx-auto">
                 <ResponsiveContainer width="100%" height="100%">
-                  <RadarChart data={radarData}>
+                  <RadarChart data={radarData} outerRadius="65%">
                     <PolarGrid stroke="hsl(0, 0%, 25%)" />
                     <PolarAngleAxis dataKey="dimension" tick={{ fontSize: 11, fill: 'hsl(0, 0%, 70%)' }} />
                     <Radar
