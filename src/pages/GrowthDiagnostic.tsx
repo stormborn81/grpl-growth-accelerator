@@ -261,32 +261,30 @@ export default function GrowthDiagnostic() {
     const stageLabel = GROWTH_STAGE_INFO[stage].title;
     const topGaps = getTop3Gaps(normalised);
 
-    const payload = {
-      first_name: state.formData.firstName.trim(),
-      last_name: state.formData.lastName.trim(),
-      email: state.formData.email.trim(),
-      company_name: state.formData.companyName.trim(),
-      phone: state.formData.phone.trim(),
-      revenue_tier: state.revenueTier,
-      growth_stage: stageLabel,
-      total_score: total,
-      growth_ambition: state.growthAmbitionTag,
-      strategy_score: normalised.strategy,
-      execution_score: normalised.execution,
-      team_score: normalised.team,
-      technology_score: normalised.technology,
-      measurement_score: normalised.measurement,
-      positioning_score: normalised.positioning,
-      top_gaps: topGaps.join(', '),
-      completed_at: new Date().toISOString(),
-    };
+    const params = new URLSearchParams();
+    params.append('first_name', state.formData.firstName.trim());
+    params.append('last_name', state.formData.lastName.trim());
+    params.append('email', state.formData.email.trim());
+    params.append('company_name', state.formData.companyName.trim());
+    params.append('phone', state.formData.phone.trim());
+    params.append('revenue_tier', state.revenueTier || '');
+    params.append('growth_stage', stageLabel);
+    params.append('total_score', String(total));
+    params.append('growth_ambition', state.growthAmbitionTag || '');
+    params.append('strategy_score', String(normalised.strategy));
+    params.append('execution_score', String(normalised.execution));
+    params.append('team_score', String(normalised.team));
+    params.append('technology_score', String(normalised.technology));
+    params.append('measurement_score', String(normalised.measurement));
+    params.append('positioning_score', String(normalised.positioning));
+    params.append('top_gaps', topGaps.join(', '));
+    params.append('completed_at', new Date().toISOString());
 
     try {
       await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         mode: 'no-cors',
-        body: JSON.stringify(payload),
+        body: params,
       });
     } catch (error) {
       console.error('Webhook error:', error);
