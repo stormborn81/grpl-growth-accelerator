@@ -62,7 +62,7 @@ const Hero = () => {
                   variant="heroSecondary" 
                   size="lg" 
                   className="w-full sm:w-auto"
-                  onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
+                  onClick={() => navigate('/contact')}
                 >
                   Book Discovery Call
                   <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />

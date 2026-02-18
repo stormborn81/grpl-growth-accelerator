@@ -105,7 +105,7 @@ const QuizResults = ({ result, answers, onRestart }: QuizResultsProps) => {
           <Button 
             size="lg"
             className="bg-accent hover:bg-accent/90 text-white"
-            onClick={() => window.open('https://calendar.app.google/uQKcAZf3Z9cbxe9o8', '_blank')}
+            onClick={() => window.location.href = '/contact'}
           >
             Book a Discovery Call
             <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />

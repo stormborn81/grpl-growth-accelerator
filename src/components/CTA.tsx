@@ -31,7 +31,7 @@ const CTA = () => {
                 Run Marketing Health Check
                 <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
               </Button>
-              <Button variant="heroSecondary" size="lg" onClick={() => window.location.href = 'mailto:matt@grpl.com.au?subject=Discovery Call Request'}>
+              <Button variant="heroSecondary" size="lg" onClick={() => navigate('/contact')}>
                 Book Discovery Call
                 <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
               </Button>
