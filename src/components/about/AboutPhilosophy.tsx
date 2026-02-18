@@ -46,30 +46,33 @@ const AboutPhilosophy = () => {
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="relative w-full max-w-lg aspect-[4/3]">
-              {/* Left circle */}
+            <div className="relative w-full max-w-lg" style={{ aspectRatio: '4/3' }}>
+              {/* Left circle – center-left */}
               <motion.div
-                className="absolute left-0 top-[10%] w-[62%] aspect-square rounded-full bg-foreground/5 border border-foreground/10"
+                className="absolute w-[62%] aspect-square rounded-full bg-foreground/5 border border-foreground/10"
+                style={{ left: '5%', top: '5%' }}
                 initial={{ x: -60, opacity: 0 }}
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.7, delay: 0.5 }}
               >
-                <span className="absolute top-[38%] left-[22%] text-xs font-bold tracking-widest uppercase">Strategic Rigour</span>
+                <span className="absolute top-[42%] left-[18%] text-xs font-bold tracking-widest uppercase">Strategic Rigour</span>
               </motion.div>
 
-              {/* Right circle */}
+              {/* Right circle – center-right */}
               <motion.div
-                className="absolute right-0 top-[10%] w-[62%] aspect-square rounded-full bg-foreground/5 border border-foreground/10"
+                className="absolute w-[62%] aspect-square rounded-full bg-foreground/5 border border-foreground/10"
+                style={{ right: '5%', top: '5%' }}
                 initial={{ x: 60, opacity: 0 }}
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.7, delay: 0.6 }}
               >
-                <span className="absolute top-[38%] right-[18%] text-xs font-bold tracking-widest uppercase">Execution Discipline</span>
+                <span className="absolute top-[42%] right-[14%] text-xs font-bold tracking-widest uppercase">Execution Discipline</span>
               </motion.div>
 
-              {/* Center overlap – GRPL orange circle */}
+              {/* Center overlap – GRPL orange circle, dead center of the overlap */}
               <motion.div
-                className="absolute left-1/2 top-[10%] -translate-x-1/2 z-10 w-[32%] aspect-square rounded-full bg-accent/15 border border-accent/40 flex flex-col items-center justify-center p-3"
+                className="absolute z-10 w-[28%] aspect-square rounded-full bg-accent/15 border border-accent/40 flex flex-col items-center justify-center p-3"
+                style={{ left: '50%', top: 'calc(5% + 31%)', transform: 'translate(-50%, -50%)' }}
                 initial={{ scale: 0 }}
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.9, type: "spring" }}
@@ -82,9 +85,10 @@ const AboutPhilosophy = () => {
                 </div>
               </motion.div>
 
-              {/* Left keywords – below circles, left-aligned */}
+              {/* Left keywords – below circles */}
               <motion.div
-                className="absolute bottom-0 left-0 w-[48%] flex flex-wrap gap-1.5 justify-center"
+                className="absolute left-0 w-[48%] flex flex-wrap gap-1.5 justify-center"
+                style={{ bottom: 0 }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.8 }}
@@ -94,9 +98,10 @@ const AboutPhilosophy = () => {
                 ))}
               </motion.div>
 
-              {/* Right keywords – below circles, right-aligned */}
+              {/* Right keywords – below circles */}
               <motion.div
-                className="absolute bottom-0 right-0 w-[48%] flex flex-wrap gap-1.5 justify-center"
+                className="absolute right-0 w-[48%] flex flex-wrap gap-1.5 justify-center"
+                style={{ bottom: 0 }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.85 }}
