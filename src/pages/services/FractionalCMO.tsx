@@ -148,12 +148,6 @@ const FractionalCMO = () => (
         </div>
       </section>
 
-      <CTABanner
-        headline="See how a fractional CMO could transform your marketing"
-        subtext="Book a free 30-minute strategy call - no obligation, no pitch."
-        buttonText="Book Your Strategy Call"
-        buttonLink="/contact"
-      />
 
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
