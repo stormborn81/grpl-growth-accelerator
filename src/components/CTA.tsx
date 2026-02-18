@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import buttonOctagon from "@/assets/button-octagon.png";
+import { trackBookCallClick, trackHealthCheckClick } from "@/utils/analytics";
 
 const CTA = () => {
   const navigate = useNavigate();
@@ -27,11 +28,11 @@ const CTA = () => {
           
           <div className="flex flex-col items-center gap-2">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="hero" size="lg" onClick={() => navigate('/marketing-health-check')}>
+              <Button variant="hero" size="lg" onClick={() => { trackHealthCheckClick('cta_banner'); navigate('/marketing-health-check'); }}>
                 Run Marketing Health Check
                 <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
               </Button>
-              <Button variant="heroSecondary" size="lg" onClick={() => navigate('/contact')}>
+              <Button variant="heroSecondary" size="lg" onClick={() => { trackBookCallClick('cta_banner'); navigate('/contact'); }}>
                 Book Discovery Call
                 <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
               </Button>
