@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="space-y-8 text-left">
             {/* Octagon background decoration */}
             <div className="absolute -top-10 -right-20 w-96 h-96 opacity-[0.03] pointer-events-none hidden lg:block">
-              <img src="/src/assets/octagon-outline.png" alt="" className="w-full h-full" />
+              <img src="/src/assets/octagon-outline.png" alt="Decorative octagon outline" className="w-full h-full" />
             </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight relative max-w-4xl">
@@ -57,7 +57,7 @@ const Hero = () => {
                   onClick={() => { trackHealthCheckClick('hero'); navigate('/marketing-health-check'); }}
                 >
                   Run Marketing Health Check
-                  <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
+                  <img src={buttonOctagon} alt="GRPL octagon icon" className="ml-2 h-3 w-3" />
                 </Button>
                 <Button 
                   variant="heroSecondary" 
@@ -66,7 +66,7 @@ const Hero = () => {
                   onClick={() => { trackBookCallClick('hero'); navigate('/contact'); }}
                 >
                   Book Discovery Call
-                  <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
+                  <img src={buttonOctagon} alt="GRPL octagon icon" className="ml-2 h-3 w-3 opacity-50" />
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground font-light text-center w-full">Free, confidential, instant results</p>

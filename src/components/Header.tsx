@@ -48,7 +48,7 @@ const Header = () => {
               navigate('/');
             }
           }} className="flex-shrink-0">
-            <img src={logo} alt="GRPL" className="h-7" />
+            <img src={logo} alt="GRPL - Fractional CMO and Growth Leadership" className="h-7" />
           </button>
           
           <nav className="hidden md:flex items-center space-x-8">

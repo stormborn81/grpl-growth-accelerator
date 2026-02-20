@@ -11,7 +11,7 @@ const Outcomes = () => {
     <section className="py-24 md:py-32 bg-background relative overflow-hidden">
       {/* Octagon background decoration */}
       <div className="absolute top-20 right-20 w-80 h-80 opacity-[0.04] pointer-events-none hidden lg:block">
-        <img src="/src/assets/octagon-outline.png" alt="" className="w-full h-full" />
+        <img src="/src/assets/octagon-outline.png" alt="Decorative octagon outline" className="w-full h-full" />
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
