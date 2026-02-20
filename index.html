@@ -93,12 +93,23 @@
         "@type": "PostalAddress",
         "addressCountry": "AU"
       },
-      "provider": {"@type": "Organization", "name": "GRPL", "url": "https://www.grpl.com.au"},
       "areaServed": [
         {"@type": "Country", "name": "Australia"},
         {"@type": "Country", "name": "New Zealand"}
       ],
-      "serviceType": ["Fractional CMO", "Chief Growth Officer", "Marketing Strategy", "Marketing Audit", "Growth Leadership", "Interim CMO", "Brand Foundation"]
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Growth Leadership Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fractional CMO"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chief Growth Officer"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marketing Strategy"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marketing Audit"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Growth Leadership"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interim CMO"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Foundation"}}
+        ]
+      }
     }
     </script>
     <script type="application/ld+json">
