@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
             <div className="md:col-span-2 lg:col-span-1">
-              <img src={logo} alt="GRPL" className="h-8 mb-6" />
+              <img src={logo} alt="GRPL - Fractional CMO and Growth Leadership" className="h-8 mb-6" />
               <p className="text-muted-foreground font-light leading-relaxed max-w-md">
                 Executive level marketing leadership for ambitious ANZ businesses. 
                 Transform marketing into your growth engine.
