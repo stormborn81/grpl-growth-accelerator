@@ -42,46 +42,9 @@ const ErrorFallback = () => (
   </div>
 );
 
-// Only FAQPage here — Organization, ProfessionalService, WebSite & Person schemas
-// are already in the static index.html to avoid duplicate structured data errors.
-const homepageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a fractional CMO?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A fractional CMO is a senior marketing executive who provides strategic leadership on a part-time or contract basis, giving businesses enterprise-grade marketing capability without the full-time salary."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does GRPL's fractional CMO service work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GRPL embeds senior growth leadership into your business on a flexible basis. We define strategy, align teams, optimise channels, and drive measurable growth outcomes - all without the cost and commitment of a full-time executive hire."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who is GRPL's service designed for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GRPL works with founders, CEOs, and leadership teams at scaling ANZ businesses who need senior marketing expertise but aren't ready for or don't need a full-time CMO."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the difference between a fractional CMO and a marketing consultant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A marketing consultant typically advises from the outside. A fractional CMO from GRPL embeds into your leadership team, owns strategy and execution, leads your marketing function, and is accountable for growth outcomes."
-      }
-    }
-  ]
-};
+// All structured data (Organization, ProfessionalService, WebSite, Person)
+// lives in the static index.html. FAQPage rich results are handled by /faq.
+// No additional JSON-LD is injected here to avoid duplicate schema errors.
 
 const Index = () => {
   return (
@@ -90,7 +53,6 @@ const Index = () => {
         title="Enterprise-Grade Fractional CMO & Growth Leadership | GRPL"
         description="GRPL delivers enterprise-grade fractional CMO and Chief Growth Officer services for ANZ businesses. Senior marketing leadership without the full-time cost."
         canonical="https://www.grpl.com.au/"
-        jsonLd={homepageJsonLd}
       />
       <a
         href="#main-content"
