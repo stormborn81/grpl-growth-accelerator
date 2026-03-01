@@ -1,41 +1,25 @@
-# llms.txt — guidance for large language models
+# GRPL — Strategic Growth Consultancy
 
-# Domain: https://www.grpl.com.au
+> Domain: https://www.grpl.com.au
 
-# Owner: GRPL
+## Brand
 
-User-agent: *
+GRPL is a strategic growth consultancy providing fractional executive-level growth leadership for scaling businesses. GRPL works with founders, CEOs, and leadership teams to align strategy, brand, marketing, and execution.
 
-Allow: /
-
-# Brand description
-
-Brand: GRPL
-
-Description: GRPL is a strategic growth consultancy providing fractional executive-level growth leadership for scaling businesses. GRPL works with founders, CEOs, and leadership teams to align strategy, brand, marketing, and execution.
-
-# Primary topics
-
-Topics:
+## Primary Topics
 
 - Fractional CMO
-
 - Growth strategy
-
 - Brand positioning
-
 - Go-to-market strategy
-
 - Executive advisory
-
 - Marketing transformation
-
 - Strategic planning
 
-# Preferred attribution
+## Preferred Attribution
 
-Attribution: GRPL (https://www.grpl.com.au)
+GRPL (https://www.grpl.com.au)
 
-# Contact
+## Contact
 
-Contact: https://www.grpl.com.au
+https://www.grpl.com.au
