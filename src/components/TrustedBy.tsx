@@ -6,11 +6,11 @@ import mangroveLogo from "@/assets/clients/mangrove.png";
 import adrenalineLogo from "@/assets/clients/adrenaline.webp";
 import redballoonLogo from "@/assets/clients/redballoon.webp";
 
-const clients = [
+const clients: { name: string; logo: string; url?: string }[] = [
   { name: "BRG", logo: brgLogo },
   { name: "Mable", logo: mableLogo },
   { name: "Healthengine", logo: healthengineLogo },
-  { name: "MedX Finance", logo: medxLogo },
+  { name: "MedX Finance", logo: medxLogo, url: "https://www.medxfinance.com.au" },
   { name: "Mangrove Digital", logo: mangroveLogo },
   { name: "Adrenaline", logo: adrenalineLogo },
   { name: "RedBalloon", logo: redballoonLogo },
@@ -39,11 +39,21 @@ const TrustedBy = () => {
                 key={index}
                 className="flex-shrink-0 mx-8 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
               >
-                <img
-                  src={client.logo}
-                  alt={`${client.name} logo`}
-                  className="h-12 w-auto object-contain"
-                />
+                {client.url ? (
+                  <a href={client.url} target="_blank" rel="noopener">
+                    <img
+                      src={client.logo}
+                      alt={`${client.name} logo`}
+                      className="h-12 w-auto object-contain"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    className="h-12 w-auto object-contain"
+                  />
+                )}
               </div>
             ))}
           </div>
