@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
 const metrics = [
   { value: "60%+", label: "Growth in revenue", period: "with a tourism brand" },
   { value: "$5m+", label: "Secured in incremental marketing investments", period: "" },
@@ -42,6 +45,15 @@ const Outcomes = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <Link
+              to="/marketing-health-check"
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+            >
+              See how your marketing stacks up <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </div>
