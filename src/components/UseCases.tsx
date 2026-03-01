@@ -1,20 +1,24 @@
 import { Rocket, Compass, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const useCases = [
   {
     icon: Rocket,
     title: "Unlock Growth",
     description: "Break through stagnant growth cycles, improve spend efficiency and prioritise high‑value activities that drive results",
+    link: "/services/fractional-cmo",
   },
   {
     icon: Compass,
     title: "Strategic Planning",
     description: "Provide executive‑level marketing thinking without a full‑time hire, empowering teams to move cohesively",
+    link: "/services/chief-growth-officer",
   },
   {
     icon: Users,
     title: "Team Leadership",
     description: "Foster executive‑team alignment, scale capacity and uplift internal leadership capabilities",
+    link: "/services/interim-cmo",
   },
 ];
 
@@ -34,7 +38,7 @@ const UseCases = () => {
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
               return (
-                <div key={index} className="text-center relative p-8 group">
+                <Link key={index} to={useCase.link} className="text-center relative p-8 group block">
                   {/* Octagon block background */}
                   <div className="absolute inset-0 bg-grpl-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                        style={{clipPath: "polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%)"}}></div>
@@ -50,7 +54,7 @@ const UseCases = () => {
                   <p className="relative text-grpl-white/70 leading-relaxed font-light">
                     {useCase.description}
                   </p>
-                </div>
+                </Link>
               );
             })}
           </div>

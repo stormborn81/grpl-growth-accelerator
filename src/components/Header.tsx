@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/assets/logo-horizontal.png";
@@ -17,39 +17,18 @@ const serviceLinks = [
 ];
 
 const Header = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
-  const handleNavClick = (sectionId: string) => {
-    setMobileMenuOpen(false);
-    if (location.pathname === '/') {
-      const element = document.getElementById(sectionId);
-      if (element) element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate(`/#${sectionId}`);
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) element.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  };
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
-          <button onClick={() => {
-            if (location.pathname === '/') {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-              navigate('/');
-            }
-          }} className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0">
             <img src={logo} alt="GRPL - Fractional CMO and Growth Leadership" className="h-7" />
-          </button>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
             {/* Services Dropdown */}
@@ -58,42 +37,43 @@ const Header = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button
+              <Link
+                to="/services"
                 className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors inline-flex items-center gap-1"
-                onClick={() => navigate('/services')}
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
                 Services <ChevronDown className={`h-3 w-3 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-              </button>
+              </Link>
               {servicesOpen && (
                 <div className="absolute top-full left-0 pt-2 w-56">
                   <div className="bg-background border border-border rounded-lg shadow-lg py-2">
                     {serviceLinks.map((link) => (
-                      <button
+                      <Link
                         key={link.path}
-                        onClick={() => { navigate(link.path); setServicesOpen(false); }}
+                        to={link.path}
+                        onClick={() => setServicesOpen(false)}
                         className="block w-full text-left px-4 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors"
                       >
                         {link.label}
-                      </button>
+                      </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
-            <button onClick={() => navigate('/about')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+            <Link to="/about" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               About
-            </button>
-            <button onClick={() => navigate('/blog')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/blog" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Insights
-            </button>
-            <button onClick={() => navigate('/contact')} className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/contact" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               Contact
-            </button>
-            <button onClick={() => navigate('/growth-diagnostic')} className="text-xs font-semibold text-accent hover:text-accent/80 transition-colors">
+            </Link>
+            <Link to="/growth-diagnostic" className="text-xs font-semibold text-accent hover:text-accent/80 transition-colors">
               Growth Diagnostic
-            </button>
+            </Link>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -127,41 +107,46 @@ const Header = () => {
                     {mobileServicesOpen && (
                       <div className="mt-3 ml-4 flex flex-col gap-3">
                         {serviceLinks.map((link) => (
-                          <button
+                          <Link
                             key={link.path}
-                            onClick={() => { navigate(link.path); setMobileMenuOpen(false); }}
+                            to={link.path}
+                            onClick={() => setMobileMenuOpen(false)}
                             className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors text-left"
                           >
                             {link.label}
-                          </button>
+                          </Link>
                         ))}
                       </div>
                     )}
                   </div>
-                  <button 
-                    onClick={() => { navigate('/about'); setMobileMenuOpen(false); }} 
+                  <Link 
+                    to="/about"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     About
-                  </button>
-                  <button 
-                    onClick={() => { navigate('/blog'); setMobileMenuOpen(false); }} 
+                  </Link>
+                  <Link 
+                    to="/blog"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     Insights
-                  </button>
-                  <button 
-                    onClick={() => { navigate('/contact'); setMobileMenuOpen(false); }} 
+                  </Link>
+                  <Link 
+                    to="/contact"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left"
                   >
                     Contact
-                  </button>
-                  <button 
-                    onClick={() => { navigate('/growth-diagnostic'); setMobileMenuOpen(false); }}
+                  </Link>
+                  <Link 
+                    to="/growth-diagnostic"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="text-lg font-semibold text-accent hover:text-accent/80 transition-colors text-left"
                   >
                     Growth Diagnostic
-                  </button>
+                  </Link>
                   <Button 
                     variant="hero" 
                     size="lg" 

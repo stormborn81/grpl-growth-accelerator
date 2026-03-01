@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { LinkedinIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const About = () => {
   return (
@@ -16,7 +16,7 @@ const About = () => {
           <div className="space-y-8 text-lg text-grpl-white/70 font-light leading-relaxed">
             <p>
               GRPL partners with ambitious ANZ businesses to transform marketing from a cost centre 
-              into a strategic growth engine. Our fractional CMO and Chief Growth Officer services 
+              into a strategic growth engine. Our <Link to="/services/fractional-cmo" className="text-accent hover:underline">fractional CMO</Link> and <Link to="/services/chief-growth-officer" className="text-accent hover:underline">Chief Growth Officer</Link> services 
               deliver C-suite marketing leadership without the overhead of full-time executive salaries.
             </p>
             
@@ -31,6 +31,15 @@ const About = () => {
               or building marketing capability for the next phase, GRPL provides the leadership, 
               strategy and execution support you need to succeed.
             </p>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+            >
+              Learn more about GRPL <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import { DollarSign, Zap, Target, TrendingUp, Eye } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import octagonRings from "@/assets/octagon-rings.png";
 
 const reasons = [
@@ -63,6 +65,15 @@ const WhyChoose = () => {
                 </div>
               );
             })}
+          </div>
+
+          <div className="text-center mt-16">
+            <Link
+              to="/growth-diagnostic"
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+            >
+              Take the Growth Diagnostic <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </div>

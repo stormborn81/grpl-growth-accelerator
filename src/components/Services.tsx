@@ -1,35 +1,43 @@
 import { Search, Map, Zap, BarChart, GraduationCap, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
     icon: Search,
     title: "Market & Customer Insights",
     description: "Deep analysis of your market position and customer needs",
+    link: "/services/marketing-audit",
   },
   {
     icon: Map,
     title: "Growth Strategy & Roadmap",
     description: "Clear, actionable plans aligned with business objectives",
+    link: "/services/chief-growth-officer",
   },
   {
     icon: Zap,
     title: "Campaign Execution",
     description: "End-to-end management and optimisation of marketing initiatives",
+    link: "/services/outsourced-marketing-department",
   },
   {
     icon: BarChart,
     title: "MarTech & Analytics",
     description: "Integration and optimisation of marketing technology stack",
+    link: "/services/fractional-cmo",
   },
   {
     icon: GraduationCap,
     title: "Team Development",
     description: "Mentoring and capability uplift for internal teams",
+    link: "/services/interim-cmo",
   },
   {
     icon: Sparkles,
     title: "Creative Excellence",
     description: "Elevate your creative output with executive‑level alignment and vision.",
+    link: "/services/brand-foundation",
   },
 ];
 
@@ -52,8 +60,12 @@ const Services = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="relative bg-secondary p-8 group hover:shadow-lg transition-all duration-500"
-                     style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}>
+                <Link
+                  key={index}
+                  to={service.link}
+                  className="relative bg-secondary p-8 group hover:shadow-lg transition-all duration-500 block"
+                  style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}
+                >
                   {/* Octagon border accent */}
                   <div className="absolute inset-0 border border-transparent group-hover:border-accent/30 transition-colors duration-500"
                        style={{clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)"}}></div>
@@ -64,9 +76,18 @@ const Services = () => {
                   <p className="text-muted-foreground leading-relaxed font-light">
                     {service.description}
                   </p>
-                </div>
+                </Link>
               );
             })}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+            >
+              View all services <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </div>

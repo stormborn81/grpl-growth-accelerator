@@ -1,18 +1,17 @@
-import { LinkedinIcon, Mail, Phone } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo-horizontal.png";
 import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
-  const navigate = useNavigate();
-  
   return (
     <footer id="contact" className="bg-background py-16 border-t border-border/50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
             <div className="md:col-span-2 lg:col-span-1">
-              <img src={logo} alt="GRPL - Fractional CMO and Growth Leadership" className="h-8 mb-6" />
+              <Link to="/">
+                <img src={logo} alt="GRPL - Fractional CMO and Growth Leadership" className="h-8 mb-6" />
+              </Link>
               <p className="text-muted-foreground font-light leading-relaxed max-w-md">
                 Executive level marketing leadership for ambitious ANZ businesses. 
                 Transform marketing into your growth engine.
@@ -51,35 +50,37 @@ const Footer = () => {
             <div>
               <h4 className="font-bold text-sm mb-4 tracking-tight">Services</h4>
               <ul className="space-y-3 text-sm text-muted-foreground font-light">
-                <li><button onClick={() => navigate('/services/fractional-cmo')} className="hover:text-foreground transition-colors">Fractional CMO</button></li>
-                <li><button onClick={() => navigate('/services/chief-growth-officer')} className="hover:text-foreground transition-colors">Chief Growth Officer</button></li>
-                <li><button onClick={() => navigate('/services/marketing-audit')} className="hover:text-foreground transition-colors">Marketing Audit</button></li>
-                <li><button onClick={() => navigate('/services/outsourced-marketing-department')} className="hover:text-foreground transition-colors">Outsourced Marketing</button></li>
-                <li><button onClick={() => navigate('/services/brand-foundation')} className="hover:text-foreground transition-colors">Brand Foundation</button></li>
-                <li><button onClick={() => navigate('/services/growth-projects')} className="hover:text-foreground transition-colors">Growth Projects</button></li>
-                <li><button onClick={() => navigate('/services/interim-cmo')} className="hover:text-foreground transition-colors">Interim CMO</button></li>
+                <li><Link to="/services/fractional-cmo" className="hover:text-foreground transition-colors">Fractional CMO</Link></li>
+                <li><Link to="/services/chief-growth-officer" className="hover:text-foreground transition-colors">Chief Growth Officer</Link></li>
+                <li><Link to="/services/marketing-audit" className="hover:text-foreground transition-colors">Marketing Audit</Link></li>
+                <li><Link to="/services/outsourced-marketing-department" className="hover:text-foreground transition-colors">Outsourced Marketing</Link></li>
+                <li><Link to="/services/brand-foundation" className="hover:text-foreground transition-colors">Brand Foundation</Link></li>
+                <li><Link to="/services/growth-projects" className="hover:text-foreground transition-colors">Growth Projects</Link></li>
+                <li><Link to="/services/interim-cmo" className="hover:text-foreground transition-colors">Interim CMO</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold text-sm mb-4 tracking-tight">Locations</h4>
               <ul className="space-y-3 text-sm text-muted-foreground font-light">
-                <li><button onClick={() => navigate('/fractional-cmo-sydney')} className="hover:text-foreground transition-colors">Fractional CMO Sydney</button></li>
-                <li><button onClick={() => navigate('/fractional-cmo-melbourne')} className="hover:text-foreground transition-colors">Fractional CMO Melbourne</button></li>
-                <li><button onClick={() => navigate('/fractional-cmo-brisbane')} className="hover:text-foreground transition-colors">Fractional CMO Brisbane</button></li>
-                <li><button onClick={() => navigate('/fractional-cmo-perth')} className="hover:text-foreground transition-colors">Fractional CMO Perth</button></li>
+                <li><Link to="/fractional-cmo-sydney" className="hover:text-foreground transition-colors">Fractional CMO Sydney</Link></li>
+                <li><Link to="/fractional-cmo-melbourne" className="hover:text-foreground transition-colors">Fractional CMO Melbourne</Link></li>
+                <li><Link to="/fractional-cmo-brisbane" className="hover:text-foreground transition-colors">Fractional CMO Brisbane</Link></li>
+                <li><Link to="/fractional-cmo-perth" className="hover:text-foreground transition-colors">Fractional CMO Perth</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-sm mb-4 tracking-tight">Company</h4>
               <ul className="space-y-3 text-sm text-muted-foreground font-light">
-                <li><button onClick={() => navigate('/about')} className="hover:text-foreground transition-colors">About</button></li>
-                <li><button onClick={() => navigate('/blog')} className="hover:text-foreground transition-colors">Insights</button></li>
-                <li><button onClick={() => navigate('/faq')} className="hover:text-foreground transition-colors">FAQ</button></li>
-                <li><a href="#contact" className="hover:text-foreground transition-colors">Contact</a></li>
-                <li><button onClick={() => navigate('/privacy')} className="hover:text-foreground transition-colors">Privacy Policy</button></li>
-                <li><button onClick={() => navigate('/terms')} className="hover:text-foreground transition-colors">Terms & Conditions</button></li>
+                <li><Link to="/about" className="hover:text-foreground transition-colors">About</Link></li>
+                <li><Link to="/blog" className="hover:text-foreground transition-colors">Insights</Link></li>
+                <li><Link to="/faq" className="hover:text-foreground transition-colors">FAQ</Link></li>
+                <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
+                <li><Link to="/growth-diagnostic" className="hover:text-foreground transition-colors">Growth Diagnostic</Link></li>
+                <li><Link to="/marketing-health-check" className="hover:text-foreground transition-colors">Marketing Health Check</Link></li>
+                <li><Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-foreground transition-colors">Terms & Conditions</Link></li>
               </ul>
             </div>
           </div>
