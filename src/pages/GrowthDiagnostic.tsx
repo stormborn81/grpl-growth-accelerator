@@ -423,6 +423,13 @@ export default function GrowthDiagnostic() {
             <p className="text-background/40 text-xs mt-4 font-light">
               Takes about 3 minutes. No login required. Your results are private.
             </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-background/40 text-xs font-light">
+              <Link to="/" className="hover:text-background/70 transition-colors underline underline-offset-2">Home</Link>
+              <Link to="/services/fractional-cmo" className="hover:text-background/70 transition-colors underline underline-offset-2">Fractional CMO</Link>
+              <Link to="/services/marketing-audit" className="hover:text-background/70 transition-colors underline underline-offset-2">Marketing Audit</Link>
+              <Link to="/about" className="hover:text-background/70 transition-colors underline underline-offset-2">About GRPL</Link>
+              <Link to="/contact" className="hover:text-background/70 transition-colors underline underline-offset-2">Contact</Link>
+            </div>
           </motion.div>
         </div>
       )}

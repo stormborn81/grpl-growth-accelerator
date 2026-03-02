@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import octagonOutline from "@/assets/octagon-outline.png";
 
 const hiringJsonLd = [
   {
@@ -215,7 +216,7 @@ const HiringCMO = () => {
         {/* The GRPL Approach */}
         <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
           <div className="absolute top-20 right-20 w-80 h-80 opacity-[0.04] pointer-events-none hidden lg:block">
-            <img src="/src/assets/octagon-outline.png" alt="" className="w-full h-full" />
+            <img src={octagonOutline} alt="" className="w-full h-full" />
           </div>
           
           <div className="container mx-auto px-6 lg:px-8 relative z-10">

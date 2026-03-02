@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import buttonOctagon from "@/assets/button-octagon.png";
+import octagonRings from "@/assets/octagon-rings.png";
 import { trackBookCallClick, trackHealthCheckClick } from "@/utils/analytics";
 
 const CTA = () => {
@@ -10,7 +11,7 @@ const CTA = () => {
     <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
       {/* Octagon background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.03] pointer-events-none">
-        <img src="/src/assets/octagon-rings.png" alt="" className="w-full h-full" />
+        <img src={octagonRings} alt="" className="w-full h-full" />
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">

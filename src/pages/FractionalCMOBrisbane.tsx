@@ -47,7 +47,7 @@ const FractionalCMOBrisbane = () => (
   <div className="min-h-screen bg-background">
     <SEO
       title="Fractional CMO Brisbane | Marketing Leadership for Growth"
-      description="Fractional CMO services for Brisbane businesses. Senior marketing leadership for SEQ's fastest-growing companies - from pre-Olympics infrastructure boom to tech scale-ups."
+      description="Fractional CMO services for Brisbane businesses. Senior marketing leadership for SEQ's fastest-growing companies and tech scale-ups."
       canonical="https://www.grpl.com.au/fractional-cmo-brisbane"
       jsonLd={jsonLd}
     />

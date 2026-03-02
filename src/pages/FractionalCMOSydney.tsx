@@ -48,7 +48,7 @@ const FractionalCMOSydney = () => (
   <div className="min-h-screen bg-background">
     <SEO
       title="Fractional CMO Sydney | Senior Marketing Leadership"
-      description="Enterprise-grade fractional CMO services for Sydney businesses. Strategic marketing leadership for tech, SaaS, fintech and professional services companies - without the $225K+ full-time cost."
+      description="Fractional CMO services for Sydney businesses. Senior marketing leadership for tech, SaaS, fintech and professional services — without the full-time cost."
       canonical="https://www.grpl.com.au/fractional-cmo-sydney"
       jsonLd={jsonLd}
     />

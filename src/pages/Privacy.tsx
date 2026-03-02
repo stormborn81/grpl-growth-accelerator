@@ -35,7 +35,7 @@ const Privacy = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Privacy Policy | GRPL"
-        description="GRPL's Privacy Policy explains how we collect, hold, use, and disclose your personal information in accordance with the Privacy Act 1988 and Australian Privacy Principles."
+        description="GRPL's Privacy Policy — how we collect, use, and protect your personal information under Australian Privacy Principles."
         canonical="https://www.grpl.com.au/privacy"
         jsonLd={breadcrumbJsonLd}
       />
