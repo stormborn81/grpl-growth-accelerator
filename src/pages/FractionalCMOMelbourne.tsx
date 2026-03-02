@@ -47,7 +47,7 @@ const FractionalCMOMelbourne = () => (
   <div className="min-h-screen bg-background">
     <SEO
       title="Fractional CMO Melbourne | Strategic Marketing Leadership"
-      description="Fractional CMO services for Melbourne businesses. Senior marketing leadership for scale-ups, professional services, and B2B companies. 60-70% less than a full-time CMO hire."
+      description="Fractional CMO services for Melbourne businesses. Senior marketing leadership for scale-ups, professional services, and B2B companies."
       canonical="https://www.grpl.com.au/fractional-cmo-melbourne"
       jsonLd={jsonLd}
     />

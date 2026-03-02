@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import buttonOctagon from "@/assets/button-octagon.png";
+import octagonOutline from "@/assets/octagon-outline.png";
 import { trackBookCallClick, trackHealthCheckClick } from "@/utils/analytics";
 
 const Hero = () => {
@@ -30,7 +31,7 @@ const Hero = () => {
           <div className="space-y-8 text-left">
             {/* Octagon background decoration */}
             <div className="absolute -top-10 -right-20 w-96 h-96 opacity-[0.03] pointer-events-none hidden lg:block">
-              <img src="/src/assets/octagon-outline.png" alt="Decorative octagon outline" className="w-full h-full" />
+              <img src={octagonOutline} alt="" className="w-full h-full" />
             </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight relative max-w-4xl">

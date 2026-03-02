@@ -65,7 +65,7 @@ const FractionalCMOPerth = () => (
   <div className="min-h-screen bg-background">
     <SEO
       title="Fractional CMO Perth | Marketing Leadership for WA Businesses"
-      description="Fractional CMO services for Perth businesses. Senior marketing leadership for resources, technology, and professional services companies diversifying and growing in Western Australia."
+      description="Fractional CMO services for Perth businesses. Senior marketing leadership for resources, technology, and professional services companies in WA."
       canonical="https://www.grpl.com.au/fractional-cmo-perth"
       jsonLd={jsonLd}
     />

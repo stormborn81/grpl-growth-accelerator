@@ -62,7 +62,7 @@ const About = () => {
     <>
       <SEO
         title="About GRPL | Enterprise-Grade Marketing & Growth Leadership | Australia"
-        description="GRPL is a collective of senior marketing and growth leaders providing fractional CMO and Chief Growth Officer services to ANZ businesses. Strategy that gets executed."
+        description="GRPL is a collective of senior marketing leaders providing fractional CMO and Chief Growth Officer services to ANZ businesses."
         canonical="https://www.grpl.com.au/about"
         jsonLd={aboutJsonLd}
       />
