@@ -54,7 +54,7 @@ export const blogPosts: BlogPostMeta[] = [
     slug: "ai-reshaping-cmo-role-2026",
     title: "Why AI Is Reshaping the CMO Role in 2026",
     seoTitle: "AI Reshaping CMO Role 2026: Strategy Guide",
-    metaDescription: "How AI is reshaping the CMO role in 2026 — from predictive analytics to automated campaigns. Strategic implications every marketing leader needs to understand.",
+    metaDescription: "How AI is reshaping the CMO role in 2026 — from predictive analytics to automated campaigns. What every marketing leader must know.",
     canonical: "https://www.grpl.com.au/blog/ai-reshaping-cmo-role-2026",
     date: "2026-02-15",
     readingTime: "11 min read",
