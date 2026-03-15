@@ -28,7 +28,7 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Blog - Marketing Leadership Insights"
-        description="Expert insights on fractional CMO services, growth strategy, and marketing leadership for Australian businesses."
+        description="Expert insights on fractional CMO services, growth strategy, and marketing leadership for Australian businesses. Guides, frameworks, and real-world advice."
         canonical="https://www.grpl.com.au/blog"
         jsonLd={blogJsonLd}
       />

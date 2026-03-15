@@ -48,8 +48,6 @@ const SEO = ({
       <meta name="author" content="GRPL" />
       <meta name="theme-color" content="#FF5500" />
 
-      <link rel="alternate" hrefLang="en-au" href={canonical} />
-      <link rel="alternate" hrefLang="x-default" href={canonical} />
 
       {jsonLd && (Array.isArray(jsonLd) ? jsonLd : [jsonLd]).map((schema, i) => (
         <script key={i} type="application/ld+json">
