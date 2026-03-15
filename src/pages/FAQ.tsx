@@ -59,7 +59,7 @@ const FAQ = () => {
   return (
     <>
       <SEO
-        title="Frequently Asked Questions | Fractional CMO & Growth Services | GRPL"
+        title="FAQ | Fractional CMO & Growth Services | GRPL"
         description="Common questions about fractional CMO services, Chief Growth Officers, marketing audits, pricing, and how GRPL works with Australian businesses."
         canonical="https://www.grpl.com.au/faq"
       />
