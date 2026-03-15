@@ -14,7 +14,7 @@ export const blogPosts: BlogPostMeta[] = [
     slug: "fractional-cmo-australia-guide",
     title: "The Complete Guide to Fractional CMO Services in Australia",
     seoTitle: "Fractional CMO Services Australia: Complete Guide",
-    metaDescription: "Discover how fractional CMO services work in Australia — costs, benefits, engagement models, and how to know if your business is ready for senior marketing leadership.",
+    metaDescription: "Discover how fractional CMO services work in Australia — costs, benefits, engagement models, and when your business is ready.",
     canonical: "https://www.grpl.com.au/blog/fractional-cmo-australia-guide",
     date: "2026-02-15",
     readingTime: "12 min read",
