@@ -14,6 +14,7 @@ const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const HiringCMO = lazy(() => import("./pages/HiringCMO"));
 const Blog = lazy(() => import("./pages/Blog"));
+const FractionalCMOSaaSAustralia = lazy(() => import("./pages/blog/FractionalCMOSaaSAustralia"));
 const FractionalCMOAustraliaGuide = lazy(() => import("./pages/blog/FractionalCMOAustraliaGuide"));
 const FractionalCMOvsMarketingAgency = lazy(() => import("./pages/blog/FractionalCMOvsMarketingAgency"));
 const WhatDoesChiefGrowthOfficerDo = lazy(() => import("./pages/blog/WhatDoesChiefGrowthOfficerDo"));
@@ -63,6 +64,7 @@ const App = () => (
               <Route path="/terms" element={<Terms />} />
               <Route path="/hiring-cmo" element={<HiringCMO />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/fractional-cmo-saas-australia" element={<FractionalCMOSaaSAustralia />} />
               <Route path="/blog/fractional-cmo-australia-guide" element={<FractionalCMOAustraliaGuide />} />
               <Route path="/blog/fractional-cmo-vs-marketing-agency" element={<FractionalCMOvsMarketingAgency />} />
               <Route path="/blog/what-does-chief-growth-officer-do" element={<WhatDoesChiefGrowthOfficerDo />} />

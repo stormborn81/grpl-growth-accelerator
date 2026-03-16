@@ -10,9 +10,10 @@ interface BlogPostLayoutProps {
   post: BlogPostMeta;
   relatedSlugs: string[];
   children: React.ReactNode;
+  jsonLd?: object | object[];
 }
 
-const BlogPostLayout = ({ post, relatedSlugs, children }: BlogPostLayoutProps) => {
+const BlogPostLayout = ({ post, relatedSlugs, children, jsonLd: additionalJsonLd }: BlogPostLayoutProps) => {
   const relatedPosts = blogPosts.filter((p) => relatedSlugs.includes(p.slug));
 
   const jsonLd = [
@@ -37,6 +38,7 @@ const BlogPostLayout = ({ post, relatedSlugs, children }: BlogPostLayoutProps) =
         { "@type": "ListItem", position: 3, name: post.title, item: post.canonical },
       ],
     },
+    ...(additionalJsonLd ? (Array.isArray(additionalJsonLd) ? additionalJsonLd : [additionalJsonLd]) : []),
   ];
 
   return (
