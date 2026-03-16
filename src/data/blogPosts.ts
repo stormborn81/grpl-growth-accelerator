@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    slug: "fractional-cmo-saas-australia",
+    title: "Fractional CMO for SaaS Companies: When and Why It Makes Sense",
+    seoTitle: "Fractional CMO for SaaS Companies: When and Why It Makes Sense | GRPL",
+    metaDescription: "SaaS companies between $2M–$15M ARR often need a CMO but can’t justify the hire. A fractional CMO builds your marketing engine at a fraction of the cost.",
+    canonical: "https://www.grpl.com.au/blog/fractional-cmo-saas-australia",
+    date: "2026-03-16",
+    readingTime: "10 min read",
+    excerpt: "SaaS companies between $2M and $15M ARR often need senior marketing leadership before a full-time CMO hire makes economic sense.",
+  },
+  {
     slug: "fractional-cmo-australia-guide",
     title: "The Complete Guide to Fractional CMO Services in Australia",
     seoTitle: "Fractional CMO Services Australia: Complete Guide",

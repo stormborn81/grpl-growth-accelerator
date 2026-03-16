@@ -38,6 +38,7 @@ const BlogPostLayout = ({ post, relatedSlugs, children, jsonLd: additionalJsonLd
         { "@type": "ListItem", position: 3, name: post.title, item: post.canonical },
       ],
     },
+    ...(additionalJsonLd ? (Array.isArray(additionalJsonLd) ? additionalJsonLd : [additionalJsonLd]) : []),
   ];
 
   return (
