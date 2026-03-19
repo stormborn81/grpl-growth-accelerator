@@ -439,17 +439,6 @@ const Health = () => {
                 </div>
               </motion.div>
 
-              <motion.div variants={fadeUp}>
-                <a
-                  href="https://madeone.world"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
-                  onClick={() => trackEvent("cta_click", { cta_name: "made_one_link", source: "health_made_one" })}
-                >
-                  Read our latest: Wellness 2.0 — The Health Economy Is Being Rebuilt <ArrowRight className="h-4 w-4" />
-                </a>
-              </motion.div>
             </motion.div>
           </div>
         </div>
