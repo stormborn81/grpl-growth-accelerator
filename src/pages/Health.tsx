@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/utils/analytics";
+import buttonOctagon from "@/assets/button-octagon.png";
+import octagonOutline from "@/assets/octagon-outline.png";
+import octagonRings from "@/assets/octagon-rings.png";
 import {
   Stethoscope,
   Dumbbell,
@@ -126,359 +129,429 @@ const Health = () => {
       />
       <Header />
 
-      {/* Breadcrumb */}
-      <div className="pt-20 pb-0">
-        <div className="container mx-auto px-6 lg:px-8">
-          <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground">
-            <ol className="flex items-center gap-1.5">
-              <li><Link to="/" className="hover:text-foreground transition-colors">GRPL</Link></li>
-              <li><ChevronRight className="h-3 w-3" /></li>
-              <li>Industries</li>
-              <li><ChevronRight className="h-3 w-3" /></li>
-              <li className="text-foreground">Health</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-
       {/* SECTION 1 - HERO */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Subtle animated mesh background */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,hsl(var(--health-accent)),transparent_70%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,hsl(var(--health-accent)),transparent_60%)]" />
+      <section className="relative min-h-screen flex items-center bg-background pt-14 overflow-hidden">
+        {/* Octagon background decoration */}
+        <div className="absolute -top-10 -right-20 w-96 h-96 opacity-[0.03] pointer-events-none hidden lg:block">
+          <img src={octagonOutline} alt="" className="w-full h-full" />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-            className="max-w-3xl mx-auto"
-          >
-            <motion.p
-              variants={fadeUp}
-              className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-6 font-medium"
+        <div className="container mx-auto px-6 lg:px-8 py-24 md:py-32 relative z-10">
+          <div className="max-w-6xl">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={stagger}
+              className="space-y-8 text-left"
             >
-              Health Economy Practice
-            </motion.p>
+              {/* Breadcrumb */}
+              <motion.nav variants={fadeUp} aria-label="Breadcrumb" className="text-xs text-muted-foreground">
+                <ol className="flex items-center gap-1.5">
+                  <li><Link to="/" className="hover:text-foreground transition-colors">GRPL</Link></li>
+                  <li><ChevronRight className="h-3 w-3" /></li>
+                  <li>Industries</li>
+                  <li><ChevronRight className="h-3 w-3" /></li>
+                  <li className="text-foreground">Health</li>
+                </ol>
+              </motion.nav>
 
-            <motion.h1
-              variants={fadeUp}
-              className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6"
-            >
-              Growth Strategy for the Health Economy
-            </motion.h1>
-
-            <motion.h2
-              variants={fadeUp}
-              className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-10 max-w-2xl mx-auto"
-            >
-              Fractional CMO and growth leadership for health, wellness, fitness, and medical businesses navigating the most complex market in Australia.
-            </motion.h2>
-
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-              <Button
-                variant="hero"
-                size="lg"
-                className="bg-health-accent hover:bg-health-accent/85 text-white"
-                onClick={() => handleBookCall("health_hero")}
+              <motion.p
+                variants={fadeUp}
+                className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground font-medium"
               >
-                Book a Strategy Call <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="heroSecondary"
-                size="lg"
-                onClick={() => {
-                  trackEvent("cta_click", { cta_name: "see_how_we_work", source: "health_hero" });
-                  document.getElementById("problem")?.scrollIntoView({ behavior: "smooth" });
-                }}
+                Health Economy Practice
+              </motion.p>
+
+              <motion.h1
+                variants={fadeUp}
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight max-w-4xl"
               >
-                See how we work with health businesses
-              </Button>
+                Growth Strategy for the
+                <span className="block mt-2">Health Economy</span>
+              </motion.h1>
+
+              <motion.div variants={fadeUp} className="w-16 h-0.5 bg-accent" />
+
+              <motion.div variants={fadeUp} className="relative">
+                <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl font-light leading-relaxed">
+                  Fractional CMO and growth leadership for health, wellness, fitness, and medical businesses navigating the most complex market in Australia.
+                </p>
+                <div className="absolute -bottom-2 left-0 w-32 h-0.5 bg-gradient-to-r from-accent via-accent to-transparent" />
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="flex flex-col items-start gap-2 pt-8">
+                <div className="flex flex-col sm:flex-row items-start gap-4">
+                  <Button
+                    variant="hero"
+                    size="lg"
+                    className="w-full sm:w-auto"
+                    onClick={() => handleBookCall("health_hero")}
+                  >
+                    Book a Strategy Call
+                    <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
+                  </Button>
+                  <Button
+                    variant="heroSecondary"
+                    size="lg"
+                    className="w-full sm:w-auto"
+                    onClick={() => {
+                      trackEvent("cta_click", { cta_name: "see_how_we_work", source: "health_hero" });
+                      document.getElementById("problem")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    See how we work with health businesses
+                    <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground font-light">
+                  Formerly CMO at HealthEngine · Growth lead at Medx Finance · Co-founder, Made One
+                </p>
+              </motion.div>
             </motion.div>
-
-            <motion.p variants={fadeUp} className="text-xs text-muted-foreground font-light">
-              Formerly CMO at HealthEngine · Growth lead at Medx Finance · Co-founder, Made One
-            </motion.p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* SECTION 2 - THE PROBLEM */}
-      <section id="problem" className="py-20 md:py-28 bg-secondary">
+      <section id="problem" className="py-24 md:py-32 bg-secondary">
         <div className="container mx-auto px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
-            className="max-w-3xl mx-auto"
-          >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-10">
-              The Health Economy Is Worth $6.8 Trillion Globally. Most Health Businesses Still Market Like It's 2015.
-            </motion.h2>
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={stagger}
+            >
+              <motion.h2 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight mb-4 max-w-4xl">
+                The Health Economy Is Worth $6.8 Trillion Globally. Most Health Businesses Still Market Like It's 2015.
+              </motion.h2>
 
-            <div className="space-y-6 text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-              <motion.p variants={fadeUp}>
-                The health industry is undergoing the biggest structural shift in decades. AI is reshaping how consumers access care. GLP-1 drugs are rewriting the fitness and nutrition playbook. Telehealth has unbundled the GP model. Longevity clinics are moving mainstream. Boutique wellness concepts are replacing traditional gyms.
-              </motion.p>
+              <motion.div variants={fadeUp} className="w-12 h-0.5 bg-accent mb-12" />
 
-              <motion.div variants={fadeUp} className="py-6 border-y border-border">
-                <p className="text-2xl md:text-3xl font-black text-foreground leading-tight">
-                  Australia's wellness economy alone has surged past US$126 billion, growing at nearly 11% year-on-year.
-                </p>
-              </motion.div>
+              <div className="max-w-3xl space-y-6 text-lg text-muted-foreground font-light leading-relaxed">
+                <motion.p variants={fadeUp}>
+                  The health industry is undergoing the biggest structural shift in decades. AI is reshaping how consumers access care. GLP-1 drugs are rewriting the fitness and nutrition playbook. Telehealth has unbundled the GP model. Longevity clinics are moving mainstream. Boutique wellness concepts are replacing traditional gyms.
+                </motion.p>
 
-              <motion.p variants={fadeUp}>
-                But the businesses winning in this environment aren't the ones with the best clinical outcomes or the most innovative product. They're the ones with the clearest market positioning, the smartest go-to-market strategy, and senior marketing leadership that can adapt faster than the market is moving.
-              </motion.p>
+                <motion.div variants={fadeUp} className="py-8 border-y border-border">
+                  <p className="text-3xl md:text-4xl font-black text-foreground leading-tight">
+                    Australia's wellness economy alone has surged past US$126 billion, growing at nearly 11% year-on-year.
+                  </p>
+                </motion.div>
 
-              <motion.p variants={fadeUp}>
-                Most health businesses don't have that. They have founders who understand health but not growth. Marketing teams executing tactics without a strategy. Brands that look like every other clinic, studio, or supplement company in their category.
-              </motion.p>
+                <motion.p variants={fadeUp}>
+                  But the businesses winning in this environment aren't the ones with the best clinical outcomes or the most innovative product. They're the ones with the clearest market positioning, the smartest go-to-market strategy, and senior marketing leadership that can adapt faster than the market is moving.
+                </motion.p>
 
-              <motion.p variants={fadeUp} className="text-foreground font-medium">
-                That's the gap GRPL fills.
-              </motion.p>
-            </div>
-          </motion.div>
+                <motion.p variants={fadeUp}>
+                  Most health businesses don't have that. They have founders who understand health but not growth. Marketing teams executing tactics without a strategy. Brands that look like every other clinic, studio, or supplement company in their category.
+                </motion.p>
+
+                <motion.p variants={fadeUp} className="text-foreground font-medium text-xl">
+                  That's the gap GRPL fills.
+                </motion.p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* SECTION 3 - WHAT WE DO */}
-      <section className="py-20 md:py-28">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
-            className="max-w-5xl mx-auto"
-          >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 max-w-3xl">
-              Enterprise-Grade Growth Leadership. Deep Health Economy Expertise.
-            </motion.h2>
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={stagger}
+            >
+              <motion.div variants={fadeUp} className="text-center mb-20">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+                  Enterprise-Grade Growth Leadership
+                </h2>
+                <div className="w-12 h-0.5 bg-accent mx-auto mb-6" />
+                <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
+                  Deep health economy expertise. Fractional CMO and Chief Growth Officer services for health businesses across Australia.
+                </p>
+              </motion.div>
 
-            <motion.p variants={fadeUp} className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-16 max-w-3xl">
-              GRPL provides fractional CMO and Chief Growth Officer services for health businesses across Australia. We embed at the leadership level, inside your business, alongside your team, bringing the strategic thinking, growth frameworks, and execution capability that most health companies can't access without a full-time C-suite hire.
-            </motion.p>
+              {/* Health categories grid - octagon clip-path cards */}
+              <motion.div variants={fadeUp} className="mb-20">
+                <h3 className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-8 font-medium text-center">We work across the health economy</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {healthCategories.map((cat) => (
+                    <div
+                      key={cat.title}
+                      className="relative bg-secondary p-8 group hover:shadow-lg transition-all duration-500"
+                      style={{ clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)" }}
+                    >
+                      <div
+                        className="absolute inset-0 border border-transparent group-hover:border-accent/30 transition-colors duration-500"
+                        style={{ clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)" }}
+                      />
+                      <cat.icon className="h-8 w-8 text-foreground mb-6 group-hover:text-accent transition-colors duration-500" strokeWidth={1.5} />
+                      <h4 className="text-xl font-bold mb-3 tracking-tight">{cat.title}</h4>
+                      <p className="text-muted-foreground leading-relaxed font-light text-sm">{cat.examples}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
 
-            {/* Health categories grid */}
-            <motion.div variants={fadeUp}>
-              <h3 className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-8 font-medium">We work across the health economy</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {healthCategories.map((cat) => (
-                  <div key={cat.title} className="border border-border rounded-lg p-5 hover:border-health-accent/30 transition-colors group">
-                    <cat.icon className="h-5 w-5 text-muted-foreground group-hover:text-health-accent transition-colors mb-3" />
-                    <h4 className="font-bold text-sm mb-1.5">{cat.title}</h4>
-                    <p className="text-xs text-muted-foreground font-light leading-relaxed">{cat.examples}</p>
-                  </div>
-                ))}
-              </div>
+              {/* Services table */}
+              <motion.div variants={fadeUp}>
+                <h3 className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-8 font-medium">What we deliver</h3>
+                <div className="divide-y divide-border">
+                  {services.map((s) => (
+                    <div key={s.service} className="py-6 grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-8">
+                      <h4 className="font-bold text-base">{s.service}</h4>
+                      <p className="text-muted-foreground font-light leading-relaxed">{s.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="text-center mt-12">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                >
+                  View all services <ArrowRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
             </motion.div>
-
-            {/* Services table */}
-            <motion.div variants={fadeUp} className="mt-20">
-              <h3 className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-8 font-medium">What we deliver</h3>
-              <div className="divide-y divide-border">
-                {services.map((s) => (
-                  <div key={s.service} className="py-5 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-8">
-                    <h4 className="font-bold text-sm">{s.service}</h4>
-                    <p className="text-sm text-muted-foreground font-light leading-relaxed">{s.description}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* SECTION 4 - WHY GRPL IN HEALTH */}
-      <section className="py-20 md:py-28 bg-secondary">
-        <div className="container mx-auto px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
-            className="max-w-5xl mx-auto"
-          >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 max-w-3xl">
-              We're Not a Marketing Agency. We're a Growth Partner Who's Built Inside the Health Economy.
-            </motion.h2>
+      <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
+        {/* Octagon background decoration */}
+        <div className="absolute bottom-10 left-10 w-64 h-64 opacity-[0.08] pointer-events-none">
+          <img src={octagonRings} alt="" className="w-full h-full brightness-0 invert" />
+        </div>
 
-            <motion.p variants={fadeUp} className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-12 max-w-3xl">
-              GRPL's founder, Matt Gudge, has spent 15+ years in senior marketing and growth leadership across healthcare, healthtech, wellness, fitness, and consumer health.
-            </motion.p>
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={stagger}
+            >
+              <motion.div variants={fadeUp} className="text-center mb-20">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4 text-grpl-white">
+                  We're Not a Marketing Agency
+                </h2>
+                <div className="w-12 h-0.5 bg-accent mx-auto mb-6" />
+                <p className="text-xl text-grpl-white/70 font-light max-w-2xl mx-auto">
+                  We're a growth partner who's built inside the health economy. GRPL's founder, Matt Gudge, has spent 15+ years in senior marketing and growth leadership across healthcare, healthtech, wellness, fitness, and consumer health.
+                </p>
+              </motion.div>
 
-            {/* Credential cards */}
-            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
-              {credentials.map((cred) => (
-                <div key={cred.company} className="border border-border rounded-lg p-6 bg-background">
-                  <p className="text-xs uppercase tracking-[0.15em] text-health-accent font-medium mb-1">{cred.subtitle}</p>
-                  <h4 className="font-black text-lg mb-3">{cred.company}</h4>
-                  <p className="text-sm text-muted-foreground font-light leading-relaxed">{cred.description}</p>
+              {/* Credential cards */}
+              <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 mb-20">
+                {credentials.map((cred) => (
+                  <div key={cred.company} className="relative">
+                    <p className="text-xs uppercase tracking-[0.15em] text-accent font-medium mb-2">{cred.subtitle}</p>
+                    <h4 className="text-xl font-bold mb-3 tracking-tight text-grpl-white">{cred.company}</h4>
+                    <p className="text-grpl-white/70 leading-relaxed font-light">{cred.description}</p>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* Differentiator blocks */}
+              <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
+                <div>
+                  <h4 className="text-xl font-bold mb-3 tracking-tight text-grpl-white">We embed, we don't just advise.</h4>
+                  <p className="text-grpl-white/70 leading-relaxed font-light">
+                    GRPL operates at the leadership level, inside your business, alongside your team, accountable for outcomes. This isn't a monthly strategy PDF. It's a fractional CMO who shows up, runs the work, and drives results.
+                  </p>
                 </div>
-              ))}
-            </motion.div>
+                <div>
+                  <h4 className="text-xl font-bold mb-3 tracking-tight text-grpl-white">We understand health's unique constraints.</h4>
+                  <p className="text-grpl-white/70 leading-relaxed font-light">
+                    Regulatory complexity, clinical credibility requirements, consumer trust dynamics, fragmented audiences, practitioner referral networks, and the pace at which this market is shifting. We've operated inside these constraints, not just advised around them.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-3 tracking-tight text-grpl-white">This isn't theory. It's pattern recognition.</h4>
+                  <p className="text-grpl-white/70 leading-relaxed font-light">
+                    We've built the brands, scaled the businesses, run the teams, and operated in the exact roles we're advising on. Every recommendation comes from doing the work, across healthtech, medical finance, wellness, fitness, and consumer health.
+                  </p>
+                </div>
+              </motion.div>
 
-            {/* Differentiator blocks */}
-            <motion.div variants={fadeUp} className="space-y-8 max-w-3xl">
-              <div>
-                <h4 className="font-black text-base mb-2">We embed, we don't just advise.</h4>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                  GRPL operates at the leadership level, inside your business, alongside your team, accountable for outcomes. This isn't a monthly strategy PDF. It's a fractional CMO who shows up, runs the work, and drives results.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-black text-base mb-2">We understand health's unique constraints.</h4>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                  Regulatory complexity, clinical credibility requirements, consumer trust dynamics, fragmented audiences, practitioner referral networks, and the pace at which this market is shifting. We've operated inside these constraints, not just advised around them.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-black text-base mb-2">This isn't theory. It's pattern recognition.</h4>
-                <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                  We've built the brands, scaled the businesses, run the teams, and operated in the exact roles we're advising on. Every recommendation comes from doing the work, across healthtech, medical finance, wellness, fitness, and consumer health.
-                </p>
-              </div>
+              <motion.div variants={fadeUp} className="text-center mt-16">
+                <Link
+                  to="/growth-diagnostic"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                >
+                  Take the Growth Diagnostic <ArrowRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* SECTION 5 - MADE ONE ADVANTAGE */}
-      <section className="py-20 md:py-28 bg-health-dark text-white">
+      <section className="py-24 md:py-32 bg-secondary">
         <div className="container mx-auto px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
-            className="max-w-5xl mx-auto"
-          >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6">
-              Backed by Made One Intelligence
-            </motion.h2>
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={stagger}
+            >
+              <motion.div variants={fadeUp} className="mb-16">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+                  Backed by Made One Intelligence
+                </h2>
+                <div className="w-12 h-0.5 bg-accent mb-6" />
+                <p className="text-xl text-muted-foreground font-light max-w-3xl leading-relaxed">
+                  GRPL is the strategic consulting arm of the same team behind Made One, Australia's health economy media brand. That gives our health clients something no other marketing consultancy can offer: real-time industry intelligence wired directly into their growth strategy.
+                </p>
+              </motion.div>
 
-            <motion.p variants={fadeUp} className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-14 max-w-3xl">
-              GRPL is the strategic consulting arm of the same team behind Made One, Australia's health economy media brand. That gives our health clients something no other marketing consultancy can offer: real-time industry intelligence wired directly into their growth strategy.
-            </motion.p>
+              <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 mb-12">
+                <div>
+                  <Globe className="h-8 w-8 text-foreground mb-6" strokeWidth={1.5} />
+                  <h4 className="text-xl font-bold mb-3 tracking-tight">Real-Time Industry Intelligence</h4>
+                  <p className="text-muted-foreground leading-relaxed font-light">
+                    We're tracking the business moves, capital flows, regulatory shifts, and consumer trends reshaping the health economy every day. Your strategy is informed by what's happening now, not last quarter's report.
+                  </p>
+                </div>
+                <div>
+                  <Users className="h-8 w-8 text-foreground mb-6" strokeWidth={1.5} />
+                  <h4 className="text-xl font-bold mb-3 tracking-tight">Health Economy Network</h4>
+                  <p className="text-muted-foreground leading-relaxed font-light">
+                    Access to founders, operators, investors, and executives across the Australian health industry through the Made One community. Strategic introductions, partnership opportunities, and market intelligence you can't get from a marketing agency.
+                  </p>
+                </div>
+                <div>
+                  <BarChart3 className="h-8 w-8 text-foreground mb-6" strokeWidth={1.5} />
+                  <h4 className="text-xl font-bold mb-3 tracking-tight">Content Authority & Market Data</h4>
+                  <p className="text-muted-foreground leading-relaxed font-light">
+                    Leverage Made One's original research and reports, including the Wellness 2.0 insight series, to ground your strategy in data, not assumptions. Understand where the market is going before your competitors do.
+                  </p>
+                </div>
+              </motion.div>
 
-            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div>
-                <Globe className="h-6 w-6 text-white/50 mb-4" />
-                <h4 className="font-black text-base mb-2">Real-Time Industry Intelligence</h4>
-                <p className="text-sm text-white/60 font-light leading-relaxed">
-                  We're tracking the business moves, capital flows, regulatory shifts, and consumer trends reshaping the health economy every day. Your strategy is informed by what's happening now, not last quarter's report.
-                </p>
-              </div>
-              <div>
-                <Users className="h-6 w-6 text-white/50 mb-4" />
-                <h4 className="font-black text-base mb-2">Health Economy Network</h4>
-                <p className="text-sm text-white/60 font-light leading-relaxed">
-                  Access to founders, operators, investors, and executives across the Australian health industry through the Made One community. Strategic introductions, partnership opportunities, and market intelligence you can't get from a marketing agency.
-                </p>
-              </div>
-              <div>
-                <BarChart3 className="h-6 w-6 text-white/50 mb-4" />
-                <h4 className="font-black text-base mb-2">Content Authority & Market Data</h4>
-                <p className="text-sm text-white/60 font-light leading-relaxed">
-                  Leverage Made One's original research and reports, including the Wellness 2.0 insight series, to ground your strategy in data, not assumptions. Understand where the market is going before your competitors do.
-                </p>
-              </div>
+              <motion.div variants={fadeUp}>
+                <a
+                  href="https://madeone.world"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                  onClick={() => trackEvent("cta_click", { cta_name: "made_one_link", source: "health_made_one" })}
+                >
+                  Read our latest: Wellness 2.0 — The Health Economy Is Being Rebuilt <ArrowRight className="h-4 w-4" />
+                </a>
+              </motion.div>
             </motion.div>
-
-            <motion.div variants={fadeUp}>
-              <a
-                href="https://madeone.world"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white border border-white/20 rounded-lg px-5 py-3 transition-colors hover:border-white/40"
-                onClick={() => trackEvent("cta_click", { cta_name: "made_one_link", source: "health_made_one" })}
-              >
-                Read our latest: Wellness 2.0 — The Health Economy Is Being Rebuilt <ArrowRight className="h-4 w-4" />
-              </a>
-            </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* SECTION 6 - SOCIAL PROOF */}
-      <section className="py-20 md:py-28">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
-            className="max-w-5xl mx-auto"
-          >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-10">
-              Trusted by Health Businesses Across Australia
-            </motion.h2>
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={stagger}
+            >
+              <motion.div variants={fadeUp} className="text-center mb-20">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+                  Trusted by Health Businesses Across Australia
+                </h2>
+                <div className="w-12 h-0.5 bg-accent mx-auto" />
+              </motion.div>
 
-            <motion.div variants={fadeUp} className="space-y-4 mb-14">
-              {proofPoints.map((point) => (
-                <div key={point} className="border border-border rounded-lg p-5">
-                  <p className="text-sm text-muted-foreground font-light leading-relaxed">{point}</p>
-                </div>
-              ))}
-            </motion.div>
+              <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                {proofPoints.map((point) => (
+                  <div
+                    key={point}
+                    className="relative bg-secondary p-8 group"
+                    style={{ clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)" }}
+                  >
+                    <p className="text-muted-foreground leading-relaxed font-light">{point}</p>
+                  </div>
+                ))}
+              </motion.div>
 
-            {/* Stat bar */}
-            <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center md:text-left">
-                  <p className="text-2xl md:text-3xl font-black tracking-tight">{stat.value}</p>
-                  <p className="text-xs text-muted-foreground font-light mt-1">{stat.label}</p>
-                </div>
-              ))}
+              {/* Stat bar */}
+              <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                {stats.map((stat) => (
+                  <div key={stat.label}>
+                    <p className="text-3xl md:text-4xl font-black tracking-tight">{stat.value}</p>
+                    <p className="text-sm text-muted-foreground font-light mt-2">{stat.label}</p>
+                  </div>
+                ))}
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* SECTION 7 - CTA */}
-      <section className="py-20 md:py-28 bg-health-accent-light">
-        <div className="container mx-auto px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
-            className="max-w-2xl mx-auto text-center"
-          >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6">
-              Let's Talk Growth
-            </motion.h2>
+      <section className="py-24 md:py-32 bg-grpl-black text-grpl-white relative overflow-hidden">
+        {/* Octagon background decoration */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.03] pointer-events-none">
+          <img src={octagonRings} alt="" className="w-full h-full" />
+        </div>
 
-            <motion.p variants={fadeUp} className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-4">
-              If you're a health business founder, CEO, or board looking for senior marketing leadership without the full-time cost, we should talk.
-            </motion.p>
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={stagger}
+            >
+              <motion.h2 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6 text-grpl-white">
+                Let's Talk Growth
+              </motion.h2>
 
-            <motion.p variants={fadeUp} className="text-sm text-muted-foreground font-light leading-relaxed mb-10">
-              GRPL works with a limited number of health clients at any one time to ensure depth, strategic focus, and real accountability. If that sounds like what your business needs, book a strategy call.
-            </motion.p>
+              <motion.div variants={fadeUp} className="w-16 h-0.5 bg-accent mx-auto mb-8" />
 
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                variant="hero"
-                size="lg"
-                className="bg-health-accent hover:bg-health-accent/85 text-white"
-                onClick={() => handleBookCall("health_cta")}
-              >
-                Book a Strategy Call <ArrowRight className="h-4 w-4" />
-              </Button>
-              <a
-                href="mailto:matt@grpl.com.au"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors font-light"
-              >
-                Or email matt@grpl.com.au
-              </a>
+              <motion.p variants={fadeUp} className="text-xl text-grpl-white/70 mb-4 font-light max-w-2xl mx-auto leading-relaxed">
+                If you're a health business founder, CEO, or board looking for senior marketing leadership without the full-time cost, we should talk.
+              </motion.p>
+
+              <motion.p variants={fadeUp} className="text-sm text-grpl-white/60 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+                GRPL works with a limited number of health clients at any one time to ensure depth, strategic focus, and real accountability. If that sounds like what your business needs, book a strategy call.
+              </motion.p>
+
+              <motion.div variants={fadeUp} className="flex flex-col items-center gap-2">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button
+                    variant="hero"
+                    size="lg"
+                    onClick={() => handleBookCall("health_cta")}
+                  >
+                    Book a Strategy Call
+                    <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3" />
+                  </Button>
+                  <Button
+                    variant="heroSecondary"
+                    size="lg"
+                    onClick={() => {
+                      trackEvent("cta_click", { cta_name: "email_cta", source: "health_cta" });
+                      window.location.href = "mailto:matt@grpl.com.au";
+                    }}
+                  >
+                    Email matt@grpl.com.au
+                    <img src={buttonOctagon} alt="" className="ml-2 h-3 w-3 opacity-50" />
+                  </Button>
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
