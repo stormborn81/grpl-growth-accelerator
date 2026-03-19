@@ -51,7 +51,7 @@ const services = [
 const credentials = [
   { company: "HealthEngine", subtitle: "Healthtech / SaaS", description: "CMO. Built the marketing function from the ground up. Redefined B2B and B2C go-to-market strategy. Established the go-to-market for their AI product launch. Led brand, demand generation, and growth across Australia's largest healthtech platform." },
   { company: "Medx Finance", subtitle: "Medical Finance", description: "Growth Lead. Specialist medical lending. Scaled to top 25 broker in Australia in under 3 years. Built acquisition funnels, referral partnerships, and brand positioning in a regulated financial services environment serving health professionals." },
-  { company: "Amazon Australia / Big Red Group", subtitle: "Enterprise Marketing", description: "Senior Marketing Leadership. Launched Amazon Australia. Scaled Big Red Group brands through COVID. Built multi-brand architectures across consumer portfolios. Enterprise-scale marketing operations and go-to-market execution." },
+  { company: "Big Red Group", subtitle: "Enterprise Marketing", description: "Senior Marketing Leadership. Scaled Big Red Group brands through COVID. Built multi-brand architectures across consumer portfolios. Enterprise-scale marketing operations and go-to-market execution." },
   { company: "Made One", subtitle: "Health Economy Media", description: "Co-founder. Australia's health economy media brand. Covering the people, companies, and capital shaping the health industry. Publisher of the Wellness 2.0 insight series." },
 ];
 
