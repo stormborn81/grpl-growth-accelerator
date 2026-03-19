@@ -38,6 +38,7 @@ const FractionalCMOPerth = lazy(() => import("./pages/FractionalCMOPerth"));
 const GrowthDiagnostic = lazy(() => import("./pages/GrowthDiagnostic"));
 const About = lazy(() => import("./pages/About"));
 const FAQ = lazy(() => import("./pages/FAQ"));
+const Health = lazy(() => import("./pages/Health"));
 
 const queryClient = new QueryClient();
 
