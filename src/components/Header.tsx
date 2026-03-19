@@ -155,6 +155,30 @@ const Header = () => {
                       </div>
                     )}
                   </div>
+                  {/* Mobile Industries Accordion */}
+                  <div>
+                    <button
+                      onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
+                      className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left w-full flex items-center justify-between"
+                      aria-expanded={mobileIndustriesOpen}
+                    >
+                      Industries <ChevronDown className={`h-4 w-4 transition-transform ${mobileIndustriesOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {mobileIndustriesOpen && (
+                      <div className="mt-3 ml-4 flex flex-col gap-3">
+                        {industryLinks.map((link) => (
+                          <Link
+                            key={link.path}
+                            to={link.path}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors text-left"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                   <Link 
                     to="/about"
                     onClick={() => setMobileMenuOpen(false)}
