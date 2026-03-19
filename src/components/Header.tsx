@@ -16,6 +16,10 @@ const serviceLinks = [
   { label: "Interim CMO", path: "/services/interim-cmo" },
 ];
 
+const industryLinks = [
+  { label: "Health", path: "/health" },
+];
+
 const Header = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
