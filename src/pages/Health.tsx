@@ -455,45 +455,51 @@ const Health = () => {
         </div>
       </section>
 
-      {/* SECTION 6 - SOCIAL PROOF */}
+      {/* SECTION 6 - TESTIMONIALS */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={stagger}
-            >
-              <motion.div variants={fadeUp} className="text-center mb-20">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
-                  Trusted by Health Businesses Across Australia
-                </h2>
-                <div className="w-12 h-0.5 bg-accent mx-auto" />
-              </motion.div>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+                What Our Clients Say
+              </h2>
+              <div className="w-12 h-0.5 bg-accent mx-auto" />
+            </div>
 
-              <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-                {proofPoints.map((point) => (
-                  <div
-                    key={point}
-                    className="relative bg-secondary p-8 group"
-                    style={{ clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)" }}
-                  >
-                    <p className="text-muted-foreground leading-relaxed font-light">{point}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  quote: "GRPL didn't just give us a logo and a tagline, they built our market presence from the ground up. Their ability to quickly grasp complex categories, identify our true competitive advantage, and translate it into a sharp, differentiated positioning has been invaluable. They crafted a distinctive voice and visual identity, then armed us with the playbooks and tools to activate it. The result was a confident market entry, clients understood our story, partners knew what we stood for, and our team had a clear roadmap for growth.",
+                  author: "Mark Grace",
+                  title: "Founder",
+                  company: "Mangrove Digital",
+                },
+                {
+                  quote: "Matt's strategic thinking is one of his greatest assets. He designed a holistic marketing strategy that aligned with Healthengine's growth goals, bringing coherence to disparate channels, setting clear performance metrics, and ensuring every campaign delivered measurable return.",
+                  author: "Dan Stinton",
+                  title: "CEO",
+                  company: "Healthengine",
+                },
+                {
+                  quote: "GRPL built our brand from the ground up and embedded the systems, processes and creative thinking that allowed us to lend over a billion dollars in our first two years. Their fractional CMO service isn't just consultancy; they operate as part of the leadership team. Together we built a sustainable lead engine, integrated our technology stack, led a martech transformation and scaled our audience and pipeline. GRPL drives real, measurable impact.",
+                  author: "Todd O'Reilly",
+                  title: "Founder & CEO",
+                  company: "MedX Finance",
+                },
+              ].map((testimonial, index) => (
+                <div key={index} className="bg-secondary p-8 rounded-2xl">
+                  <p className="text-foreground/80 mb-8 leading-relaxed font-light text-lg">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="border-t border-border/50 pt-6">
+                    <p className="font-bold text-sm">{testimonial.author}</p>
+                    <p className="text-xs text-muted-foreground mt-1 font-light">
+                      {testimonial.title}, {testimonial.company}
+                    </p>
                   </div>
-                ))}
-              </motion.div>
-
-              {/* Stat bar */}
-              <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                {stats.map((stat) => (
-                  <div key={stat.label}>
-                    <p className="text-3xl md:text-4xl font-black tracking-tight">{stat.value}</p>
-                    <p className="text-sm text-muted-foreground font-light mt-2">{stat.label}</p>
-                  </div>
-                ))}
-              </motion.div>
-            </motion.div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
