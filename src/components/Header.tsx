@@ -68,6 +68,36 @@ const Header = () => {
                 </div>
               )}
             </div>
+            {/* Industries Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIndustriesOpen(true)}
+              onMouseLeave={() => setIndustriesOpen(false)}
+            >
+              <button
+                className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors inline-flex items-center gap-1"
+                aria-expanded={industriesOpen}
+                aria-haspopup="true"
+              >
+                Industries <ChevronDown className={`h-3 w-3 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {industriesOpen && (
+                <div className="absolute top-full left-0 pt-2 w-48">
+                  <div className="bg-background border border-border rounded-lg shadow-lg py-2">
+                    {industryLinks.map((link) => (
+                      <Link
+                        key={link.path}
+                        to={link.path}
+                        onClick={() => setIndustriesOpen(false)}
+                        className="block w-full text-left px-4 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
             <Link to="/about" className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors">
               About
             </Link>
