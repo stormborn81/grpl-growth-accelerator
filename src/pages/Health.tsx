@@ -228,7 +228,6 @@ const Health = () => {
                 <p className="text-2xl md:text-3xl font-black text-foreground leading-tight">
                   Australia's wellness economy alone has surged past US$126 billion, growing at nearly 11% year-on-year.
                 </p>
-                <p className="text-sm text-muted-foreground mt-2">That's not a niche. It's one of the fastest-growing sectors in the country.</p>
               </motion.div>
 
               <motion.p variants={fadeUp}>
