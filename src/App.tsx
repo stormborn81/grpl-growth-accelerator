@@ -89,6 +89,8 @@ const App = () => (
               <Route path="/fractional-cmo-perth" element={<FractionalCMOPerth />} />
               <Route path="/growth-diagnostic" element={<GrowthDiagnostic />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/health" element={<Health />} />
+              <Route path="/industries/health" element={<Health />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
