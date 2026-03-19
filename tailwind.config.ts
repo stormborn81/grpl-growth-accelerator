@@ -63,6 +63,9 @@ export default {
         "grpl-black": "hsl(var(--grpl-black))",
         "grpl-white": "hsl(var(--grpl-white))",
         "grpl-orange": "hsl(var(--grpl-orange))",
+        "health-accent": "hsl(var(--health-accent))",
+        "health-accent-light": "hsl(var(--health-accent-light))",
+        "health-dark": "hsl(var(--health-dark))",
       },
       borderRadius: {
         lg: "var(--radius)",

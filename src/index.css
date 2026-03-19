@@ -48,6 +48,11 @@ All colors MUST be HSL.
     --grpl-black: 0 0% 0%;
     --grpl-white: 0 0% 100%;
 
+    /* Health vertical accent */
+    --health-accent: 180 73% 18%;
+    --health-accent-light: 180 30% 96%;
+    --health-dark: 180 20% 12%;
+
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 

@@ -16,11 +16,17 @@ const serviceLinks = [
   { label: "Interim CMO", path: "/services/interim-cmo" },
 ];
 
+const industryLinks = [
+  { label: "Health", path: "/health" },
+];
+
 const Header = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
@@ -53,6 +59,36 @@ const Header = () => {
                         key={link.path}
                         to={link.path}
                         onClick={() => setServicesOpen(false)}
+                        className="block w-full text-left px-4 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            {/* Industries Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIndustriesOpen(true)}
+              onMouseLeave={() => setIndustriesOpen(false)}
+            >
+              <button
+                className="text-xs font-medium text-foreground/70 hover:text-foreground transition-colors inline-flex items-center gap-1"
+                aria-expanded={industriesOpen}
+                aria-haspopup="true"
+              >
+                Industries <ChevronDown className={`h-3 w-3 transition-transform ${industriesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {industriesOpen && (
+                <div className="absolute top-full left-0 pt-2 w-48">
+                  <div className="bg-background border border-border rounded-lg shadow-lg py-2">
+                    {industryLinks.map((link) => (
+                      <Link
+                        key={link.path}
+                        to={link.path}
+                        onClick={() => setIndustriesOpen(false)}
                         className="block w-full text-left px-4 py-2 text-xs font-medium text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors"
                       >
                         {link.label}
@@ -107,6 +143,30 @@ const Header = () => {
                     {mobileServicesOpen && (
                       <div className="mt-3 ml-4 flex flex-col gap-3">
                         {serviceLinks.map((link) => (
+                          <Link
+                            key={link.path}
+                            to={link.path}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors text-left"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  {/* Mobile Industries Accordion */}
+                  <div>
+                    <button
+                      onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
+                      className="text-lg font-medium text-foreground hover:text-accent transition-colors text-left w-full flex items-center justify-between"
+                      aria-expanded={mobileIndustriesOpen}
+                    >
+                      Industries <ChevronDown className={`h-4 w-4 transition-transform ${mobileIndustriesOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {mobileIndustriesOpen && (
+                      <div className="mt-3 ml-4 flex flex-col gap-3">
+                        {industryLinks.map((link) => (
                           <Link
                             key={link.path}
                             to={link.path}
