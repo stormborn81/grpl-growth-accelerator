@@ -11,7 +11,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbS
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     name: "GRPL - Marketing Audit",
     description: "GRPL's six-dimension marketing audit diagnoses what is actually broken in your strategy. Not a checklist - a diagnostic.",
     url: "https://www.grpl.com.au/services/marketing-audit",

@@ -11,7 +11,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbS
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     name: "GRPL - Fractional CMO Services",
     description: "Enterprise-grade fractional CMO services for Australian businesses. Senior marketing leadership at a fraction of the full-time cost.",
     url: "https://www.grpl.com.au/services/fractional-cmo",

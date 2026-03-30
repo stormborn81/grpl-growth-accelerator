@@ -10,7 +10,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbS
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     name: "GRPL - Chief Growth Officer Services",
     description: "Fractional CGO services unifying marketing, sales, and product growth. Integrated revenue leadership for Australian businesses.",
     url: "https://www.grpl.com.au/services/chief-growth-officer",

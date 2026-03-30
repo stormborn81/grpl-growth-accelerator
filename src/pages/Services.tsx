@@ -60,7 +60,7 @@ const steps = [
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     name: "GRPL - Marketing Leadership Services",
     description: "Enterprise-grade fractional CMO, Chief Growth Officer, marketing audit and outsourced marketing services for Australian businesses.",
     url: "https://www.grpl.com.au/services",

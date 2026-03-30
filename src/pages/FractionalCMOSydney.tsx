@@ -11,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     name: "GRPL - Fractional CMO Sydney",
     description: "Enterprise-grade fractional CMO services for Sydney businesses. Senior marketing leadership for technology, SaaS, fintech and professional services companies.",
     url: "https://www.grpl.com.au/fractional-cmo-sydney",

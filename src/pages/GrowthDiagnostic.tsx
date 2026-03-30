@@ -39,13 +39,10 @@ const INITIAL_SCORES: DimensionScores = { strategy: 0, execution: 0, team: 0, te
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
+  "@type": "WebPage",
   name: "GRPL Growth Diagnostic",
   description: "Free interactive diagnostic tool that identifies growth gaps and provides personalised marketing leadership recommendations for Australian businesses.",
   url: "https://www.grpl.com.au/growth-diagnostic",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Web",
-  offers: { "@type": "Offer", price: "0", priceCurrency: "AUD" },
   provider: { "@type": "Organization", name: "GRPL", url: "https://www.grpl.com.au" },
 };
 

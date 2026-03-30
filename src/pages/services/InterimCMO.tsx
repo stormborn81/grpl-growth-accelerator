@@ -10,7 +10,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbS
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     name: "GRPL - Interim CMO",
     description: "Immediate interim CMO services while you hire a permanent marketing leader. Keep strategy on track and teams productive during the transition.",
     url: "https://www.grpl.com.au/services/interim-cmo",

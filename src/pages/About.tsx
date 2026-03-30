@@ -26,8 +26,7 @@ const aboutJsonLd = {
     "@type": "Country",
     "name": "Australia"
   },
-  "serviceType": ["Fractional CMO", "Chief Growth Officer", "Marketing Audit", "Brand Foundation", "Growth Projects", "Interim CMO"],
-  "knowsAbout": ["Marketing Strategy", "Growth Leadership", "B2B Marketing", "Brand Strategy", "AI Search Optimisation", "Demand Generation"]
+  "knowsAbout": ["Fractional CMO", "Chief Growth Officer", "Marketing Audit", "Brand Foundation", "Growth Projects", "Interim CMO", "Marketing Strategy", "Growth Leadership", "B2B Marketing", "Brand Strategy", "AI Search Optimisation", "Demand Generation"]
 };
 
 const aboutFaqs = [
