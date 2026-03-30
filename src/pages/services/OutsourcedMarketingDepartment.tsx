@@ -10,7 +10,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbS
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     name: "GRPL - Outsourced Marketing Department",
     description: "A complete outsourced marketing department for Australian businesses. Strategy, leadership, and execution without the overhead.",
     url: "https://www.grpl.com.au/services/outsourced-marketing-department",

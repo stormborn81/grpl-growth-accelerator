@@ -11,7 +11,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbS
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Service",
     name: "GRPL - Brand Foundation",
     description: "Build your brand from the ground up. GRPL's Brand Foundation sprint delivers vision, identity, and market positioning for founders in weeks.",
     url: "https://www.grpl.com.au/services/brand-foundation",
