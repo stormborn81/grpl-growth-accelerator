@@ -204,7 +204,7 @@ const Wellness2Report = () => {
             >
               <p className="text-4xl md:text-5xl font-black text-accent mb-2">$6.8 TRILLION</p>
               <p className="text-sm text-white/70 font-light leading-relaxed">
-                Global health economy. Every week, billion-dollar deals reshape what you pay, what you access, and how you look after yourself. Nobody's explaining how it works. Until now.
+                Global health economy. Every week, significant shifts, deals and processes evolve in this space. Staying ahead has never been harder without the right people on your side.
               </p>
               <p className="text-xs text-white/30 mt-3">Source: Global Wellness Institute, Global Wellness Economy Monitor 2024</p>
             </motion.div>
