@@ -11,6 +11,16 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    slug: "wellness-2-health-economy-rebuilt",
+    title: "Wellness 2.0: The Health Economy Is Being Rebuilt",
+    seoTitle: "Wellness 2.0: The Health Economy Is Being Rebuilt | GRPL",
+    metaDescription: "GRPL's inaugural insight report mapping 8 forces reshaping the $6.8 trillion health economy — AI, GLP-1s, telehealth, longevity, and more.",
+    canonical: "https://www.grpl.com.au/blog/wellness-2-health-economy-rebuilt",
+    date: "2026-03-30",
+    readingTime: "25 min read",
+    excerpt: "The way you train, recover, get diagnosed, lose weight, track your body, and access a doctor is being redesigned — simultaneously, by different industries, for different reasons.",
+  },
+  {
     slug: "fractional-cmo-saas-australia",
     title: "Fractional CMO for SaaS Companies: When and Why It Makes Sense",
     seoTitle: "Fractional CMO for SaaS Companies: When and Why It Makes Sense | GRPL",

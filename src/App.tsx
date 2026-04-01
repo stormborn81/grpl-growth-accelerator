@@ -23,6 +23,7 @@ const AIReshapingCMORole2026 = lazy(() => import("./pages/blog/AIReshapingCMORol
 const MarketingAuditFramework = lazy(() => import("./pages/blog/MarketingAuditFramework"));
 const WhenReadyForFractionalCMO = lazy(() => import("./pages/blog/WhenReadyForFractionalCMO"));
 const B2BMarketingLeadership = lazy(() => import("./pages/blog/B2BMarketingLeadership"));
+const Wellness2Report = lazy(() => import("./pages/blog/Wellness2Report"));
 const ServicesHub = lazy(() => import("./pages/Services"));
 const ServiceFractionalCMO = lazy(() => import("./pages/services/FractionalCMO"));
 const ServiceChiefGrowthOfficer = lazy(() => import("./pages/services/ChiefGrowthOfficer"));
