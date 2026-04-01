@@ -75,6 +75,7 @@ const App = () => (
               <Route path="/blog/marketing-audit-framework" element={<MarketingAuditFramework />} />
               <Route path="/blog/when-ready-for-fractional-cmo" element={<WhenReadyForFractionalCMO />} />
               <Route path="/blog/b2b-marketing-leadership-strategy-execution" element={<B2BMarketingLeadership />} />
+              <Route path="/blog/wellness-2-health-economy-rebuilt" element={<Wellness2Report />} />
               <Route path="/services" element={<ServicesHub />} />
               <Route path="/services/fractional-cmo" element={<ServiceFractionalCMO />} />
               <Route path="/services/chief-growth-officer" element={<ServiceChiefGrowthOfficer />} />
