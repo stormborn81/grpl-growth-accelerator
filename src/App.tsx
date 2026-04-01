@@ -23,6 +23,7 @@ const AIReshapingCMORole2026 = lazy(() => import("./pages/blog/AIReshapingCMORol
 const MarketingAuditFramework = lazy(() => import("./pages/blog/MarketingAuditFramework"));
 const WhenReadyForFractionalCMO = lazy(() => import("./pages/blog/WhenReadyForFractionalCMO"));
 const B2BMarketingLeadership = lazy(() => import("./pages/blog/B2BMarketingLeadership"));
+const Wellness2Report = lazy(() => import("./pages/blog/Wellness2Report"));
 const ServicesHub = lazy(() => import("./pages/Services"));
 const ServiceFractionalCMO = lazy(() => import("./pages/services/FractionalCMO"));
 const ServiceChiefGrowthOfficer = lazy(() => import("./pages/services/ChiefGrowthOfficer"));
@@ -74,6 +75,7 @@ const App = () => (
               <Route path="/blog/marketing-audit-framework" element={<MarketingAuditFramework />} />
               <Route path="/blog/when-ready-for-fractional-cmo" element={<WhenReadyForFractionalCMO />} />
               <Route path="/blog/b2b-marketing-leadership-strategy-execution" element={<B2BMarketingLeadership />} />
+              <Route path="/blog/wellness-2-health-economy-rebuilt" element={<Wellness2Report />} />
               <Route path="/services" element={<ServicesHub />} />
               <Route path="/services/fractional-cmo" element={<ServiceFractionalCMO />} />
               <Route path="/services/chief-growth-officer" element={<ServiceChiefGrowthOfficer />} />
